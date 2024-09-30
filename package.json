@@ -5,7 +5,7 @@
   "scripts": {
     "run": "gulp",
     "build": "gulp build",
-    "prepublish": "gulp build"
+    "prepublishOnly": "gulp build"
   },
   "keywords": [
     "inkdrop",
