@@ -6,14 +6,14 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Lato';
+@fontName          : -apple-system, BlinkMacSystemFont, Segoe UI, 'Lato';
 @fontSmoothing     : antialiased;
 
-@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
 @googleFontName    : @fontName;
-@importGoogleFonts : true;
+@importGoogleFonts : false;
 @googleFontSizes   : '400,700,400italic,700italic';
 @googleSubset      : 'latin';
 
@@ -160,7 +160,7 @@
     Scroll Bars
 --------------------*/
 
-@useCustomScrollbars: true;
+@useCustomScrollbars: false;
 
 @customScrollbarWidth: 10px;
 @customScrollbarHeight: 10px;
@@ -387,14 +387,6 @@
 @warningBackgroundColor : #FFFAF3;
 @warningHeaderColor     : #794B02;
 @warningTextColor       : #573A08;
-
-/*-------------------
-        Paths
---------------------*/
-
-/* For source only. Modified in gulp for dist */
-@imagePath : '../../themes/default/assets/images';
-@fontPath  : '../../themes/default/assets/fonts';
 
 /*-------------------
        Em Sizes
