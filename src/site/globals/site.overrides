@@ -359,14 +359,6 @@
   --warning-text-color: @warningTextColor;
 
   /*-------------------
-          Paths
-   --------------------*/
-
-  /* For source only. Modified in gulp for dist */
-  --image-path: @imagePath;
-  --font-path: @fontPath;
-
-  /*-------------------
          Em Sizes
    --------------------*/
 
@@ -432,19 +424,6 @@
   --inverted-pressed-text-color: @invertedPressedTextColor;
   --inverted-selected-text-color: @invertedSelectedTextColor;
   --inverted-disabled-text-color: @invertedDisabledTextColor;
-
-  /*-------------------
-       Brand Colors
-   --------------------*/
-
-  --facebook-color: @facebookColor;
-  --twitter-color: @twitterColor;
-  --google-plus-color: @googlePlusColor;
-  --linked-in-color: @linkedInColor;
-  --youtube-color: @youtubeColor;
-  --instagram-color: @instagramColor;
-  --pinterest-color: @pinterestColor;
-  --vk-color: @vkColor;
 
   /*-------------------
         Borders
