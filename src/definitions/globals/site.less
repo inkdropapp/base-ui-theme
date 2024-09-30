@@ -1,0 +1,226 @@
+/*!
+ * # Semantic UI - Site
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+@type : 'global';
+@element : 'site';
+
+@import (multiple) '../../theme.config';
+
+/*******************************
+             Page
+*******************************/
+
+.loadFonts();
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: var(--em-size, @emSize);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: var(--page-overflow-x, @pageOverflowX);
+  min-width: var(--page-min-width, @pageMinWidth);
+  background: var(--page-background, @pageBackground);
+  font-family: var(--page-font, @pageFont);
+  font-size: var(--font-size, @fontSize);
+  line-height: var(--line-height, @lineHeight);
+  color: var(--text-color, @textColor);
+  font-smoothing: var(--font-smoothing, @fontSmoothing);
+}
+
+/*******************************
+             Headers
+*******************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--header-font, @headerFont);
+  line-height: var(--header-line-height, @headerLineHeight);
+  margin: var(--header-margin, @headerMargin);
+  font-weight: var(--header-font-weight, @headerFontWeight);
+  padding: 0em;
+}
+
+h1 {
+  min-height: 1rem;
+  font-size: var(--h1, @h1);
+}
+
+h2 {
+  font-size: var(--h2, @h2);
+}
+
+h3 {
+  font-size: var(--h3, @h3);
+}
+
+h4 {
+  font-size: var(--h4, @h4);
+}
+
+h5 {
+  font-size: var(--h5, @h5);
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+  margin-bottom: 0em;
+}
+
+
+/*******************************
+             Text
+*******************************/
+
+p {
+  margin: var(--paragraph-margin, @paragraphMargin);
+  line-height: var(--paragraph-line-height, @paragraphLineHeight);
+}
+
+p:first-child {
+  margin-top: 0em;
+}
+
+p:last-child {
+  margin-bottom: 0em;
+}
+
+/*-------------------
+        Links
+--------------------*/
+
+a {
+  color: var(--link-color, @linkColor);
+  text-decoration: var(--link-underline, @linkUnderline);
+}
+
+a:hover {
+  color: var(--link-hover-color, @linkHoverColor);
+  text-decoration: var(--link-hover-underline, @linkHoverUnderline);
+}
+
+
+/*******************************
+         Scrollbars
+*******************************/
+
+.addScrollbars() when (@useCustomScrollbars) {
+
+  /* Force Simple Scrollbars */
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: @customScrollbarWidth;
+    height: @customScrollbarHeight;
+  }
+
+  body ::-webkit-scrollbar-track {
+    background: @trackBackground;
+    border-radius: @trackBorderRadius;
+  }
+
+  body ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: @thumbBorderRadius;
+    background: @thumbBackground;
+    transition: @thumbTransition;
+  }
+
+  body ::-webkit-scrollbar-thumb:window-inactive {
+    background: @thumbInactiveBackground;
+  }
+
+  body ::-webkit-scrollbar-thumb:hover {
+    background: @thumbHoverBackground;
+  }
+
+  /* Inverted UI */
+  body .ui.inverted::-webkit-scrollbar-track {
+    background: @trackInvertedBackground;
+  }
+
+  body .ui.inverted::-webkit-scrollbar-thumb {
+    background: @thumbInvertedBackground;
+  }
+
+  body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
+    background: @thumbInvertedInactiveBackground;
+  }
+
+  body .ui.inverted::-webkit-scrollbar-thumb:hover {
+    background: @thumbInvertedHoverBackground;
+  }
+}
+
+/*******************************
+          Highlighting
+*******************************/
+
+/* Site */
+::-webkit-selection {
+  background-color: var(--highlight-background, @highlightBackground);
+  color: var(--highlight-color, @highlightColor);
+}
+
+::-moz-selection {
+  background-color: var(--highlight-background, @highlightBackground);
+  color: var(--highlight-color, @highlightColor);
+}
+
+::selection {
+  background-color: var(--highlight-background, @highlightBackground);
+  color: var(--highlight-color, @highlightColor);
+}
+
+/* Form */
+textarea::-webkit-selection,
+input::-webkit-selection {
+  background-color: var(--input-highlight-background, @inputHighlightBackground);
+  color: var(--input-highlight-color, @inputHighlightColor);
+}
+
+textarea::-moz-selection,
+input::-moz-selection {
+  background-color: var(--input-highlight-background, @inputHighlightBackground);
+  color: var(--input-highlight-color, @inputHighlightColor);
+}
+
+textarea::selection,
+input::selection {
+  background-color: var(--input-highlight-background, @inputHighlightBackground);
+  color: var(--input-highlight-color, @inputHighlightColor);
+}
+
+.addScrollbars();
+.loadUIOverrides();
