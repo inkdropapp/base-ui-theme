@@ -4,7 +4,8 @@
   "description": "Base UI Theme for Inkdrop",
   "scripts": {
     "run": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepublish": "gulp build"
   },
   "keywords": [
     "inkdrop",
@@ -46,5 +47,6 @@
   },
   "browserslist": [
     "Electron 31.0.4"
-  ]
+  ],
+  "files": ["styles/theme.css"]
 }
