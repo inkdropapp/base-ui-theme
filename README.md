@@ -1,4 +1,4 @@
-# Default Light UI Theme for Inkdrop
+# Base styles of the UI theme for Inkdrop
 
 Inkdrop's UI elements are styled based on [Semantic UI](http://semantic-ui.com/).
 It's mostly common in customizing the theme with it, so [their documentation](http://learnsemantic.com/) is very helpful to get started.

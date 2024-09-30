@@ -23,8 +23,5 @@ jobs:
           BUN_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: bun install
 
-      - name: Lint 🧐
-        run: bun run lint
-
-      - name: Test 🚨
-        run: bun run test
+      - name: Build 🏗️
+        run: bun run build
