@@ -1,6 +1,6 @@
 {
   "name": "@inkdropapp/base-ui-theme",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Base UI Theme for Inkdrop",
   "scripts": {
     "run": "gulp",
@@ -48,5 +48,7 @@
   "browserslist": [
     "Electron 31.0.4"
   ],
-  "files": ["styles/theme.css"]
+  "files": [
+    "styles/theme.css"
+  ]
 }
