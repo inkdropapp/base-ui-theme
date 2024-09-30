@@ -27,6 +27,7 @@
     "gulp-copy": "^4.0.1",
     "gulp-dedupe": "0.0.2",
     "gulp-flatten": "^0.4.0",
+    "gulp-footer": "^2.1.0",
     "gulp-header": "^2.0.9",
     "gulp-if": "^3.0.0",
     "gulp-json-editor": "^2.5.6",

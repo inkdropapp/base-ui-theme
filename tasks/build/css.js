@@ -16,6 +16,7 @@ const
   flatten      = require('gulp-flatten'),
   gulpif       = require('gulp-if'),
   header       = require('gulp-header'),
+  footer       = require('gulp-footer'),
   less         = require('gulp-less'),
   minifyCSS    = require('gulp-clean-css'),
   normalize    = require('normalize-path'),
@@ -37,6 +38,7 @@ const
   assets       = config.paths.assets,
 
   banner       = tasks.banner,
+  footerLines  = tasks.footer,
   filenames    = tasks.filenames,
   comments     = tasks.regExp.comments,
   log          = tasks.log,
@@ -107,6 +109,9 @@ function pack(type, compress) {
     .pipe(gulpif(config.hasPermissions, chmod(config.parsedPermissions)))
     .pipe(gulpif(compress, minifyCSS(settings.concatMinify)))
     .pipe(header(banner, settings.header))
+    // Embrace the concatenated CSS in a `theme.ui.base` layer
+    .pipe(header('@layer theme.ui.base {\n\n'))
+    .pipe(footer('\n\n}\n'))
     .pipe(gulp.dest(output.packaged))
     .pipe(print(log.created))
     ;
