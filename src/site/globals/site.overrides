@@ -52,11 +52,11 @@
       Brand Colors
    --------------------*/
 
-  --primary-color: @primaryColor;
-  --secondary-color: @secondaryColor;
+  --primary-color: var(--color-blue-500);
+  --secondary-color: var(--hsl-zinc-900);
 
-  --light-primary-color: @lightPrimaryColor;
-  --light-secondary-color: @lightSecondaryColor;
+  --light-primary-color: var(--color-blue-400);
+  --light-secondary-color: var(--color-neutral-700);
 
   /*--------------
     Page Heading
@@ -205,80 +205,80 @@
    --------------------*/
 
   /*---  Colors  ---*/
-  --red: @red;
-  --orange: @orange;
-  --yellow: @yellow;
-  --olive: @olive;
-  --green: @green;
-  --teal: @teal;
-  --blue: @blue;
-  --violet: @violet;
-  --purple: @purple;
-  --pink: @pink;
-  --brown: @brown;
-  --grey: @grey;
-  --black: @black;
+  --red: var(--color-red-500);
+  --orange: var(--color-orange-500);
+  --yellow: var(--color-yellow-500);
+  --olive: var(--color-lime-500);
+  --green: var(--color-green-500);
+  --teal: var(--color-teal-500);
+  --blue: var(--color-blue-500);
+  --violet: var(--color-violet-500);
+  --purple: var(--color-purple-500);
+  --pink: var(--color-pink-500);
+  --brown: var(--color-yellow-800);
+  --grey: var(--color-neutral-500);
+  --black: var(--color-neutral-900);
 
   /*---  Light Colors  ---*/
-  --light-red: @lightRed;
-  --light-orange: @lightOrange;
-  --light-yellow: @lightYellow;
-  --light-olive: @lightOlive;
-  --light-green: @lightGreen;
-  --light-teal: @lightTeal;
-  --light-blue: @lightBlue;
-  --light-violet: @lightViolet;
-  --light-purple: @lightPurple;
-  --light-pink: @lightPink;
-  --light-brown: @lightBrown;
-  --light-grey: @lightGrey;
-  --light-black: @lightBlack;
+  --light-red: var(--color-red-400);
+  --light-orange: var(--color-orange-400);
+  --light-yellow: var(--color-yellow-400);
+  --light-olive: var(--color-lime-400);
+  --light-green: var(--color-green-400);
+  --light-teal: var(--color-teal-400);
+  --light-blue: var(--color-blue-400);
+  --light-violet: var(--color-violet-400);
+  --light-purple: var(--color-purple-400);
+  --light-pink: var(--color-pink-400);
+  --light-brown: var(--color-yellow-700);
+  --light-grey: var(--color-neutral-300);
+  --light-black: var(--color-neutral-700);
 
   /*---   Neutrals  ---*/
-  --full-black: @fullBlack;
-  --off-white: @offWhite;
-  --dark-white: @darkWhite;
-  --mid-white: @midWhite;
-  --white: @white;
+  --full-black: var(--color-black);
+  --off-white: var(--color-gray-50);
+  --dark-white: var(--color-gray-100);
+  --mid-white: var(--color-gray-200);
+  --white: var(--color-white);
 
   /*--- Colored Backgrounds ---*/
-  --red-background: @redBackground;
-  --orange-background: @orangeBackground;
-  --yellow-background: @yellowBackground;
-  --olive-background: @oliveBackground;
-  --green-background: @greenBackground;
-  --teal-background: @tealBackground;
-  --blue-background: @blueBackground;
-  --violet-background: @violetBackground;
-  --purple-background: @purpleBackground;
-  --pink-background: @pinkBackground;
-  --brown-background: @brownBackground;
+  --red-background: var(--color-red-100);
+  --orange-background: var(--color-orange-100);
+  --yellow-background: var(--color-yellow-100);
+  --olive-background: var(--color-lime-100);
+  --green-background: var(--color-green-100);
+  --teal-background: var(--color-teal-100);
+  --blue-background: var(--color-blue-100);
+  --violet-background: var(--color-violet-100);
+  --purple-background: var(--color-purple-100);
+  --pink-background: var(--color-pink-100);
+  --brown-background: var(--color-orange-100);
 
   /*--- Colored Headers ---*/
-  --red-header-color: @redHeaderColor;
-  --olive-header-color: @oliveHeaderColor;
+  --red-header-color: var(--color-red-600);
+  --orange-header-color: var(--color-orange-600);
+  --yellow-header-color: var(--color-yellow-800);
+  --olive-header-color: var(--color-lime-700);
   --green-header-color: @greenHeaderColor;
-  --yellow-header-color: @yellowHeaderColor;
   --blue-header-color: @blueHeaderColor;
   --teal-header-color: @tealHeaderColor;
   --pink-header-color: @pinkHeaderColor;
   --violet-header-color: @violetHeaderColor;
   --purple-header-color: @purpleHeaderColor;
-  --orange-header-color: @orangeHeaderColor;
   --brown-header-color: @brownHeaderColor;
 
   /*--- Colored Text ---*/
-  --red-text-color: @redTextColor;
-  --orange-text-color: @orangeTextColor;
-  --yellow-text-color: @yellowTextColor;
-  --olive-text-color: @oliveTextColor;
-  --green-text-color: @greenTextColor;
-  --teal-text-color: @tealTextColor;
-  --blue-text-color: @blueTextColor;
-  --violet-text-color: @violetTextColor;
-  --purple-text-color: @purpleTextColor;
-  --pink-text-color: @pinkTextColor;
-  --brown-text-color: @brownTextColor;
+  --red-text-color: var(--color-red-500);
+  --orange-text-color: var(--color-orange-500);
+  --yellow-text-color: var(--color-yellow-700);
+  --olive-text-color: var(--color-lime-600);
+  --green-text-color: var(--color-green-600);
+  --teal-text-color: var(--color-teal-600);
+  --blue-text-color: var(--color-blue-500);
+  --violet-text-color: var(--color-violet-500);
+  --purple-text-color: var(--color-purple-500);
+  --pink-text-color: var(--color-pink-500);
+  --brown-text-color: var(--color-yellow-800);
 
   /*--- Colored Border ---*/
   --red-border-color: @redBorderColor;
@@ -1162,9 +1162,7 @@
   /*-------------------
         Label
   --------------------*/
-  --label-background-color: #E8E8E8;
   --label-background-image: none;
-  --label-text-color: var(--muted-text-color);
   --label-font-weight: var(--font-weights-medium);
   --label-border: 0px solid transparent;
   --label-border-radius: var(--absolute-border-radius);
@@ -1173,9 +1171,6 @@
   --label-hover-background-image: none;
   --label-hover-text-color: var(--hovered-text-color);
 
-  --label-active-background-color: #D0D0D0;
-  --label-active-background-image: none;
-  --label-active-text-color: var(--selected-text-color);
 
   --label-active-hover-background-color: #C8C8C8;
   --label-active-hover-background-image: none;
@@ -1510,16 +1505,17 @@
   --note-list-view-item-separator-border: 1px solid var(--white-down);
   --note-list-view-item-date-color: var(--primary-color);
   --note-list-view-item-tag-color: var(--blue-focus);
-  --note-list-view-item-inactive-background: hsl(var(--hsl-sky-800) / 20%);
+  --note-list-view-item-selected-background: hsl(var(--hsl-sky-800) / 20%);
   --note-list-view-item-active-background: var(--primary-color);
-  --note-list-view-item-active-color: var(--inverted-text-color);
-  --note-list-view-item-active-date-color: var(--inverted-text-color);
-  --note-list-view-item-active-tag-color: var(--inverted-text-color);
-  --note-list-view-item-focus-inner-shadow: none;
   --note-search-bar-background: rgb(245, 245, 244);
   --note-search-bar-border-bottom: rgba(255, 255, 255, 0.8);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
+  --mark-border-width: 1px;
+  --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
+  --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
+  --mark-color: light-dark(var(--color-gray-950), var(--color-gray-50));
+  --mark-font-weight: var(--font-weights-bold);
 
   /*-------------------
         Editor
