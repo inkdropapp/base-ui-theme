@@ -1476,6 +1476,7 @@
   /*-------------------
         Side Bar
   --------------------*/
+  --sidebar-color-scheme: dark;
   --sidebar-background: #171A21;
   --sidebar-menu-item-inactive-background: hsl(var(--hsl-slate-600) / 70%);
   --sidebar-menu-item-active-background: hsl(var(--hsl-blue-300) / 50%);

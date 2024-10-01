@@ -3,5 +3,5 @@
 *******************************/
 
 .sidebar-layout-content {
-  color-scheme: dark;
+  color-scheme: var(--sidebar-color-scheme);
 }
