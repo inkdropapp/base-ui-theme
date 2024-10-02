@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="node_modules/@inkdropapp/css/reset.css" />
+  <link rel="stylesheet" href="node_modules/@inkdropapp/css/tokens.css" />
+  <link rel="stylesheet" href="node_modules/@inkdropapp/css/tags.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <title>Base UI Theme style test</title>
+  <style>
+    body {
+      padding: 2em 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ui container">
+
+    <h2>Messages</h2>
+
+    <div class="ui message">
+      <div class="header">
+        Changes in Service
+      </div>
+      <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.
+      </p>
+    </div>
+
+    <div class="ui info message">
+      <div class="header">
+        Info
+      </div>
+
+      <p>Plugins add new functionality or provide new look to Inkdrop. You can activate or deactivate them at any time.
+        Read&nbsp;<a href="https://docs.inkdrop.app/reference/extend-with-plugins">the manual&nbsp;<svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" name="expand-6"
+            class="svg-icon streamline expand-6 inline">
+            <defs>
+              <style>
+                .expand-6_svg__a {
+                  fill: none;
+                  stroke: currentColor;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 1.5px
+                }
+              </style>
+            </defs>
+            <path
+              d="M23.251 7.498V.748h-6.75M23.251.748l-15 15M11.251 5.248h-9a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h15a1.5 1.5 0 0 0 1.5-1.5v-9"
+              class="expand-6_svg__a"></path>
+          </svg></a> to learn more.</p>
+    </div>
+
+    <div class="ui positive message">
+      <div class="header">
+        You are eligible for a reward
+      </div>
+      <p>Go to your <b>special offers</b> page to see now.</p>
+    </div>
+
+    <div class="ui negative message">
+      <div class="header">
+        We're sorry we can't apply that discount
+      </div>
+      <p>That offer has expired
+      </p>
+    </div>
+
+    <h2>Segments</h2>
+
+    <div class="plugin-list-item-view ui segments">
+      <div class="ui segment ">
+        <div class="header"><span class="name">dev-tools</span><span
+            class="ui basic label grey label-official">Official</span><span class="spacer"></span>
+          <div class="additional-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+              height="1em" name="module-puzzle" class="svg-icon streamline module-puzzle inline">
+              <path
+                d="m19.5 15.75 3.311-3.311a1.5 1.5 0 0 0 0-2.121L20.7 8.212A3.75 3.75 0 1 1 15.788 3.3l-2.106-2.111a1.5 1.5 0 0 0-2.121 0L8.25 4.5A3.75 3.75 0 1 0 4.5 8.25l-3.311 3.311a1.5 1.5 0 0 0 0 2.121L3.3 15.788A3.75 3.75 0 1 1 8.212 20.7l2.106 2.107a1.5 1.5 0 0 0 2.121 0L15.75 19.5a3.75 3.75 0 1 0 3.75-3.75"
+                style="fill: none; stroke: currentcolor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5px;">
+              </path>
+            </svg><span class="version">v0.1.0</span></div>
+        </div>
+        <div class="description">Developer tools for Inkdrop</div>
+      </div>
+      <div class="ui secondary clearing segment">
+        <div class="accessory"><button class="ui tiny circular icon button plugin-uninstall-button "
+            title="Uninstall"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+              name="bin-1" class="svg-icon streamline bin-1 ">
+              <defs>
+                <style>
+                  .bin-1_svg__a {
+                    fill: none;
+                    stroke: currentColor;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px
+                  }
+                </style>
+              </defs>
+              <path
+                d="M1.5 4.5h21M14.25 1.5h-4.5A1.5 1.5 0 0 0 8.25 3v1.5h7.5V3a1.5 1.5 0 0 0-1.5-1.5M9.75 17.25v-7.5M14.25 17.25v-7.5M18.865 21.124A1.5 1.5 0 0 1 17.37 22.5H6.631a1.5 1.5 0 0 1-1.495-1.376L3.75 4.5h16.5Z"
+                class="bin-1_svg__a"></path>
+            </svg></button>
+          <div class="ui toggle checkbox plugin-switch-view"><input type="checkbox" class="native-key-bindings"
+              name="dev-tools" checked=""><label></label></div>
+        </div>
+        <div class="repository"><a href="https://github.com/inkdropapp/inkdrop-dev-tools"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" name="github"
+              class="svg-icon streamline github inline">
+              <desc>Github Logo 1 Streamline Icon: https://streamlinehq.com</desc>
+              <path fill="currentColor"
+                d="M12 .28a12 12 0 0 0-3.72 23.41h.28a1 1 0 0 0 .7-.24 1.05 1.05 0 0 0 .36-.82v-1.3a.5.5 0 0 0-.19-.33.5.5 0 0 0-.41-.1c-2.69.58-3.26-1.1-3.29-1.21A4.64 4.64 0 0 0 4 17.5l-.15-.11a.73.73 0 0 1 .38-.07 1.48 1.48 0 0 1 1.14.88 3 3 0 0 0 4 1.16.53.53 0 0 0 .3-.36 2 2 0 0 1 .56-1.22.5.5 0 0 0 .15-.53.49.49 0 0 0-.42-.35c-2.37-.27-4.8-1.1-4.8-5.19a4 4 0 0 1 1.06-2.78.49.49 0 0 0 .09-.52A3.56 3.56 0 0 1 6.32 6a5.6 5.6 0 0 1 2.52 1.15.48.48 0 0 0 .42.06A10.7 10.7 0 0 1 12 6.85a10.3 10.3 0 0 1 2.75.36.46.46 0 0 0 .41-.06A5.5 5.5 0 0 1 17.68 6a3.54 3.54 0 0 1 0 2.38.48.48 0 0 0 .1.52 4 4 0 0 1 1.05 2.75c0 4.1-2.43 4.92-4.81 5.18a.49.49 0 0 0-.42.35.49.49 0 0 0 .15.52 2.23 2.23 0 0 1 .61 1.75v3.18a1.06 1.06 0 0 0 .37.82 1.18 1.18 0 0 0 1.06.19A12 12 0 0 0 12 .28">
+              </path>
+            </svg>inkdropapp/inkdrop-dev-tools</a></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
