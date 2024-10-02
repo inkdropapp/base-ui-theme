@@ -53,7 +53,7 @@
    --------------------*/
 
   --primary-color: var(--color-blue-500);
-  --secondary-color: var(--hsl-zinc-900);
+  --secondary-color: var(--color-zinc-900);
 
   --light-primary-color: var(--color-blue-400);
   --light-secondary-color: var(--color-neutral-700);
@@ -135,7 +135,7 @@
   --page-overflow-x: @pageOverflowX;
 
   --line-height: @lineHeight;
-  --text-color: @textColor;
+  --text-color: hsl(var(--hsl-black) / 87%);
 
   /*-------------------
         Paragraph
@@ -148,20 +148,20 @@
          Links
    --------------------*/
 
-  --link-color: @linkColor;
+  --link-color: var(--color-blue-500);
   --link-underline: @linkUnderline;
-  --link-hover-color: @linkHoverColor;
+  --link-hover-color: var(--color-blue-600);
   --link-hover-underline: @linkHoverUnderline;
 
   /*-------------------
     Highlighted Text
    --------------------*/
 
-  --highlight-background: @highlightBackground;
-  --highlight-color: @highlightColor;
+  --highlight-background: var(--color-blue-200);
+  --highlight-color: var(--text-color);
 
-  --input-highlight-background: @inputHighlightBackground;
-  --input-highlight-color: @inputHighlightColor;
+  --input-highlight-background: hsl(var(--hsl-neutral-600) / 40%);
+  --input-highlight-color: var(--text-color);
 
 
   /*-------------------
@@ -259,13 +259,13 @@
   --orange-header-color: var(--color-orange-600);
   --yellow-header-color: var(--color-yellow-800);
   --olive-header-color: var(--color-lime-700);
-  --green-header-color: @greenHeaderColor;
-  --blue-header-color: @blueHeaderColor;
-  --teal-header-color: @tealHeaderColor;
-  --pink-header-color: @pinkHeaderColor;
-  --violet-header-color: @violetHeaderColor;
-  --purple-header-color: @purpleHeaderColor;
-  --brown-header-color: @brownHeaderColor;
+  --green-header-color: var(--color-green-700);
+  --teal-header-color: var(--color-teal-700);
+  --blue-header-color: var(--color-blue-600);
+  --violet-header-color: var(--color-violet-600);
+  --purple-header-color: var(--color-purple-600);
+  --pink-header-color: var(--color-pink-600);
+  --brown-header-color: var(--color-yellow-900);
 
   /*--- Colored Text ---*/
   --red-text-color: var(--color-red-500);
@@ -281,17 +281,17 @@
   --brown-text-color: var(--color-yellow-800);
 
   /*--- Colored Border ---*/
-  --red-border-color: @redBorderColor;
-  --orange-border-color: @orangeBorderColor;
-  --yellow-border-color: @yellowBorderColor;
-  --olive-border-color: @oliveBorderColor;
-  --green-border-color: @greenBorderColor;
-  --teal-border-color: @tealBorderColor;
-  --blue-border-color: @blueBorderColor;
-  --violet-border-color: @violetBorderColor;
-  --purple-border-color: @purpleBorderColor;
-  --pink-border-color: @pinkBorderColor;
-  --brown-border-color: @brownBorderColor;
+  --red-border-color: var(--red-text-color);
+  --orange-border-color: var(--orange-text-color);
+  --yellow-border-color: var(--yellow-text-color);
+  --olive-border-color: var(--olive-text-color);
+  --green-border-color: var(--green-text-color);
+  --teal-border-color: var(--teal-text-color);
+  --blue-border-color: var(--blue-text-color);
+  --violet-border-color: var(--violet-text-color);
+  --purple-border-color: var(--purple-text-color);
+  --pink-border-color: var(--pink-text-color);
+  --brown-border-color: var(--brown-text-color);
 
   /*-------------------
        Alpha Colors
@@ -315,11 +315,11 @@
 
   /* Differentiating Layers */
   --subtle-shadow:
-    0px 1px 2px 0 @borderColor ;
+    0px 1px 2px 0 var(--border-color);
   --floating-shadow:
     0px 2px 4px 0px rgba(34, 36, 38, 0.12),
     0px 2px 10px 0px rgba(34, 36, 38, 0.15);
-  --raised-shadow: 0px 2px 3px 0px @borderColor;
+  --raised-shadow: 0px 2px 3px 0px var(--border-color);
 
   /*******************************
              Power-User
@@ -331,32 +331,32 @@
    --------------------*/
 
   /* Positive */
-  --positive-color: @positiveColor;
-  --positive-background-color: @positiveBackgroundColor;
-  --positive-border-color: @positiveBorderColor;
-  --positive-header-color: @positiveHeaderColor;
-  --positive-text-color: @positiveTextColor;
+  --positive-color: var(--color-green-500);
+  --positive-background-color: var(--color-green-50);
+  --positive-border-color: var(--color-green-300);
+  --positive-header-color: var(--color-green-900);
+  --positive-text-color: var(--color-green-800);
 
   /* Negative */
-  --negative-color: @negativeColor;
-  --negative-background-color: @negativeBackgroundColor;
-  --negative-border-color: @negativeBorderColor;
-  --negative-header-color: @negativeHeaderColor;
-  --negative-text-color: @negativeTextColor;
+  --negative-color: var(--color-red-500);
+  --negative-background-color: var(--color-red-50);
+  --negative-border-color: var(--color-red-300);
+  --negative-header-color: var(--color-red-900);
+  --negative-text-color: var(--color-red-800);
 
   /* Info */
-  --info-color: @infoColor;
-  --info-background-color: @infoBackgroundColor;
-  --info-border-color: @infoBorderColor;
-  --info-header-color: @infoHeaderColor;
-  --info-text-color: @infoTextColor;
+  --info-color: var(--color-cyan-500);
+  --info-background-color: var(--color-sky-50);
+  --info-border-color: var(--color-sky-300);
+  --info-header-color: var(--color-sky-900);
+  --info-text-color: var(--color-sky-800);
 
   /* Warning */
-  --warning-color: @warningColor;
-  --warning-border-color: @warningBorderColor;
-  --warning-background-color: @warningBackgroundColor;
-  --warning-header-color: @warningHeaderColor;
-  --warning-text-color: @warningTextColor;
+  --warning-color: var(--color-amber-400);
+  --warning-background-color: var(--color-stone-100);
+  --warning-border-color: var(--color-stone-400);
+  --warning-header-color: var(--color-yellow-800);
+  --warning-text-color: var(--color-amber-900);
 
   /*-------------------
          Em Sizes
@@ -406,24 +406,24 @@
        Neutral Text
    --------------------*/
 
-  --dark-text-color: @darkTextColor;
-  --muted-text-color: @mutedTextColor;
-  --light-text-color: @lightTextColor;
+  --dark-text-color: hsl(var(--hsl-black) / 85%);
+  --muted-text-color: hsl(var(--hsl-black) / 60%);
+  --light-text-color: hsl(var(--hsl-black) / 40%);
 
-  --unselected-text-color: @unselectedTextColor;
-  --hovered-text-color: @hoveredTextColor;
-  --pressed-text-color: @pressedTextColor;
-  --selected-text-color: @selectedTextColor;
-  --disabled-text-color: @disabledTextColor;
+  --unselected-text-color: hsl(var(--hsl-black) / 40%);
+  --hovered-text-color: hsl(var(--hsl-black) / 80%);
+  --pressed-text-color: hsl(var(--hsl-black) / 90%);
+  --selected-text-color: hsl(var(--hsl-black) / 95%);
+  --disabled-text-color: hsl(var(--hsl-black) / 20%);
 
-  --inverted-text-color: @invertedTextColor;
-  --inverted-muted-text-color: @invertedMutedTextColor;
-  --inverted-light-text-color: @invertedLightTextColor;
-  --inverted-unselected-text-color: @invertedUnselectedTextColor;
-  --inverted-hovered-text-color: @invertedHoveredTextColor;
-  --inverted-pressed-text-color: @invertedPressedTextColor;
-  --inverted-selected-text-color: @invertedSelectedTextColor;
-  --inverted-disabled-text-color: @invertedDisabledTextColor;
+  --inverted-text-color: hsl(var(--hsl-white) / 90%);
+  --inverted-muted-text-color: hsl(var(--hsl-white) / 80%);
+  --inverted-light-text-color: hsl(var(--hsl-white) / 70%);
+  --inverted-unselected-text-color: hsl(var(--hsl-white) / 50%);
+  --inverted-hovered-text-color: hsl(var(--hsl-white) / 100%);
+  --inverted-pressed-text-color: hsl(var(--hsl-white) / 100%);
+  --inverted-selected-text-color: hsl(var(--hsl-white) / 100%);
+  --inverted-disabled-text-color: hsl(var(--hsl-white) / 20%);
 
   /*-------------------
         Borders
@@ -431,22 +431,22 @@
 
   --circular-radius: @circularRadius;
 
-  --border-color: @borderColor;
-  --strong-border-color: @strongBorderColor;
-  --internal-border-color: @internalBorderColor;
-  --selected-border-color: @selectedBorderColor;
-  --strong-selected-border-color: @strongSelectedBorderColor;
-  --disabled-border-color: @disabledBorderColor;
+  --border-color: hsl(var(--hsl-neutral-900) / 15%);
+  --strong-border-color: hsl(var(--hsl-neutral-900) / 22%);
+  --internal-border-color: hsl(var(--hsl-neutral-900) / 10%);
+  --selected-border-color: hsl(var(--hsl-neutral-900) / 35%);
+  --strong-selected-border-color: hsl(var(--hsl-neutral-900) / 50%);
+  --disabled-border-color: hsl(var(--hsl-neutral-900) / 50%);
 
-  --solid-internal-border-color: @solidInternalBorderColor;
-  --solid-border-color: @solidBorderColor;
-  --solid-selected-border-color: @solidSelectedBorderColor;
+  --solid-internal-border-color: var(--color-neutral-50);
+  --solid-border-color: var(--color-zinc-300);
+  --solid-selected-border-color: var(--color-neutral-400);
 
-  --white-border-color: @whiteBorderColor;
-  --selected-white-border-color: @selectedWhiteBorderColor;
+  --white-border-color: hsl(var(--hsl-white) / 10%);
+  --selected-white-border-color: hsl(var(--hsl-white) / 80%);
 
-  --solid-white-border-color: @solidWhiteBorderColor;
-  --selected-solid-white-border-color: @selectedSolidWhiteBorderColor;
+  --solid-white-border-color: var(--color-neutral-400);
+  --selected-solid-white-border-color: var(--color-neutral-300);
 
 
   /*-------------------
@@ -473,17 +473,17 @@
   --page-min-width: @pageMinWidth;
 
   /* Positive / Negative Dupes */
-  --success-background-color: @successBackgroundColor;
-  --success-color: @successColor;
-  --success-border-color: @successBorderColor;
-  --success-header-color: @successHeaderColor;
-  --success-text-color: @successTextColor;
+  --success-background-color: var(--positive-background-color);
+  --success-color: var(--positive-color);
+  --success-border-color: var(--positive-border-color);
+  --success-header-color: var(--positive-header-color);
+  --success-text-color: var(--positive-text-color);
 
-  --error-background-color: @errorBackgroundColor;
-  --error-color: @errorColor;
-  --error-border-color: @errorBorderColor;
-  --error-header-color: @errorHeaderColor;
-  --error-text-color: @errorTextColor;
+  --error-background-color: var(--negative-background-color);
+  --error-color: var(--negative-color);
+  --error-border-color: var(--negative-border-color);
+  --error-header-color: var(--negative-header-color);
+  --error-text-color: var(--negative-text-color);
 
 
   /* Responsive */
@@ -680,9 +680,9 @@
         Disabled
    --------------------*/
 
-  --disabled-opacity: @disabledOpacity;
-  --disabled-text-color: @disabledTextColor;
-  --inverted-disabled-text-color: @invertedDisabledTextColor;
+  --disabled-opacity: 0.45;
+  --disabled-text-color: hsl(var(--hsl-neutral-800) / 30%);
+  --inverted-disabled-text-color: hsl(var(--hsl-white) / 30%);
 
   /*-------------------
           Hover
@@ -694,116 +694,96 @@
     0px 2px 10px 0px rgba(34, 36, 38, 0.25);
 
   /*---  Colors  ---*/
-  --primary-color-hover: @primaryColorHover;
-  --secondary-color-hover: @secondaryColorHover;
+  --primary-color-hover: var(--color-blue-600);
+  --secondary-color-hover: var(--color-zinc-800);
 
-  --red-hover: @redHover;
-  --orange-hover: @orangeHover;
-  --yellow-hover: @yellowHover;
-  --olive-hover: @oliveHover;
-  --green-hover: @greenHover;
-  --teal-hover: @tealHover;
-  --blue-hover: @blueHover;
-  --violet-hover: @violetHover;
-  --purple-hover: @purpleHover;
-  --pink-hover: @pinkHover;
-  --brown-hover: @brownHover;
+  --red-hover: var(--color-red-600);
+  --orange-hover: var(--color-orange-600);
+  --yellow-hover: var(--color-yellow-600);
+  --olive-hover: var(--color-lime-600);
+  --green-hover: var(--color-green-600);
+  --teal-hover: var(--color-teal-600);
+  --blue-hover: var(--color-blue-600);
+  --violet-hover: var(--color-violet-600);
+  --purple-hover: var(--color-purple-600);
+  --pink-hover: var(--color-pink-600);
+  --brown-hover: var(--color-yellow-900);
 
-  --light-red-hover: @lightRedHover;
-  --light-orange-hover: @lightOrangeHover;
-  --light-yellow-hover: @lightYellowHover;
-  --light-olive-hover: @lightOliveHover;
-  --light-green-hover: @lightGreenHover;
-  --light-teal-hover: @lightTealHover;
-  --light-blue-hover: @lightBlueHover;
-  --light-violet-hover: @lightVioletHover;
-  --light-purple-hover: @lightPurpleHover;
-  --light-pink-hover: @lightPinkHover;
-  --light-brown-hover: @lightBrownHover;
-  --light-grey-hover: @lightGreyHover;
-  --light-black-hover: @lightBlackHover;
+  --light-red-hover: var(--color-red-500);
+  --light-orange-hover: var(--color-orange-500);
+  --light-yellow-hover: var(--color-yellow-500);
+  --light-olive-hover: var(--color-lime-500);
+  --light-green-hover: var(--color-green-500);
+  --light-teal-hover: var(--color-teal-500);
+  --light-blue-hover: var(--color-blue-500);
+  --light-violet-hover: var(--color-violet-500);
+  --light-purple-hover: var(--color-purple-500);
+  --light-pink-hover: var(--color-pink-500);
+  --light-brown-hover: var(--color-yellow-800);
+  --light-grey-hover: var(--color-neutral-400);
+  --light-black-hover: var(--color-neutral-800);
 
   /*---  Emotive  ---*/
-  --positive-color-hover: @positiveColorHover;
-  --negative-color-hover: @negativeColorHover;
-
-  /*---  Brand   ---*/
-  --facebook-hover-color: @facebookHoverColor;
-  --twitter-hover-color: @twitterHoverColor;
-  --google-plus-hover-color: @googlePlusHoverColor;
-  --linked-in-hover-color: @linkedInHoverColor;
-  --youtube-hover-color: @youtubeHoverColor;
-  --instagram-hover-color: @instagramHoverColor;
-  --pinterest-hover-color: @pinterestHoverColor;
-  --vk-hover-color: @vkHoverColor;
+  --positive-color-hover: var(--color-green-600);
+  --negative-color-hover: var(--color-red-600);
 
   /*---  Dark Tones  ---*/
-  --full-black-hover: @fullBlackHover;
-  --black-hover: @blackHover;
-  --grey-hover: @greyHover;
+  --full-black-hover: var(--color-neutral-950);
+  --black-hover: var(--color-neutral-800);
+  --grey-hover: var(--color-neutral-400);
 
   /*---  Light Tones  ---*/
-  --white-hover: @whiteHover;
-  --off-white-hover: @offWhiteHover;
-  --dark-white-hover: @darkWhiteHover;
+  --white-hover: var(--color-gray-50);
+  --off-white-hover: var(--color-gray-100);
+  --dark-white-hover: var(--color-gray-200);
 
   /*-------------------
           Focus
    --------------------*/
 
   /*---  Colors  ---*/
-  --primary-color-focus: @primaryColorFocus;
-  --secondary-color-focus: @secondaryColorFocus;
+  --primary-color-focus: var(--color-blue-600);
+  --secondary-color-focus: var(--color-zinc-800);
 
-  --red-focus: @redFocus;
-  --orange-focus: @orangeFocus;
-  --yellow-focus: @yellowFocus;
-  --olive-focus: @oliveFocus;
-  --green-focus: @greenFocus;
-  --teal-focus: @tealFocus;
-  --blue-focus: @blueFocus;
-  --violet-focus: @violetFocus;
-  --purple-focus: @purpleFocus;
-  --pink-focus: @pinkFocus;
-  --brown-focus: @brownFocus;
+  --red-focus: var(--color-red-600);
+  --orange-focus: var(--color-orange-600);
+  --yellow-focus: var(--color-yellow-600);
+  --olive-focus: var(--color-lime-600);
+  --green-focus: var(--color-green-600);
+  --teal-focus: var(--color-teal-600);
+  --blue-focus: var(--color-blue-600);
+  --violet-focus: var(--color-violet-600);
+  --purple-focus: var(--color-purple-600);
+  --pink-focus: var(--color-pink-600);
+  --brown-focus: var(--color-yellow-900);
 
-  --light-red-focus: @lightRedFocus;
-  --light-orange-focus: @lightOrangeFocus;
-  --light-yellow-focus: @lightYellowFocus;
-  --light-olive-focus: @lightOliveFocus;
-  --light-green-focus: @lightGreenFocus;
-  --light-teal-focus: @lightTealFocus;
-  --light-blue-focus: @lightBlueFocus;
-  --light-violet-focus: @lightVioletFocus;
-  --light-purple-focus: @lightPurpleFocus;
-  --light-pink-focus: @lightPinkFocus;
-  --light-brown-focus: @lightBrownFocus;
-  --light-grey-focus: @lightGreyFocus;
-  --light-black-focus: @lightBlackFocus;
+  --light-red-focus: var(--color-red-500);
+  --light-orange-focus: var(--color-orange-500);
+  --light-yellow-focus: var(--color-yellow-500);
+  --light-olive-focus: var(--color-lime-500);
+  --light-green-focus: var(--color-green-500);
+  --light-teal-focus: var(--color-teal-500);
+  --light-blue-focus: var(--color-blue-500);
+  --light-violet-focus: var(--color-violet-500);
+  --light-purple-focus: var(--color-purple-500);
+  --light-pink-focus: var(--color-pink-500);
+  --light-brown-focus: var(--color-yellow-800);
+  --light-grey-focus: var(--color-neutral-400);
+  --light-black-focus: var(--color-neutral-800);
 
   /*---  Emotive  ---*/
-  --positive-color-focus: @positiveColorFocus;
-  --negative-color-focus: @negativeColorFocus;
-
-  /*---  Brand   ---*/
-  --facebook-focus-color: @facebookFocusColor;
-  --twitter-focus-color: @twitterFocusColor;
-  --google-plus-focus-color: @googlePlusFocusColor;
-  --linked-in-focus-color: @linkedInFocusColor;
-  --youtube-focus-color: @youtubeFocusColor;
-  --instagram-focus-color: @instagramFocusColor;
-  --pinterest-focus-color: @pinterestFocusColor;
-  --vk-focus-color: @vkFocusColor;
+  --positive-color-focus: var(--color-green-600);
+  --negative-color-focus: var(--color-red-600);
 
   /*---  Dark Tones  ---*/
-  --full-black-focus: @fullBlackFocus;
-  --black-focus: @blackFocus;
-  --grey-focus: @greyFocus;
+  --full-black-focus: var(--color-neutral-900);
+  --black-focus: var(--color-neutral-700);
+  --grey-focus: var(--color-neutral-300);
 
   /*---  Light Tones  ---*/
-  --white-focus: @whiteFocus;
-  --off-white-focus: @offWhiteFocus;
-  --dark-white-focus: @darkWhiteFocus;
+  --white-focus: var(--color-gray-100);
+  --off-white-focus: var(--color-gray-200);
+  --dark-white-focus: var(--color-gray-300);
 
 
   /*-------------------
@@ -811,58 +791,48 @@
    --------------------*/
 
   /*---  Colors  ---*/
-  --primary-color-down: @primaryColorDown;
-  --secondary-color-down: @secondaryColorDown;
+  --primary-color-down: var(--color-blue-700);
+  --secondary-color-down: var(--color-zinc-700);
 
-  --red-down: @redDown;
-  --orange-down: @orangeDown;
-  --yellow-down: @yellowDown;
-  --olive-down: @oliveDown;
-  --green-down: @greenDown;
-  --teal-down: @tealDown;
-  --blue-down: @blueDown;
-  --violet-down: @violetDown;
-  --purple-down: @purpleDown;
-  --pink-down: @pinkDown;
-  --brown-down: @brownDown;
+  --red-down: var(--color-red-700);
+  --orange-down: var(--color-orange-700);
+  --yellow-down: var(--color-yellow-700);
+  --olive-down: var(--color-lime-700);
+  --green-down: var(--color-green-700);
+  --teal-down: var(--color-teal-700);
+  --blue-down: var(--color-blue-700);
+  --violet-down: var(--color-violet-700);
+  --purple-down: var(--color-purple-700);
+  --pink-down: var(--color-pink-700);
+  --brown-down: var(--color-yellow-950);
 
-  --light-red-down: @lightRedDown;
-  --light-orange-down: @lightOrangeDown;
-  --light-yellow-down: @lightYellowDown;
-  --light-olive-down: @lightOliveDown;
-  --light-green-down: @lightGreenDown;
-  --light-teal-down: @lightTealDown;
-  --light-blue-down: @lightBlueDown;
-  --light-violet-down: @lightVioletDown;
-  --light-purple-down: @lightPurpleDown;
-  --light-pink-down: @lightPinkDown;
-  --light-brown-down: @lightBrownDown;
-  --light-grey-down: @lightGreyDown;
-  --light-black-down: @lightBlackDown;
+  --light-red-down: var(--color-red-600);
+  --light-orange-down: var(--color-orange-600);
+  --light-yellow-down: var(--color-yellow-600);
+  --light-olive-down: var(--color-lime-600);
+  --light-green-down: var(--color-green-600);
+  --light-teal-down: var(--color-teal-600);
+  --light-blue-down: var(--color-blue-600);
+  --light-violet-down: var(--color-violet-600);
+  --light-purple-down: var(--color-purple-600);
+  --light-pink-down: var(--color-pink-600);
+  --light-brown-down: var(--color-yellow-900);
+  --light-grey-down: var(--color-neutral-500);
+  --light-black-down: var(--color-neutral-900);
 
   /*---  Emotive  ---*/
-  --positive-color-down: @positiveColorDown;
-  --negative-color-down: @negativeColorDown;
-
-  /*---  Brand   ---*/
-  --facebook-down-color: @facebookDownColor;
-  --twitter-down-color: @twitterDownColor;
-  --google-plus-down-color: @googlePlusDownColor;
-  --linked-in-down-color: @linkedInDownColor;
-  --youtube-down-color: @youtubeDownColor;
-  --instagram-down-color: @instagramDownColor;
-  --pinterest-down-color: @pinterestDownColor;
-  --vk-down-color: @vkDownColor;
+  --positive-color-down: var(--color-green-700);
+  --negative-color-down: var(--color-red-700);
 
   /*---  Dark Tones  ---*/
-  --full-black-down: @fullBlackDown;
-  --black-down: @blackDown;
-  --grey-down: @greyDown;
+  --full-black-down: var(--color-neutral-800);
+  --black-down: var(--color-neutral-600);
+  --grey-down: var(--color-neutral-200);
 
   /*---  Light Tones  ---*/
-  --white-down: @whiteDown;
-  --off-white-down: @offWhiteDown;
-  --dark-white-down: @darkWhiteDown;
+  --white-down: var(--color-gray-200);
+  --off-white-down: var(--color-gray-300);
+  --dark-white-down: var(--color-gray-400);
 
 
   /*-------------------
@@ -870,64 +840,54 @@
    --------------------*/
 
   /*---  Colors  ---*/
-  --primary-color-active: @primaryColorActive;
-  --secondary-color-active: @secondaryColorActive;
+  --primary-color-active: var(--color-blue-700);
+  --secondary-color-active: var(--color-zinc-700);
 
-  --red-active: @redActive;
-  --orange-active: @orangeActive;
-  --yellow-active: @yellowActive;
-  --olive-active: @oliveActive;
-  --green-active: @greenActive;
-  --teal-active: @tealActive;
-  --blue-active: @blueActive;
-  --violet-active: @violetActive;
-  --purple-active: @purpleActive;
-  --pink-active: @pinkActive;
-  --brown-active: @brownActive;
+  --red-active: var(--color-red-700);
+  --orange-active: var(--color-orange-700);
+  --yellow-active: var(--color-yellow-700);
+  --olive-active: var(--color-lime-700);
+  --green-active: var(--color-green-700);
+  --teal-active: var(--color-teal-700);
+  --blue-active: var(--color-blue-700);
+  --violet-active: var(--color-violet-700);
+  --purple-active: var(--color-purple-700);
+  --pink-active: var(--color-pink-700);
+  --brown-active: var(--color-yellow-950);
 
-  --light-red-active: @lightRedActive;
-  --light-orange-active: @lightOrangeActive;
-  --light-yellow-active: @lightYellowActive;
-  --light-olive-active: @lightOliveActive;
-  --light-green-active: @lightGreenActive;
-  --light-teal-active: @lightTealActive;
-  --light-blue-active: @lightBlueActive;
-  --light-violet-active: @lightVioletActive;
-  --light-purple-active: @lightPurpleActive;
-  --light-pink-active: @lightPinkActive;
-  --light-brown-active: @lightBrownActive;
-  --light-grey-active: @lightGreyActive;
-  --light-black-active: @lightBlackActive;
+  --light-red-active: var(--color-red-600);
+  --light-orange-active: var(--color-orange-600);
+  --light-yellow-active: var(--color-yellow-600);
+  --light-olive-active: var(--color-lime-600);
+  --light-green-active: var(--color-green-600);
+  --light-teal-active: var(--color-teal-600);
+  --light-blue-active: var(--color-blue-600);
+  --light-violet-active: var(--color-violet-600);
+  --light-purple-active: var(--color-purple-600);
+  --light-pink-active: var(--color-pink-600);
+  --light-brown-active: var(--color-yellow-900);
+  --light-grey-active: var(--color-neutral-500);
+  --light-black-active: var(--color-neutral-900);
 
   /*---  Emotive  ---*/
-  --positive-color-active: @positiveColorActive;
-  --negative-color-active: @negativeColorActive;
-
-  /*---  Brand   ---*/
-  --facebook-active-color: @facebookActiveColor;
-  --twitter-active-color: @twitterActiveColor;
-  --google-plus-active-color: @googlePlusActiveColor;
-  --linked-in-active-color: @linkedInActiveColor;
-  --youtube-active-color: @youtubeActiveColor;
-  --instagram-active-color: @instagramActiveColor;
-  --pinterest-active-color: @pinterestActiveColor;
-  --vk-active-color: @vkActiveColor;
+  --positive-color-active: var(--color-green-700);
+  --negative-color-active: var(--color-red-700);
 
   /*---  Dark Tones  ---*/
-  --full-black-active: @fullBlackActive;
-  --black-active: @blackActive;
-  --grey-active: @greyActive;
+  --full-black-active: var(--color-neutral-800);
+  --black-active: var(--color-neutral-600);
+  --grey-active: var(--color-neutral-200);
 
   /*---  Light Tones  ---*/
-  --white-active: @whiteActive;
-  --off-white-active: @offWhiteActive;
-  --dark-white-active: darken(@darkWhite, 5);
+  --white-active: var(--color-gray-200);
+  --off-white-active: var(--color-gray-300);
+  --dark-white-active: var(--color-gray-400);
 
   /*-------------------
         Button
   --------------------*/
-  --button-background: #E0E1E2 none;
-  --button-text-color: rgba(0, 0, 0, 0.6);
+  --button-background: var(--color-gray-200) none;
+  --button-text-color: hsl(var(--hsl-black) / 60%);
   --button-margin: 0em 0.25em 0em 0em;
   --button-padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   --button-text-shadow: none;
@@ -936,7 +896,7 @@
   --button-line-height: 1em;
 
   /* Hovered */
-  --button-hover-background-color: #CACBCD;
+  --button-hover-background-color: var(--color-gray-300);
   --button-hover-background-image: none;
   --button-hover-box-shadow: var(--button-box-shadow);
   --button-hover-color: var(--hovered-text-color);
@@ -954,14 +914,14 @@
   --button-disabled-box-shadow: none;
 
   /* Pressed Down */
-  --button-down-background-color: #babbbc;
+  --button-down-background-color: var(--color-gray-400);
   --button-down-background-image: '';
   --button-down-pressed-shadow: none;
   --button-down-box-shadow: var(--button-box-shadow), none;
   --button-down-color: var(--pressed-text-color);
 
   /* Active */
-  --button-active-background-color: #C0C1C2;
+  --button-active-background-color: var(--color-gray-400);
   --button-active-background-image: none;
   --button-active-color: var(--selected-text-color);
   --button-active-box-shadow: var(--button-box-shadow);
@@ -987,7 +947,7 @@
   --basic-button-border-radius: var(--default-border-radius);
   --basic-button-box-shadow: 0px 0px 0px 1px var(--border-color) inset;
 
-  --basic-button-hover-background: #FFFFFF;
+  --basic-button-hover-background: var(--color-white);
   --basic-button-hover-text-color: var(--hovered-text-color);
   --basic-button-hover-box-shadow: 0px 0px 0px 1px var(--selected-border-color) inset, 0px 0px 0px 0px var(--border-color) inset;
 
@@ -995,7 +955,7 @@
   --basic-button-focus-text-color: var(--basic-button-hover-text-color);
   --basic-button-focus-box-shadow: var(--basic-button-hover-box-shadow);
 
-  --basic-button-down-background: #F8F8F8;
+  --basic-button-down-background: var(--color-gray-50);
   --basic-button-down-text-color: var(--pressed-text-color);
   --basic-button-down-box-shadow:
     0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset,
@@ -1143,7 +1103,7 @@
   --input-box-shadow: none;
 
   --input-down-border-color: rgba(0, 0, 0, 0.3);
-  --input-down-background: #FAFAFA;
+  --input-down-background: var(--color-gray-50);
   --input-down-color: var(--text-color);
   --input-down-box-shadow: none;
 
@@ -1156,8 +1116,8 @@
   --input-error-border-color: var(--negative-border-color);
   --input-error-color: var(--negative-text-color);
   --input-error-box-shadow: none;
-  --input-placeholder-error-color: #D98886;
-  --input-placeholder-error-focus-color: #C26765;
+  --input-placeholder-error-color: var(--color-red-300);
+  --input-placeholder-error-focus-color: var(--color-red-400);
 
   /*-------------------
         Label
@@ -1215,6 +1175,15 @@
   --grouped-segment-box-shadow: none;
   --grouped-segment-border: none;
   --grouped-segment-divider: 1px solid var(--border-color);
+  /* --grouped-segment-group-border: 1px solid var(--border-color); */
+  --grouped-segment-group-border: none;
+  --grouped-segment-group-segment-box-shadow: 
+    0 0 0 1px hsl(var(--hsl-neutral-900) / .1),
+    0 1px 1px hsl(var(--hsl-neutral-900) / .1),
+    0 1.5px 3px -2px hsl(var(--hsl-neutral-900) / .3),
+    0 4px 6px hsl(var(--hsl-neutral-900) / .04),
+    0 8px 12px -1px hsl(var(--hsl-neutral-900) / .03);
+  --grouped-segment-group-border-radius: var(--default-border-radius);
 
   /*-------------------
         Form
@@ -1316,7 +1285,7 @@
   /*-------------------
         Message
   --------------------*/
-  --message-background: #F8F8F9;
+  --message-background: var(--color-zinc-50);
   --message-shadow-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   --message-box-shadow:
     0px 0px 0px 1px var(--strong-border-color) inset,
@@ -1472,7 +1441,7 @@
         Side Bar
   --------------------*/
   --sidebar-color-scheme: dark;
-  --sidebar-background: #171A21;
+  --sidebar-background: var(--color-gray-900);
   --sidebar-menu-item-inactive-background: hsl(var(--hsl-slate-600) / 70%);
   --sidebar-menu-item-active-background: hsl(var(--hsl-blue-300) / 50%);
   --sidebar-menu-section-color: var(--inverted-unselected-text-color);
@@ -1480,7 +1449,7 @@
   --sidebar-menu-item-color: var(--inverted-light-text-color);
   --sidebar-menu-action-color: var(--inverted-disabled-text-color);
   --sidebar-menu-action-hover-color: var(--inverted-light-text-color);
-  --sidebar-sync-status-view-background: #12151A;
+  --sidebar-sync-status-view-background: var(--color-gray-950);
   --sidebar-sync-status-view-text-color: var(--inverted-muted-text-color);
   --sidebar-sync-status-view-detail-color: var(--inverted-unselected-text-color);
   --sidebar-scrollbar-width: 6px;
