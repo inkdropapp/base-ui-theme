@@ -1466,8 +1466,8 @@
   /*-------------------
         Note List Bar
   --------------------*/
-  --note-list-bar-background: rgb(245, 245, 244);
-  --note-list-bar-pinned-section-header-background: #e6e6e6;
+  --note-list-bar-background: var(--color-stone-100);
+  --note-list-bar-pinned-section-header-background: var(--color-neutral-200);
   --note-list-bar-pinned-section-header-border-bottom: none;
   --note-list-bar-pinned-section-footer-border-bottom: 4px solid #ccc;
   --note-list-view-item-color: var(--muted-text-color);
@@ -1476,7 +1476,7 @@
   --note-list-view-item-tag-color: var(--blue-focus);
   --note-list-view-item-selected-background: hsl(var(--hsl-sky-800) / 20%);
   --note-list-view-item-active-background: var(--primary-color);
-  --note-search-bar-background: rgb(245, 245, 244);
+  --note-search-bar-background: var(--note-list-bar-background);
   --note-search-bar-border-bottom: rgba(255, 255, 255, 0.8);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
