@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "author": "Takuya Matsuyama<t@inkdrop.app>",
   "devDependencies": {
+    "@inkdropapp/css": "^0.4.2",
     "del": "^7.1.0",
     "less": "^4.2.0",
     "mkdirp": "^3.0.1"
@@ -21,6 +22,8 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf ./styles",
+    "watch": "./scripts/watch.sh",
+    "unwatch": "./scripts/unwatch.sh",
     "build": "mkdir -p ./styles && lessc src/semantic.less > styles/theme.css",
     "prepublishOnly": "bun run build"
   }
