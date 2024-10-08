@@ -331,32 +331,32 @@
    --------------------*/
 
   /* Positive */
-  --positive-color: var(--color-green-500);
-  --positive-background-color: var(--color-green-50);
-  --positive-border-color: var(--color-green-300);
-  --positive-header-color: var(--color-green-900);
-  --positive-text-color: var(--color-green-800);
+  --positive-color: hsl(var(--hsl-green-500));
+  --positive-background-color: hsl(var(--hsl-green-500) / 10%);
+  --positive-border-color: hsl(var(--hsl-green-600) / 50%);
+  --positive-header-color: hsl(var(--hsl-green-800) / 90%);
+  --positive-text-color: hsl(var(--hsl-green-900) / 90%);
 
   /* Negative */
-  --negative-color: var(--color-red-500);
-  --negative-background-color: var(--color-red-50);
-  --negative-border-color: var(--color-red-300);
-  --negative-header-color: var(--color-red-900);
-  --negative-text-color: var(--color-red-800);
+  --negative-color: hsl(var(--hsl-red-500));
+  --negative-background-color: hsl(var(--hsl-red-500) / 10%);
+  --negative-border-color: hsl(var(--hsl-red-500) / 50%);
+  --negative-header-color: hsl(var(--hsl-red-800) / 90%);
+  --negative-text-color: hsl(var(--hsl-red-800) / 90%);
 
   /* Info */
-  --info-color: var(--color-cyan-500);
-  --info-background-color: var(--color-sky-50);
-  --info-border-color: var(--color-sky-300);
-  --info-header-color: var(--color-sky-900);
-  --info-text-color: var(--color-sky-800);
+  --info-color: hsl(var(--hsl-sky-500));
+  --info-background-color: hsl(var(--hsl-sky-500) / 10%);
+  --info-border-color: hsl(var(--hsl-sky-500) / 70%);
+  --info-header-color: hsl(var(--hsl-sky-800) / 90%);
+  --info-text-color: hsl(var(--hsl-sky-800) / 90%);
 
   /* Warning */
-  --warning-color: var(--color-amber-400);
-  --warning-background-color: var(--color-stone-100);
-  --warning-border-color: var(--color-stone-400);
-  --warning-header-color: var(--color-yellow-800);
-  --warning-text-color: var(--color-amber-900);
+  --warning-color: hsl(var(--hsl-amber-400));
+  --warning-background-color: hsl(var(--hsl-yellow-500) / 10%);
+  --warning-border-color: hsl(var(--hsl-amber-600) / 70%);
+  --warning-header-color: hsl(var(--hsl-yellow-800) / 90%);
+  --warning-text-color: hsl(var(--hsl-amber-900) / 90%);
 
   /*-------------------
          Em Sizes
@@ -1177,7 +1177,7 @@
   --grouped-segment-divider: 1px solid var(--border-color);
   /* --grouped-segment-group-border: 1px solid var(--border-color); */
   --grouped-segment-group-border: none;
-  --grouped-segment-group-segment-box-shadow: 
+  --grouped-segment-group-segment-box-shadow:
     0 0 0 1px hsl(var(--hsl-neutral-900) / .1),
     0 1px 1px hsl(var(--hsl-neutral-900) / .1),
     0 1.5px 3px -2px hsl(var(--hsl-neutral-900) / .3),
@@ -1285,7 +1285,7 @@
   /*-------------------
         Message
   --------------------*/
-  --message-background: var(--color-zinc-50);
+  --message-background: hsl(var(--hsl-zinc-400) / 10%);
   --message-shadow-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   --message-box-shadow:
     0px 0px 0px 1px var(--strong-border-color) inset,
