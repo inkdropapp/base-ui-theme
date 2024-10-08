@@ -1,6 +1,6 @@
 {
   "name": "@inkdropapp/base-ui-theme",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Takuya Matsuyama<t@inkdrop.app>",
   "devDependencies": {
     "@inkdropapp/css": "^0.4.2",
