@@ -1532,11 +1532,4 @@
   --task-icon-completed: hsl(var(--hsl-emerald-500));
   --task-icon-dropped: hsl(var(--hsl-rose-400));
 
-  /*-------------------
-    Task Progress View
-  --------------------*/
-  --task-progress-view-border-color: hsl(var(--hsl-gray-950) / 30%);
-  --task-progress-view-background-color: hsl(var(--hsl-gray-950) / 30%);
-  --task-progress-view-foreground-color: hsl(var(--hsl-white) / 60%);
-  --task-progress-view-completed-color: hsl(var(--hsl-green-500));
 }
