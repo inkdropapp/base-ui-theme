@@ -1285,7 +1285,11 @@
   --secondary-menu-active-item-color: var(--selected-text-color);
   --secondary-menu-active-hover-item-background: var(--transparent-black);
   --secondary-menu-active-hover-item-color: var(--selected-text-color);
+  --secondary-vertical-pointing-menu-border-right-color: var(--border-color);
   --secondary-vertical-menu-item-border-radius: var(--default-border-radius);
+  --secondary-pointing-menu-hover-text-color: var(--text-color);
+  --secondary-pointing-menu-active-item-color: var(--selected-text-color);
+  --secondary-pointing-menu-active-hover-item-color: var(--selected-text-color);
 
   /*-------------------
         Message
