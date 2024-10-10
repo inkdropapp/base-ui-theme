@@ -1451,16 +1451,19 @@
   --------------------*/
   --sidebar-color-scheme: dark;
   --sidebar-background: var(--color-gray-900);
+  --sidebar-border-right: none;
   --sidebar-menu-item-inactive-background: hsl(var(--hsl-slate-600) / 70%);
   --sidebar-menu-item-active-background: hsl(var(--hsl-blue-300) / 50%);
   --sidebar-menu-section-color: var(--inverted-unselected-text-color);
   --sidebar-menu-section-separator-color: rgba(255, 255, 255, 0.1);
   --sidebar-menu-item-color: var(--inverted-light-text-color);
+  --sidebar-menu-active-item-color: var(--inverted-light-text-color);
   --sidebar-menu-action-color: var(--inverted-disabled-text-color);
   --sidebar-menu-action-hover-color: var(--inverted-light-text-color);
   --sidebar-sync-status-view-background: var(--color-gray-950);
   --sidebar-sync-status-view-text-color: var(--inverted-muted-text-color);
   --sidebar-sync-status-view-detail-color: var(--inverted-unselected-text-color);
+  --sidebar-sync-status-view-border-top: none;
   --sidebar-scrollbar-width: 6px;
   --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
@@ -1476,6 +1479,7 @@
         Note List Bar
   --------------------*/
   --note-list-bar-background: var(--color-stone-100);
+  --note-list-bar-border-right: none;
   --note-list-bar-pinned-section-header-background: var(--color-neutral-200);
   --note-list-bar-pinned-section-header-border-bottom: none;
   --note-list-bar-pinned-section-footer-border-bottom: 4px solid #ccc;
@@ -1499,6 +1503,8 @@
         Editor
   --------------------*/
   --editor-background: rgb(255, 255, 255);
+  --editor-header-title-input-background: transparent;
+  --note-tags-bar-input-background: transparent;
 
   /*-------------------
         Header Note Menu
