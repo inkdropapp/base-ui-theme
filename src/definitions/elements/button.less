@@ -12,7 +12,7 @@
             Theme
 *******************************/
 
-@type    : 'element';
+@type : 'element';
 @element : 'button';
 
 @import (multiple) '../../theme.config';
@@ -31,7 +31,7 @@
   outline-width: var(--focused-outline-width);
   outline-color: var(--unfocused-outline-color);
   outline-style: var(--focused-outline-style);
-  border: none;
+  border: var(--button-border, none);
   vertical-align: @verticalAlign;
   background: var(--button-background, @background);
   color: var(--button-text-color, @textColor);
@@ -118,11 +118,13 @@
   box-shadow: var(--button-active-box-shadow, @activeBoxShadow);
   color: var(--button-active-color, @activeColor);
 }
+
 .ui.active.button:hover {
   background-color: var(--button-active-hover-background-color, @activeHoverBackgroundColor);
   background-image: var(--button-active-hover-background-image, @activeHoverBackgroundImage);
   color: var(--button-active-hover-color, @activeHoverColor);
 }
+
 .ui.active.button:active {
   background-color: var(--button-active-background-color, @activeBackgroundColor);
   background-image: var(--button-active-background-image, @activeBackgroundImage);
@@ -143,6 +145,7 @@
   pointer-events: var(--button-loading-pointer-events, @loadingPointerEvents);
   transition: var(--button-loading-transition, @loadingTransition);
 }
+
 .ui.loading.button:before {
   position: absolute;
   content: '';
@@ -156,6 +159,7 @@
   border-radius: var(--circular-radius);
   border: var(--loader-line-width) solid var(--inverted-loader-fill-color);
 }
+
 .ui.loading.button:after {
   position: absolute;
   content: '';
@@ -177,6 +181,7 @@
 
   box-shadow: 0px 0px 0px 1px transparent;
 }
+
 .ui.labeled.icon.loading.button .icon {
   background-color: transparent;
   box-shadow: none;
@@ -186,6 +191,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -194,6 +200,7 @@
 .ui.basic.loading.button:not(.inverted):before {
   border-color: var(--loader-fill-color);
 }
+
 .ui.basic.loading.button:not(.inverted):after {
   border-top-color: var(--loader-line-color);
 }
@@ -232,36 +239,43 @@
 .ui.mini.button {
   font-size: var(--mini);
 }
+
 .ui.tiny.buttons .button,
 .ui.tiny.buttons .or,
 .ui.tiny.button {
   font-size: var(--tiny);
 }
+
 .ui.small.buttons .button,
 .ui.small.buttons .or,
 .ui.small.button {
   font-size: var(--small);
 }
+
 .ui.buttons .button,
 .ui.buttons .or,
 .ui.button {
   font-size: var(--medium);
 }
+
 .ui.large.buttons .button,
 .ui.large.buttons .or,
 .ui.large.button {
   font-size: var(--large);
 }
+
 .ui.big.buttons .button,
 .ui.big.buttons .or,
 .ui.big.button {
   font-size: var(--big);
 }
+
 .ui.huge.buttons .button,
 .ui.huge.buttons .or,
 .ui.huge.button {
   font-size: var(--huge);
 }
+
 .ui.massive.buttons .button,
 .ui.massive.buttons .or,
 .ui.massive.button {
@@ -274,10 +288,11 @@
 
 .ui.icon.buttons .button,
 .ui.icon.button {
-  padding: var(--button-padding, @verticalPadding @verticalPadding ( @verticalPadding + @shadowOffset ));
+  padding: var(--button-padding, @verticalPadding @verticalPadding (@verticalPadding + @shadowOffset ));
 }
-.ui.icon.buttons .button > .icon,
-.ui.icon.button > .icon {
+
+.ui.icon.buttons .button>.icon,
+.ui.icon.button>.icon {
   opacity: var(--button-icon-only-opacity, @iconButtonOpacity);
   margin: 0em !important;
   vertical-align: top;
@@ -298,11 +313,13 @@
   text-shadow: none !important;
   box-shadow: var(--basic-button-box-shadow, @basicBoxShadow);
 }
+
 .ui.basic.buttons {
   box-shadow: @basicGroupBoxShadow;
   border: @basicGroupBorder;
   border-radius: var(--default-border-radius);
 }
+
 .ui.basic.buttons .button {
   border-radius: 0em;
 }
@@ -313,24 +330,28 @@
   color: var(--basic-button-hover-text-color, @basicHoverTextColor) !important;
   box-shadow: var(--basic-button-hover-box-shadow, @basicHoverBoxShadow);
 }
+
 .ui.basic.buttons .button:focus,
 .ui.basic.button:focus {
   background: var(--basic-button-focus-background, @basicFocusBackground) !important;
   color: var(--basic-button-focus-text-color, @basicFocusTextColor) !important;
   box-shadow: var(--basic-button-focus-box-shadow, @basicFocusBoxShadow);
 }
+
 .ui.basic.buttons .button:active,
 .ui.basic.button:active {
   background: var(--basic-button-down-background, @basicDownBackground) !important;
   color: var(--basic-button-down-text-color, @basicDownTextColor) !important;
   box-shadow: var(--basic-button-down-box-shadow, @basicDownBoxShadow);
 }
+
 .ui.basic.buttons .active.button,
 .ui.basic.active.button {
   background: var(--basic-button-active-background, @basicActiveBackground) !important;
   box-shadow: var(--basic-button-active-box-shadow, @basicActiveBoxShadow) !important;
   color: var(--basic-button-active-text-color, @basicActiveTextColor) !important;
 }
+
 .ui.basic.buttons .active.button:hover,
 .ui.basic.active.button:hover {
   background-color: var(--transparent-black, @transparentBlack);
@@ -344,7 +365,8 @@
 .ui.circular.button {
   border-radius: 10em;
 }
-.ui.circular.button > .icon {
+
+.ui.circular.button>.icon {
   width: 1em;
   vertical-align: baseline;
 }
@@ -358,6 +380,7 @@
 .ui.fluid.button {
   width: 100%;
 }
+
 .ui.fluid.button {
   display: block;
 }
@@ -365,118 +388,139 @@
 .ui.two.buttons {
   width: 100%;
 }
-.ui.two.buttons > .button {
+
+.ui.two.buttons>.button {
   width: 50%;
 }
 
 .ui.three.buttons {
   width: 100%;
 }
-.ui.three.buttons > .button {
+
+.ui.three.buttons>.button {
   width: 33.333%;
 }
 
 .ui.four.buttons {
   width: 100%;
 }
-.ui.four.buttons > .button {
+
+.ui.four.buttons>.button {
   width: 25%;
 }
 
 .ui.five.buttons {
   width: 100%;
 }
-.ui.five.buttons > .button {
+
+.ui.five.buttons>.button {
   width: 20%;
 }
 
 .ui.six.buttons {
   width: 100%;
 }
-.ui.six.buttons > .button {
+
+.ui.six.buttons>.button {
   width: 16.666%;
 }
 
 .ui.seven.buttons {
   width: 100%;
 }
-.ui.seven.buttons > .button {
+
+.ui.seven.buttons>.button {
   width: 14.285%;
 }
 
 .ui.eight.buttons {
   width: 100%;
 }
-.ui.eight.buttons > .button {
+
+.ui.eight.buttons>.button {
   width: 12.500%;
 }
 
 .ui.nine.buttons {
   width: 100%;
 }
-.ui.nine.buttons > .button {
+
+.ui.nine.buttons>.button {
   width: 11.11%;
 }
 
 .ui.ten.buttons {
   width: 100%;
 }
-.ui.ten.buttons > .button {
+
+.ui.ten.buttons>.button {
   width: 10%;
 }
 
 .ui.eleven.buttons {
   width: 100%;
 }
-.ui.eleven.buttons > .button {
+
+.ui.eleven.buttons>.button {
   width: 9.09%;
 }
 
 .ui.twelve.buttons {
   width: 100%;
 }
-.ui.twelve.buttons > .button {
+
+.ui.twelve.buttons>.button {
   width: 8.3333%;
 }
 
 /* Fluid Vertical Buttons */
 .ui.fluid.vertical.buttons,
-.ui.fluid.vertical.buttons > .button {
+.ui.fluid.vertical.buttons>.button {
   display: flex;
   width: auto;
 }
 
-.ui.two.vertical.buttons > .button {
+.ui.two.vertical.buttons>.button {
   height: 50%;
 }
-.ui.three.vertical.buttons > .button {
+
+.ui.three.vertical.buttons>.button {
   height: 33.333%;
 }
-.ui.four.vertical.buttons > .button {
+
+.ui.four.vertical.buttons>.button {
   height: 25%;
 }
-.ui.five.vertical.buttons > .button {
+
+.ui.five.vertical.buttons>.button {
   height: 20%;
 }
-.ui.six.vertical.buttons > .button {
+
+.ui.six.vertical.buttons>.button {
   height: 16.666%;
 }
-.ui.seven.vertical.buttons > .button {
+
+.ui.seven.vertical.buttons>.button {
   height: 14.285%;
 }
-.ui.eight.vertical.buttons > .button {
+
+.ui.eight.vertical.buttons>.button {
   height: 12.500%;
 }
-.ui.nine.vertical.buttons > .button {
+
+.ui.nine.vertical.buttons>.button {
   height: 11.11%;
 }
-.ui.ten.vertical.buttons > .button {
+
+.ui.ten.vertical.buttons>.button {
   height: 10%;
 }
-.ui.eleven.vertical.buttons > .button {
+
+.ui.eleven.vertical.buttons>.button {
   height: 9.09%;
 }
-.ui.twelve.vertical.buttons > .button {
+
+.ui.twelve.vertical.buttons>.button {
   height: 8.3333%;
 }
 
@@ -492,27 +536,32 @@
   text-shadow: var(--primary-button-text-shadow, @primaryTextShadow);
   background-image: var(--primary-button-background-image, @coloredBackgroundImage);
 }
+
 .ui.primary.button {
   box-shadow: var(--primary-button-box-shadow, @coloredBoxShadow);
 }
+
 .ui.primary.buttons .button:hover,
 .ui.primary.button:hover {
   background-color: var(--primary-button-hover-background-color, @primaryColorHover);
   color: var(--primary-button-text-color, @primaryTextColor);
   text-shadow: var(--primary-button-text-shadow, @primaryTextShadow);
 }
+
 .ui.primary.buttons .button:focus,
 .ui.primary.button:focus {
   background-color: var(--primary-button-focus-background-color, @primaryColorFocus);
   color: var(--primary-button-text-color, @primaryTextColor);
   text-shadow: var(--primary-button-text-shadow, @primaryTextShadow);
 }
+
 .ui.primary.buttons .button:active,
 .ui.primary.button:active {
   background-color: var(--primary-button-down-background-color, @primaryColorDown);
   color: var(--primary-button-text-color, @primaryTextColor);
   text-shadow: var(--primary-button-text-shadow, @primaryTextShadow);
 }
+
 .ui.primary.buttons .active.button,
 .ui.primary.buttons .active.button:active,
 .ui.primary.active.button,
@@ -528,30 +577,35 @@
   box-shadow: var(--basic-primary-button-box-shadow, 0px 0px 0px @basicBorderSize @primaryColor inset) !important;
   color: var(--primary-color, @primaryColor) !important;
 }
+
 .ui.basic.primary.buttons .button:hover,
 .ui.basic.primary.button:hover {
   background: transparent !important;
   box-shadow: var(--basic-primary-button-hover-box-shadow, 0px 0px 0px @basicColoredBorderSize @primaryColorHover inset) !important;
   color: var(--primary-color-hover, @primaryColorHover) !important;
 }
+
 .ui.basic.primary.buttons .button:focus,
 .ui.basic.primary.button:focus {
   background: transparent !important;
   box-shadow: var(--basic-primary-button-focus-box-shadow, 0px 0px 0px @basicColoredBorderSize @primaryColorFocus inset) !important;
   color: var(--primary-color-hover, @primaryColorHover) !important;
 }
+
 .ui.basic.primary.buttons .active.button,
 .ui.basic.primary.active.button {
   background: transparent !important;
   box-shadow: var(--basic-primary-button-active-box-shadow, 0px 0px 0px @basicColoredBorderSize @primaryColorActive inset) !important;
   color: var(--primary-color-down, @primaryColorDown) !important;
 }
+
 .ui.basic.primary.buttons .button:active,
 .ui.basic.primary.button:active {
   box-shadow: var(--basic-primary-button-down-box-shadow, 0px 0px 0px @basicColoredBorderSize @primaryColorDown inset) !important;
   color: var(--primary-color-down, @primaryColorDown) !important;
 }
-.ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+
+.ui.buttons:not(.vertical)>.basic.primary.button:not(:first-child) {
   margin-left: calc(-1 * var(--basic-colored-border-size, @basicColoredBorderSize));
 }
 
@@ -567,27 +621,32 @@
   text-shadow: var(--secondary-button-text-shadow, @secondaryTextShadow);
   background-image: var(--secondary-button-background-image, @coloredBackgroundImage);
 }
+
 .ui.secondary.button {
   box-shadow: var(--secondary-button-box-shadow, @coloredBoxShadow);
 }
+
 .ui.secondary.buttons .button:hover,
 .ui.secondary.button:hover {
   background-color: var(--secondary-button-hover-background-color, @secondaryColorHover);
   color: var(--secondary-button-text-color, @secondaryTextColor);
   text-shadow: var(--secondary-button-text-shadow, @secondaryTextShadow);
 }
+
 .ui.secondary.buttons .button:focus,
 .ui.secondary.button:focus {
   background-color: var(--secondary-button-focus-background-color, @secondaryColorFocus);
   color: var(--secondary-button-text-color, @secondaryTextColor);
   text-shadow: var(--secondary-button-text-shadow, @secondaryTextShadow);
 }
+
 .ui.secondary.buttons .button:active,
 .ui.secondary.button:active {
   background-color: var(--secondary-button-down-background-color, @secondaryColorDown);
   color: var(--secondary-button-text-color, @secondaryTextColor);
   text-shadow: var(--secondary-button-text-shadow, @secondaryTextShadow);
 }
+
 .ui.secondary.buttons .active.button,
 .ui.secondary.buttons .active.button:active,
 .ui.secondary.active.button,
@@ -603,30 +662,35 @@
   box-shadow: var(--basic-secondary-button-box-shadow, 0px 0px 0px @basicBorderSize @secondaryColor inset) !important;
   color: var(--secondary-color, @secondaryColor) !important;
 }
+
 .ui.basic.secondary.buttons .button:hover,
 .ui.basic.secondary.button:hover {
   background: transparent !important;
   box-shadow: var(--basic-secondary-button-hover-box-shadow, 0px 0px 0px @basicColoredBorderSize @secondaryColorHover inset) !important;
   color: var(--secondary-color-hover, @secondaryColorHover) !important;
 }
+
 .ui.basic.secondary.buttons .button:focus,
 .ui.basic.secondary.button:focus {
   background: transparent !important;
   box-shadow: var(--basic-secondary-button-focus-box-shadow, 0px 0px 0px @basicColoredBorderSize @secondaryColorFocus inset) !important;
   color: var(--secondary-color-hover, @secondaryColorHover) !important;
 }
+
 .ui.basic.secondary.buttons .active.button,
 .ui.basic.secondary.active.button {
   background: transparent !important;
   box-shadow: var(--basic-secondary-button-active-box-shadow, 0px 0px 0px @basicColoredBorderSize @secondaryColorActive inset) !important;
   color: var(--secondary-color-down, @secondaryColorDown) !important;
 }
+
 .ui.basic.secondary.buttons .button:active,
 .ui.basic.secondary.button:active {
   box-shadow: var(--basic-secondary-button-down-box-shadow, 0px 0px 0px @basicColoredBorderSize @secondaryColorDown inset) !important;
   color: var(--secondary-color-down, @secondaryColorDown) !important;
 }
-.ui.buttons:not(.vertical) > .basic.secondary.button:not(:first-child) {
+
+.ui.buttons:not(.vertical)>.basic.secondary.button:not(:first-child) {
   margin-left: calc(-1 * var(--basic-colored-border-size, @basicColoredBorderSize));
 }
 
@@ -642,27 +706,32 @@
   text-shadow: var(--positive-button-text-shadow, @positiveTextShadow);
   background-image: var(--positive-button-background-image, @coloredBackgroundImage);
 }
+
 .ui.positive.button {
   box-shadow: var(--positive-button-box-shadow, @coloredBoxShadow);
 }
+
 .ui.positive.buttons .button:hover,
 .ui.positive.button:hover {
   background-color: var(--positive-button-hover-background-color, @positiveColorHover);
   color: var(--positive-button-text-color, @positiveTextColor);
   text-shadow: var(--positive-button-text-shadow, @positiveTextShadow);
 }
+
 .ui.positive.buttons .button:focus,
 .ui.positive.button:focus {
   background-color: var(--positive-button-focus-background-color, @positiveColorFocus);
   color: var(--positive-button-text-color, @positiveTextColor);
   text-shadow: var(--positive-button-text-shadow, @positiveTextShadow);
 }
+
 .ui.positive.buttons .button:active,
 .ui.positive.button:active {
   background-color: var(--positive-button-down-background-color, @positiveColorDown);
   color: var(--positive-button-text-color, @positiveTextColor);
   text-shadow: var(--positive-button-text-shadow, @positiveTextShadow);
 }
+
 .ui.positive.buttons .active.button,
 .ui.positive.buttons .active.button:active,
 .ui.positive.active.button,
@@ -678,30 +747,35 @@
   box-shadow: var(--basic-positive-button-box-shadow, 0px 0px 0px @basicBorderSize @positiveColor inset) !important;
   color: var(--positive-color, @positiveColor) !important;
 }
+
 .ui.basic.positive.buttons .button:hover,
 .ui.basic.positive.button:hover {
   background: transparent !important;
   box-shadow: var(--basic-positive-button-hover-box-shadow, 0px 0px 0px @basicColoredBorderSize @positiveColorHover inset) !important;
   color: var(--positive-color-hover, @positiveColorHover) !important;
 }
+
 .ui.basic.positive.buttons .button:focus,
 .ui.basic.positive.button:focus {
   background: transparent !important;
   box-shadow: var(--basic-positive-button-focus-box-shadow, 0px 0px 0px @basicColoredBorderSize @positiveColorFocus inset) !important;
   color: var(--positive-color-hover, @positiveColorHover) !important;
 }
+
 .ui.basic.positive.buttons .active.button,
 .ui.basic.positive.active.button {
   background: transparent !important;
   box-shadow: var(--basic-positive-button-active-box-shadow, 0px 0px 0px @basicColoredBorderSize @positiveColorActive inset) !important;
   color: var(--positive-color-down, @positiveColorDown) !important;
 }
+
 .ui.basic.positive.buttons .button:active,
 .ui.basic.positive.button:active {
   box-shadow: var(--basic-positive-button-down-box-shadow, 0px 0px 0px @basicColoredBorderSize @positiveColorDown inset) !important;
   color: var(--positive-color-down, @positiveColorDown) !important;
 }
-.ui.buttons:not(.vertical) > .basic.positive.button:not(:first-child) {
+
+.ui.buttons:not(.vertical)>.basic.positive.button:not(:first-child) {
   margin-left: calc(-1 * var(--basic-colored-border-size, @basicColoredBorderSize));
 }
 
@@ -717,27 +791,32 @@
   text-shadow: var(--negative-button-text-shadow, @negativeTextShadow);
   background-image: var(--negative-button-background-image, @coloredBackgroundImage);
 }
+
 .ui.negative.button {
   box-shadow: var(--negative-button-box-shadow, @coloredBoxShadow);
 }
+
 .ui.negative.buttons .button:hover,
 .ui.negative.button:hover {
   background-color: var(--negative-button-hover-background-color, @negativeColorHover);
   color: var(--negative-button-text-color, @negativeTextColor);
   text-shadow: var(--negative-button-text-shadow, @negativeTextShadow);
 }
+
 .ui.negative.buttons .button:focus,
 .ui.negative.button:focus {
   background-color: var(--negative-button-focus-background-color, @negativeColorFocus);
   color: var(--negative-button-text-color, @negativeTextColor);
   text-shadow: var(--negative-button-text-shadow, @negativeTextShadow);
 }
+
 .ui.negative.buttons .button:active,
 .ui.negative.button:active {
   background-color: var(--negative-button-down-background-color, @negativeColorDown);
   color: var(--negative-button-text-color, @negativeTextColor);
   text-shadow: var(--negative-button-text-shadow, @negativeTextShadow);
 }
+
 .ui.negative.buttons .active.button,
 .ui.negative.buttons .active.button:active,
 .ui.negative.active.button,
@@ -753,30 +832,35 @@
   box-shadow: var(--basic-negative-button-box-shadow, 0px 0px 0px @basicBorderSize @negativeColor inset) !important;
   color: var(--negative-color, @negativeColor) !important;
 }
+
 .ui.basic.negative.buttons .button:hover,
 .ui.basic.negative.button:hover {
   background: transparent !important;
   box-shadow: var(--basic-negative-button-hover-box-shadow, 0px 0px 0px @basicColoredBorderSize @negativeColorHover inset) !important;
   color: var(--negative-color-hover, @negativeColorHover) !important;
 }
+
 .ui.basic.negative.buttons .button:focus,
 .ui.basic.negative.button:focus {
   background: transparent !important;
   box-shadow: var(--basic-negative-button-focus-box-shadow, 0px 0px 0px @basicColoredBorderSize @negativeColorFocus inset) !important;
   color: var(--negative-color-hover, @negativeColorHover) !important;
 }
+
 .ui.basic.negative.buttons .active.button,
 .ui.basic.negative.active.button {
   background: transparent !important;
   box-shadow: var(--basic-negative-button-active-box-shadow, 0px 0px 0px @basicColoredBorderSize @negativeColorActive inset) !important;
   color: var(--negative-color-down, @negativeColorDown) !important;
 }
+
 .ui.basic.negative.buttons .button:active,
 .ui.basic.negative.button:active {
   box-shadow: var(--basic-negative-button-down-box-shadow, 0px 0px 0px @basicColoredBorderSize @negativeColorDown inset) !important;
   color: var(--negative-color-down, @negativeColorDown) !important;
 }
-.ui.buttons:not(.vertical) > .basic.negative.button:not(:first-child) {
+
+.ui.buttons:not(.vertical)>.basic.negative.button:not(:first-child) {
   margin-left: calc(-1 * var(--basic-colored-border-size, @basicColoredBorderSize));
 }
 
