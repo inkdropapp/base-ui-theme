@@ -1187,6 +1187,8 @@
     0 4px 6px hsl(var(--hsl-neutral-900) / .04),
     0 8px 12px -1px hsl(var(--hsl-neutral-900) / .03);
   --grouped-segment-group-border-radius: var(--default-border-radius);
+  --grouped-segment-hover-background: var(--off-white);
+
 
   /*-------------------
         Form
