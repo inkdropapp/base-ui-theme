@@ -1438,7 +1438,7 @@
   --modal-box-close-color: var(--white);
   --modal-box-header-background: var(--white);
   --modal-box-header-color: var(--dark-text-color);
-  --modal-box-header-border: 1px solid var(--solid-color);
+  --modal-box-header-border: 1px solid var(--border-color);
   --modal-box-header-font-size: 1rem;
   --modal-box-header-font-weight: var(--font-weights-bold);
   --modal-box-content-font-size: 1em;
