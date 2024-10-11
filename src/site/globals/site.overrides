@@ -1503,8 +1503,9 @@
   /*-------------------
         Editor
   --------------------*/
-  --editor-background: rgb(255, 255, 255);
+  --editor-background: var(--color-white);
   --editor-header-title-input-background: transparent;
+  --editor-floating-actions-background: hsl(var(--hsl-white) / 60%);
   --note-tags-bar-input-background: transparent;
 
   /*-------------------
