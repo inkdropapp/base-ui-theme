@@ -1540,3 +1540,14 @@
   --task-icon-dropped: hsl(var(--hsl-rose-400));
 
 }
+
+body.acrylic-window {
+  --page-background: transparent;
+  --inline-dropdown-menu-background: hsl(var(--hsl-white));
+
+  .editor .CodeMirror,
+  .editor .CodeMirror .CodeMirror-scroll,
+  .editor .CodeMirror .CodeMirror-gutters {
+    background-color: transparent !important;
+  }
+}
