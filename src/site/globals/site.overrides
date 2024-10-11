@@ -1520,6 +1520,11 @@
   --header-note-menu-encrypt-button-background: var(--yellow-background);
 
   /*-------------------
+        Notifications
+  --------------------*/
+  --notification-item-background: hsl(var(--hsl-white) / 80%);
+
+  /*-------------------
         Preferences
   --------------------*/
   --preferences-sidebar-background: rgb(245, 245, 244);
