@@ -1408,6 +1408,7 @@
   --dropdown-menu-divider-border: 1px solid var(--internal-border-color);
   --dropdown-menu-item-description-color: var(--light-text-color);
   --dropdown-menu-message-color: var(--unselected-text-color);
+  --inline-dropdown-menu-background: hsl(var(--hsl-white) / 70%);
   --inline-dropdown-text-font-weight: var(--font-weights-bold);
   --dropdown-active-item-background: transparent;
   --dropdown-active-item-font-weight: var(--font-weights-bold);
