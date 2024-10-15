@@ -1507,6 +1507,8 @@
   --editor-background: var(--color-white);
   --editor-header-title-input-background: transparent;
   --editor-floating-actions-background: hsl(var(--hsl-white) / 60%);
+  --editor-drawer-background: hsl(var(--hsl-white) / 70%);
+  --editor-drawer-border-left: none;
   --note-tags-bar-input-background: transparent;
 
   /*-------------------
@@ -1544,6 +1546,7 @@
 
 body.acrylic-window {
   --page-background: transparent;
+  --editor-drawer-background: hsl(var(--hsl-white));
   --inline-dropdown-menu-background: hsl(var(--hsl-white));
 
   .editor .CodeMirror,
