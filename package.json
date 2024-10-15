@@ -4,16 +4,19 @@
   "author": "Takuya Matsuyama<t@inkdrop.app>",
   "devDependencies": {
     "@inkdropapp/css": "^0.4.2",
+    "@types/node": "^22.7.5",
     "del": "^7.1.0",
     "less": "^4.2.0",
-    "mkdirp": "^3.0.1"
+    "mkdirp": "^3.0.1",
+    "postcss": "^8.4.47"
   },
   "browserslist": [
     "Electron 31.0.4"
   ],
   "description": "Base UI Theme for Inkdrop",
   "files": [
-    "styles/theme.css"
+    "styles/theme.css",
+    "lib/variable-names.json"
   ],
   "keywords": [
     "inkdrop",
@@ -25,6 +28,7 @@
     "watch": "./scripts/watch.sh",
     "unwatch": "./scripts/unwatch.sh",
     "build": "mkdir -p ./styles && lessc src/semantic.less > styles/theme.css",
-    "prepublishOnly": "bun run build"
+    "generate-variable-names": "bun ./scripts/generate-variable-names.ts",
+    "prepublishOnly": "bun run build && bun run generate-variable-names"
   }
 }

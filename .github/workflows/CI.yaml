@@ -25,3 +25,6 @@ jobs:
 
       - name: Build 🏗️
         run: bun run build
+
+      - name: Generate variable name list 🏗️
+        run: bun run generate-variable-names
