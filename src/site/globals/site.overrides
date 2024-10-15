@@ -1325,16 +1325,17 @@
   /*-------------------
         Table
   --------------------*/
-  --table-background: var(--white);
+  --table-background: hsl(var(--hsl-white) / 20%);
   --table-border-width: 1px;
   --table-border: var(--table-border-width) solid var(--border-color);
   --table-box-shadow: noone;
-  --table-header-background: var(--off-white);
+  --table-header-background: hsl(var(--hsl-gray-200) / 30%);
   --table-header-color: var(--text-color);
   --table-header-font-style: none;
   --table-header-font-weight: var(--font-weights-bold);
   --table-header-border: 1px solid var(--internal-border-color);
   --table-header-divider: none;
+  --table-row-border: 1px solid var(--internal-border-color);
 
   /*-------------------
         Checkbox
