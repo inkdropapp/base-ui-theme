@@ -28,7 +28,7 @@
     "watch": "./scripts/watch.sh",
     "unwatch": "./scripts/unwatch.sh",
     "build": "mkdir -p ./styles && lessc src/semantic.less > styles/theme.css",
-    "generate-variable-names": "bun ./scripts/generate-variable-names.ts",
+    "generate-variable-names": "mkdir -p ./lib && bun ./scripts/generate-variable-names.ts",
     "prepublishOnly": "bun run build && bun run generate-variable-names"
   }
 }
