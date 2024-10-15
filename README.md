@@ -1,22 +1,25 @@
 # Base styles of the UI theme for Inkdrop
 
-Inkdrop's UI elements are styled based on [Semantic UI](http://semantic-ui.com/).
-It's mostly common in customizing the theme with it, so [their documentation](http://learnsemantic.com/) is very helpful to get started.
+This module provides the default styles and CSS variables for customizing Inkdrop's UI.
+It is built on top of [Semantic UI](http://semantic-ui.com/).
 
 Read [the documentation](https://developers.inkdrop.app/guides/create-a-theme) for detailed instructions.
 
+## Requirements
+
+- [Bun](https://bun.sh/)
+
 ## How to build
 
+To build the module and generate CSS variable name list, run the following commands:
+
 ```
-npm install
-npm build
+bun install
+bun run build
+bun run generate-variable-names
 ```
 
 ## Which files to edit
 
-- `src/site/globals/site.variables`
-  - Variables for Inkdrop-specific components
-- `src/site/globals/site.overrides`
-  - Declarations of CSS variables
-- `src/themes/default/globals/site.variables`
-  - Common variables
+- [`src/site/globals/site.overrides`](src/site/globals/site.overrides)
+  - This file contains the CSS variables used throughout the theme.
