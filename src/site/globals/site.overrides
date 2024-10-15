@@ -17,14 +17,6 @@
   --header-font: @headerFont;
   --page-font: @pageFont;
 
-  --google-font-name: @googleFontName;
-  --import-google-fonts: @importGoogleFonts;
-  --google-font-sizes: @googleFontSizes;
-  --google-subset: @googleSubset;
-
-  --google-protocol: @googleProtocol;
-  --google-font-request: @googleFontRequest;
-
   /*-------------------
         Base Sizes
    --------------------*/
