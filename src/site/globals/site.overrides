@@ -1477,10 +1477,10 @@
   --note-list-bar-pinned-section-header-background: var(--color-neutral-200);
   --note-list-bar-pinned-section-header-border-bottom: none;
   --note-list-bar-pinned-section-footer-border-bottom: 4px solid #ccc;
+  --note-list-view-item-header-color: var(--text-color);
   --note-list-view-item-color: var(--muted-text-color);
   --note-list-view-item-separator-border: 1px solid var(--white-down);
   --note-list-view-item-date-color: var(--primary-color);
-  --note-list-view-item-tag-color: var(--blue-focus);
   --note-list-view-item-selected-background: hsl(var(--hsl-sky-800) / 20%);
   --note-list-view-item-active-background: var(--primary-color);
   --note-search-bar-background: var(--note-list-bar-background);
@@ -1554,8 +1554,8 @@ body.acrylic-window {
          Dark Mode
 *******************************/
 
-body[class*='dark-ui'],
-.dark-mode {
+:root:has(body[class*='dark-ui']),
+:root:has(body.dark-mode) {
   /*-------------------
     Brand Colors
   --------------------*/
@@ -2570,8 +2570,8 @@ body[class*='dark-ui'],
   --task-icon-dropped: hsl(var(--hsl-rose-400));
 }
 
-body[class*='dark-ui'],
-.dark-mode {
+:root:has(body[class*='dark-ui']),
+:root:has(body.dark-mode) {
   body.acrylic-window {
     --page-background: transparent;
     --editor-background: hsl(var(--hsl-neutral-950) / 60%);
