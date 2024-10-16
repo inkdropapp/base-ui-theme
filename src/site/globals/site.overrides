@@ -1977,7 +1977,7 @@ body.acrylic-window {
   /*-------------------
         Button
   --------------------*/
-  --button-background: hsl(var(--hsl-neutral-800)/ 70%) none;
+  --button-background: hsl(var(--hsl-neutral-800) / 70%) none;
   --button-text-color: hsl(var(--hsl-neutral-50) / 60%);
   --button-margin: 0em 0.25em 0em 0em;
   --button-border: 1px solid var(--strong-transparent-white);
@@ -2220,7 +2220,7 @@ body.acrylic-window {
   /*-------------------
         Segment
   --------------------*/
-  --segment-background: hsl(var(--hsl-neutral-800)/ 50%);
+  --segment-background: hsl(var(--hsl-neutral-800) / 50%);
   --segment-border: 1px solid var(--border-color);
   --segment-box-shadow: var(--subtle-shadow);
   --segment-border-radius: var(--default-border-radius);
