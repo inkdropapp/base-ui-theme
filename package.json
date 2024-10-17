@@ -2,6 +2,10 @@
   "name": "@inkdropapp/base-ui-theme",
   "version": "0.3.1",
   "author": "Takuya Matsuyama<t@inkdrop.app>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inkdropapp/base-ui-theme.git"
+  },
   "devDependencies": {
     "@inkdropapp/css": "^0.4.2",
     "@types/node": "^22.7.5",
