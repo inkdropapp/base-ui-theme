@@ -1180,6 +1180,7 @@
     0 8px 12px -1px hsl(var(--hsl-neutral-900) / .03);
   --grouped-segment-group-border-radius: var(--default-border-radius);
   --grouped-segment-hover-background: var(--off-white);
+  --piled-segments-background: var(--subtle-transparent-black);
 
 
   /*-------------------
@@ -2238,6 +2239,9 @@ body.acrylic-window {
     0 8px 12px -1px hsl(var(--hsl-neutral-900) / .03);
   --grouped-segment-group-border-radius: var(--default-border-radius);
   --grouped-segment-hover-background: hsl(var(--hsl-neutral-800) / 80%);
+  --stacked-segment-page-background: var(var(--subtle-transparent-black));
+  --piled-segments-background: var(--strong-transparent-white);
+
   /*-------------------
         Form
   --------------------*/
