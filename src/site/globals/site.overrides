@@ -1537,8 +1537,10 @@
 
 }
 
-body.acrylic-window {
+:root:has(body.acrylic-window) {
   --page-background: transparent;
+  --note-list-bar-background: hsl(var(--hsl-stone-100) / 80%);
+  --editor-background: hsl(var(--hsl-white) / 70%);
   --editor-drawer-background: hsl(var(--hsl-white));
   --inline-dropdown-menu-background: hsl(var(--hsl-white));
 
@@ -2574,13 +2576,11 @@ body.acrylic-window {
   --task-icon-dropped: hsl(var(--hsl-rose-400));
 }
 
-:root:has(body[class*='dark-ui']),
-:root:has(body.dark-mode) {
-  body.acrylic-window {
-    --page-background: transparent;
-    --editor-background: hsl(var(--hsl-neutral-950) / 60%);
-    --editor-drawer-background: hsl(var(--hsl-neutral-800));
-    --sidebar-background: hsl(var(--hsl-black) / 10%);
-    --inline-dropdown-menu-background: hsl(var(--hsl-neutral-900));
-  }
+:root:has(body.acrylic-window[class*='dark-ui']),
+:root:has(body.dark-mode.acrylic-window) {
+  --page-background: transparent;
+  --editor-background: hsl(var(--hsl-neutral-950) / 60%);
+  --editor-drawer-background: hsl(var(--hsl-neutral-800));
+  --sidebar-background: hsl(var(--hsl-black) / 10%);
+  --inline-dropdown-menu-background: hsl(var(--hsl-neutral-900));
 }
