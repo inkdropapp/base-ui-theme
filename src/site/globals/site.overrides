@@ -1484,7 +1484,7 @@
   --note-list-view-item-date-color: var(--primary-color);
   --note-list-view-item-selected-background: hsl(var(--hsl-sky-800) / 20%);
   --note-list-view-item-active-background: var(--primary-color);
-  --note-search-bar-background: var(--note-list-bar-background);
+  --note-search-bar-background: transparent;
   --note-search-bar-border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
@@ -2512,6 +2512,7 @@
   --scrollbar-width: 6px;
   --scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
+
   /*-------------------
         Note List Bar
   --------------------*/
@@ -2583,4 +2584,10 @@
   --editor-drawer-background: hsl(var(--hsl-neutral-800));
   --sidebar-background: hsl(var(--hsl-black) / 10%);
   --inline-dropdown-menu-background: hsl(var(--hsl-neutral-900));
+}
+
+:root:has(body.acrylic-window[class*='dark-ui'].platform-win32),
+:root:has(body.dark-mode.acrylic-window.platform-win32) {
+  --sidebar-background: hsl(var(--hsl-black) / 20%);
+  --page-background: hsl(var(--hsl-black) / 40%);
 }
