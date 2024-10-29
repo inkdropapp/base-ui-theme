@@ -1462,6 +1462,8 @@
   --sidebar-scrollbar-width: 6px;
   --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
+  --sidebar-notification-view-background: var(--warning-color);
+  --sidebar-notification-view-color: var(--warning-text-color);
 
   /*-------------------
         Scroll Bar
@@ -2506,6 +2508,9 @@
   --sidebar-scrollbar-width: 6px;
   --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
+  --sidebar-notification-view-background: var(--warning-color);
+  --sidebar-notification-view-color: hsl(var(--hsl-amber-900) / 90%);
+
   /*-------------------
         Scroll Bar
   --------------------*/
