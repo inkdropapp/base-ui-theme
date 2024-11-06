@@ -1053,6 +1053,18 @@
   --divider-border-highlight-color: var(--white-border-color);
 
   /*-------------------
+        Elements
+  --------------------*/
+  --mark-border-width: 1px;
+  --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
+  --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
+  --mark-color: light-dark(var(--color-gray-950), var(--color-gray-50));
+  --mark-font-weight: var(--font-weights-bold);
+  --kbd-color: var(--muted-text-color);
+  --kbd-background: light-dark(var(--off-white), var(--subtle-transparent-white));
+  --kbd-border-color: var(--border-color);
+
+  /*-------------------
         Header
   --------------------*/
 
@@ -1490,11 +1502,6 @@
   --note-search-bar-border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
-  --mark-border-width: 1px;
-  --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
-  --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
-  --mark-color: light-dark(var(--color-gray-950), var(--color-gray-50));
-  --mark-font-weight: var(--font-weights-bold);
 
   /*-------------------
         Editor
@@ -2135,6 +2142,15 @@
   --divider-border-highlight-color: var(--white-border-color);
 
   /*-------------------
+        Elements
+  --------------------*/
+  --mark-border-width: 1px;
+  --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
+  --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
+  --mark-color: light-dark(var(--color-gray-950), var(--color-gray-50));
+  --mark-font-weight: var(--font-weights-bold);
+
+  /*-------------------
         Header
   --------------------*/
   --header-text-color: var(--text-color);
@@ -2160,6 +2176,7 @@
   --sub-header-font-size: var(--h3-sub-header-font-size);
   --small-sub-header-font-size: var(--h4-sub-header-font-size);
   --tiny-sub-header-font-size: var(--h5-sub-header-font-size);
+
   /*-------------------
         Input
   --------------------*/
@@ -2536,11 +2553,7 @@
   --note-search-bar-border-bottom: 1px solid var(--border-color);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
-  --mark-border-width: 1px;
-  --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
-  --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
-  --mark-color: light-dark(var(--color-gray-950), var(--color-gray-50));
-  --mark-font-weight: var(--font-weights-bold);
+
   /*-------------------
         Editor
   --------------------*/
