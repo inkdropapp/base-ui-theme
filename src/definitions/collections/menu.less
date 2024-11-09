@@ -593,7 +593,7 @@ Floated Menu / Item
 
 /* Vertical Active */
 .ui.vertical.menu .active.item {
-  background: @activeItemBackground;
+  background: var(--vertical-menu-item-active-background, @activeItemBackground);
   border-radius: 0em;
   box-shadow: @verticalActiveBoxShadow;
 }

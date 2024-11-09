@@ -1266,9 +1266,10 @@
   --menu-active-item-box-shadow: none;
   --menu-active-hover-item-background: var(--transparent-black);
   --menu-active-hover-item-color: var(--selected-text-color);
-  --vertical-menu-background: var(--white);
+  --vertical-menu-background: hsl(var(--hsl-white) / 70%);
   --vertical-menu-box-shadow: var(--subtle-shadow);
   --vertical-menu-item-background: none;
+  --vertical-menu-item-active-background: var(--transparent-black);
   --vertical-divider-background: var(--internal-border-color);
   --tabular-menu-background: none transparent;
   --tabular-menu-border-width: 1px;
@@ -1552,6 +1553,7 @@
   --editor-background: hsl(var(--hsl-white) / 70%);
   --editor-drawer-background: hsl(var(--hsl-white));
   --inline-dropdown-menu-background: hsl(var(--hsl-white));
+  --vertical-menu-background: hsl(var(--hsl-white));
 
   .editor .CodeMirror,
   .editor .CodeMirror .CodeMirror-scroll,
@@ -2334,6 +2336,7 @@
   --vertical-menu-background: hsl(var(--hsl-neutral-900) / 70%);
   --vertical-menu-box-shadow: var(--subtle-shadow);
   --vertical-menu-item-background: none;
+  --vertical-menu-item-active-background: var(--transparent-white);
   --vertical-divider-background: var(--internal-border-color);
   --tabular-menu-background: none transparent;
   --tabular-menu-border-width: 1px;
@@ -2473,7 +2476,7 @@
   --dropdown-active-item-background: transparent;
   --dropdown-active-item-font-weight: var(--font-weights-bold);
   --dropdown-active-item-color: var(--selected-text-color);
-  --dropdown-hovered-item-background: var(--subtle-transparent-white);
+  --dropdown-hovered-item-background: var(--transparent-white);
   --dropdown-hovered-item-color: var(--selected-text-color);
   --dropdown-default-text-color: var(--input-placeholder-color);
   --dropdown-default-text-focus-color: var(--input-placeholder-focus-color);
@@ -2602,6 +2605,7 @@
   --editor-drawer-background: hsl(var(--hsl-neutral-800));
   --sidebar-background: hsl(var(--hsl-black) / 10%);
   --inline-dropdown-menu-background: hsl(var(--hsl-neutral-900));
+  --vertical-menu-background: hsl(var(--hsl-neutral-900));
 }
 
 :root:has(body.acrylic-window[class*='dark-ui'].platform-win32),
