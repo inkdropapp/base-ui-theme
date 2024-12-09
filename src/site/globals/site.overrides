@@ -1350,7 +1350,7 @@
   --checkbox-background: var(--white);
   --checkbox-border-radius: var(--3px);
   --checkbox-border: 1px solid var(--solid-border-color);
-  --checkbpx-label-color: var(--text-color);
+  --checkbox-label-color: var(--text-color);
   --checkbox-hover-background: var(--checkbox-background);
   --checkbox-hover-border-color: var(--selected-border-color);
   --checkbox-label-hover-color: var(--hovered-text-color);
@@ -2408,7 +2408,7 @@
   --checkbox-background: var(--color-neutral-800);
   --checkbox-border-radius: var(--3px);
   --checkbox-border: 1px solid var(--solid-border-color);
-  --checkbpx-label-color: var(--text-color);
+  --checkbox-label-color: var(--text-color);
   --checkbox-hover-background: var(--checkbox-background);
   --checkbox-hover-border-color: var(--selected-border-color);
   --checkbox-label-hover-color: var(--hovered-text-color);
