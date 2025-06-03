@@ -1547,6 +1547,10 @@
 
 }
 
+/*-------------------------------
+    Acrylic background window
+--------------------------------*/
+
 :root:has(body.acrylic-window) {
   --page-background: transparent;
   --note-list-bar-background: hsl(var(--hsl-stone-100) / 80%);
@@ -1554,12 +1558,7 @@
   --editor-drawer-background: hsl(var(--hsl-white));
   --inline-dropdown-menu-background: hsl(var(--hsl-white));
   --vertical-menu-background: hsl(var(--hsl-white));
-
-  .editor .CodeMirror,
-  .editor .CodeMirror .CodeMirror-scroll,
-  .editor .CodeMirror .CodeMirror-gutters {
-    background-color: transparent !important;
-  }
+  --editor-background-color: transparent;
 }
 
 
@@ -2598,6 +2597,10 @@
   --task-icon-dropped: hsl(var(--hsl-rose-400));
 }
 
+/*-------------------------------
+  Acrylic background window (Dark)
+--------------------------------*/
+
 :root:has(body.acrylic-window[class*='dark-ui']),
 :root:has(body.dark-mode.acrylic-window) {
   --page-background: transparent;
@@ -2613,3 +2616,4 @@
   --sidebar-background: hsl(var(--hsl-black) / 20%);
   --page-background: hsl(var(--hsl-black) / 40%);
 }
+
