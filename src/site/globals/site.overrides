@@ -1558,7 +1558,6 @@
   --editor-drawer-background: hsl(var(--hsl-white));
   --inline-dropdown-menu-background: hsl(var(--hsl-white));
   --vertical-menu-background: hsl(var(--hsl-white));
-  --editor-background-color: transparent;
 }
 
 
