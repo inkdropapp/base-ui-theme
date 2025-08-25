@@ -2226,9 +2226,9 @@
         List
   --------------------*/
   --selection-list-item-border-radius: 0.5em;
-  --selection-list-hover-background: var(--subtle-transparent-black);
+  --selection-list-hover-background: var(--subtle-transparent-white);
   --selection-list-hover-color: var(--hovered-text-color);
-  --selection-list-down-background: var(--transparent-black);
+  --selection-list-down-background: var(--transparent-white);
   --selection-list-down-color: var(--pressed-text-color);
   --selection-list-active-background: var(--transparent-white);
   --selection-list-active-color: var(--selected-text-color);
@@ -2321,15 +2321,15 @@
   --menu-item-text-color: var(--text-color);
   --menu-item-font-weight: normal;
   --menu-divider-background: var(--internal-border-color);
-  --menu-hover-item-background: var(--subtle-transparent-black);
+  --menu-hover-item-background: var(--subtle-transparent-white);
   --menu-hover-item-text-color: var(--selected-text-color);
-  --menu-pressed-item-background: var(--subtle-transparent-black);
+  --menu-pressed-item-background: var(--subtle-transparent-white);
   --menu-pressed-item-text-color: var(--selected-text-color);
   --menu-active-item-background: var(--transparent-black);
   --menu-active-item-text-color: var(--selected-text-color);
   --menu-active-item-font-weight: normal;
   --menu-active-item-box-shadow: none;
-  --menu-active-hover-item-background: var(--transparent-black);
+  --menu-active-hover-item-background: var(--transparent-white);
   --menu-active-hover-item-color: var(--selected-text-color);
   --vertical-menu-background: hsl(var(--hsl-neutral-900) / 70%);
   --vertical-menu-box-shadow: var(--subtle-shadow);
@@ -2361,6 +2361,7 @@
   --secondary-pointing-menu-hover-text-color: var(--highlight-color);
   --secondary-pointing-menu-active-item-color: var(--selected-text-color);
   --secondary-pointing-menu-active-hover-item-color: var(--selected-text-color);
+
   /*-------------------
         Message
   --------------------*/
