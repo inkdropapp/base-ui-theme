@@ -2478,7 +2478,7 @@
   --dropdown-hovered-item-color: var(--selected-text-color);
   --dropdown-default-text-color: var(--input-placeholder-color);
   --dropdown-default-text-focus-color: var(--input-placeholder-focus-color);
-  --dropdown-selected-background: var(--subtle-transparent-black);
+  --dropdown-selected-background: var(--transparent-white);
   --dropdown-selected-color: var(--selected-text-color);
   --dropdown-error-item-hover-background: #FFF2F2;
   --dropdown-error-item-active-background: #FDCFCF;
