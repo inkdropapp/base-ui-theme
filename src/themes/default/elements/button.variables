@@ -50,6 +50,9 @@
 @iconColor: '';
 @iconTransition: opacity @defaultDuration @defaultEasing;
 @iconVerticalAlign: '';
+@iconVerticalPadding: @8px;
+@iconHorizontalPadding: @10px;
+@iconFontSize: @18px;
 
 @iconMargin: 0em @iconDistance 0em -(@iconDistance / 2);
 @rightIconMargin: 0em -(@iconDistance / 2) 0em @iconDistance;

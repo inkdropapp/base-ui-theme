@@ -288,7 +288,13 @@
 
 .ui.icon.buttons .button,
 .ui.icon.button {
-  padding: var(--button-padding, @verticalPadding @verticalPadding (@verticalPadding + @shadowOffset ));
+  padding: var(--icon-button-padding, @iconVerticalPadding @iconHorizontalPadding);
+  margin: 0;
+  font-size: var(--icon-button-font-size, @iconFontSize);
+
+  >svg {
+    margin: 0;
+  }
 }
 
 .ui.icon.buttons .button>.icon,
