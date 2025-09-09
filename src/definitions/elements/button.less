@@ -288,6 +288,9 @@
 
 .ui.icon.buttons .button,
 .ui.icon.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--icon-button-padding, @iconVerticalPadding @iconHorizontalPadding);
   margin: 0;
   font-size: var(--icon-button-font-size, @iconFontSize);
@@ -302,6 +305,12 @@
   opacity: var(--button-icon-only-opacity, @iconButtonOpacity);
   margin: 0em !important;
   vertical-align: top;
+}
+
+.ui.button:not(.icon)>svg {
+  margin: 0 var(--button-icon-distance, @iconDistance) 0 0;
+  opacity: 0.8;
+  vertical-align: bottom;
 }
 
 
