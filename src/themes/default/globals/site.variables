@@ -42,8 +42,8 @@
 /* See Power-user section below
    for explanation of @px variables
 */
-@relativeBorderRadius: @relative5px;
-@absoluteBorderRadius: @5px;
+@relativeBorderRadius: @relative7px;
+@absoluteBorderRadius: @7px;
 
 @defaultBorderRadius: @absoluteBorderRadius;
 
