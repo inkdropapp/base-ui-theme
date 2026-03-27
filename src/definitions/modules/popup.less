@@ -8,16 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'module';
-@element : 'popup';
+@type: "module";
+@element: "popup";
 
-@import (multiple) '../../theme.config';
-
+@import (multiple) "../../theme.config";
 
 /*******************************
             Popup
@@ -33,38 +31,38 @@
   min-width: min-content;
   z-index: @zIndex;
 
-  border: @border;
+  border: var(--popup-border, 1px solid var(--solid-border-color));
   line-height: @lineHeight;
   max-width: @maxWidth;
-  background: @background;
+  background: var(--popup-background, @background);
 
-  padding: @verticalPadding @horizontalPadding;
-  font-weight: @fontWeight;
-  font-style: @fontStyle;
-  color: @color;
+  padding: var(--popup-vertical-padding, @verticalPadding) var(--popup-horizontal-padding, @horizontalPadding);
+  font-weight: var(--popup-font-weight, @fontWeight);
+  font-style: var(--popup-font-style, @fontStyle);
+  color: var(--popup-color, @color);
 
-  border-radius: @borderRadius;
-  box-shadow: @boxShadow;
+  border-radius: var(--popup-border-radius, @borderRadius);
+  box-shadow: var(--popup-box-shadow, @boxShadow);
 }
 .ui.popup > .header {
   padding: 0em;
 
   font-family: @headerFont;
-  font-size: @headerFontSize;
-  line-height: @headerLineHeight;
-  font-weight: @headerFontWeight;
+  font-size: var(--popup-header-font-size, @headerFontSize);
+  line-height: var(--popup-header-line-height, @headerLineHeight);
+  font-weight: var(--popup-header-font-weight, @headerFontWeight);
 }
 .ui.popup > .header + .content {
-  padding-top: @headerDistance;
+  padding-top: var(--popup-header-distance, @headerDistance);
 }
 
 .ui.popup:before {
   position: absolute;
-  content: '';
+  content: "";
   width: @arrowSize;
   height: @arrowSize;
 
-  background: @arrowBackground;
+  background: var(--popup-arrow-background, @arrowBackground);
   transform: rotate(45deg);
 
   z-index: @arrowZIndex;
@@ -88,12 +86,12 @@
 [data-tooltip]:before {
   pointer-events: none;
   position: absolute;
-  content: '';
-  font-size: @medium;
+  content: "";
+  font-size: var(--medium);
   width: @arrowSize;
   height: @arrowSize;
 
-  background: @tooltipArrowBackground;
+  background: var(--popup-arrow-background, @tooltipArrowBackground);
   transform: rotate(45deg);
 
   z-index: @arrowZIndex;
@@ -109,20 +107,20 @@
   text-align: left;
   white-space: nowrap;
 
-  font-size: @tooltipFontSize;
+  font-size: var(--tooltip-font-size, @tooltipFontSize);
 
-  border: @tooltipBorder;
-  line-height: @tooltipLineHeight;
+  border: var(--tooltip-border, @tooltipBorder);
+  line-height: var(--tooltip-line-height, @tooltipLineHeight);
   max-width: @tooltipMaxWidth;
-  background: @tooltipBackground;
+  background: var(--tooltip-background, @tooltipBackground);
 
-  padding: @tooltipPadding;
-  font-weight: @tooltipFontWeight;
-  font-style: @tooltipFontStyle;
-  color: @tooltipColor;
+  padding: var(--tooltip-padding, @tooltipPadding);
+  font-weight: var(--tooltip-font-weight, @tooltipFontWeight);
+  font-style: var(--tooltip-font-style, @tooltipFontStyle);
+  color: var(--tooltip-color, @tooltipColor);
 
-  border-radius: @tooltipBorderRadius;
-  box-shadow: @tooltipBoxShadow;
+  border-radius: var(--tooltip-border-radius, @tooltipBorderRadius);
+  box-shadow: var(--tooltip-box-shadow, @tooltipBoxShadow);
   z-index: @tooltipZIndex;
 }
 
@@ -132,7 +130,7 @@
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: @tooltipArrowBottomBackground;
+  background: var(--popup-arrow-bottom-background, @tooltipArrowBottomBackground);
   margin-left: @tooltipArrowHorizontalOffset;
   margin-bottom: -@tooltipArrowVerticalOffset;
 }
@@ -153,16 +151,12 @@
   opacity: 0;
   transform: rotate(45deg) scale(0) !important;
   transform-origin: center top;
-  transition:
-    all @tooltipDuration @tooltipEasing
-  ;
+  transition: all @tooltipDuration @tooltipEasing;
 }
 [data-tooltip]:after {
   opacity: 1;
   transform-origin: center bottom;
-  transition:
-    all @tooltipDuration @tooltipEasing
-  ;
+  transition: all @tooltipDuration @tooltipEasing;
 }
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
@@ -205,7 +199,6 @@
   transform: scale(1) !important;
 }
 
-
 /*--------------
     Inverted
 ---------------*/
@@ -217,19 +210,19 @@
 
 /* Arrow Position */
 [data-tooltip][data-inverted]:before {
-  background: @invertedArrowBottomBackground;
+  background: var(--popup-inverted-arrow-bottom-background, @invertedArrowBottomBackground);
 }
 
 /* Popup  */
 [data-tooltip][data-inverted]:after {
-  background: @tooltipInvertedBackground;
-  color: @tooltipInvertedColor;
-  border: @tooltipInvertedBorder;
-  box-shadow: @tooltipInvertedBoxShadow;
+  background: var(--tooltip-inverted-background, @tooltipInvertedBackground);
+  color: var(--tooltip-inverted-color, @tooltipInvertedColor);
+  border: var(--tooltip-inverted-border, @tooltipInvertedBorder);
+  box-shadow: var(--tooltip-inverted-box-shadow, @tooltipInvertedBoxShadow);
 }
 [data-tooltip][data-inverted]:after .header {
-  background-color: @tooltipInvertedHeaderBackground;
-  color: @tooltipInvertedHeaderColor;
+  background-color: var(--tooltip-inverted-header-background, @tooltipInvertedHeaderBackground);
+  color: var(--tooltip-inverted-header-color, @tooltipInvertedHeaderColor);
 }
 
 /*--------------
@@ -250,7 +243,7 @@
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: @tooltipArrowTopBackground;
+  background: var(--popup-arrow-top-background, @tooltipArrowTopBackground);
   margin-left: @tooltipArrowHorizontalOffset;
   margin-bottom: -@tooltipArrowVerticalOffset;
 }
@@ -288,7 +281,6 @@
   margin-left: @tooltipArrowHorizontalOffset;
   margin-bottom: -@tooltipArrowVerticalOffset;
 }
-
 
 /* Bottom Center */
 [data-position="bottom center"][data-tooltip]:after {
@@ -368,36 +360,36 @@
 
 /* Arrow */
 [data-position~="bottom"][data-tooltip]:before {
-  background: @arrowTopBackground;
+  background: var(--popup-arrow-top-background, @arrowTopBackground);
   box-shadow: @bottomArrowBoxShadow;
 }
 [data-position="left center"][data-tooltip]:before {
-  background: @arrowCenterBackground;
+  background: var(--popup-arrow-center-background, @arrowCenterBackground);
   box-shadow: @leftArrowBoxShadow;
 }
 [data-position="right center"][data-tooltip]:before {
-  background: @arrowCenterBackground;
+  background: var(--popup-arrow-center-background, @arrowCenterBackground);
   box-shadow: @rightArrowBoxShadow;
 }
 [data-position~="top"][data-tooltip]:before {
-  background: @arrowBottomBackground;
+  background: var(--popup-arrow-bottom-background, @arrowBottomBackground);
 }
 
 /* Inverted Arrow Color */
 [data-inverted][data-position~="bottom"][data-tooltip]:before {
-  background: @invertedArrowTopBackground;
+  background: var(--popup-inverted-arrow-top-background, @invertedArrowTopBackground);
   box-shadow: @bottomArrowBoxShadow;
 }
 [data-inverted][data-position="left center"][data-tooltip]:before {
-  background: @invertedArrowCenterBackground;
+  background: var(--popup-inverted-arrow-center-background, @invertedArrowCenterBackground);
   box-shadow: @leftArrowBoxShadow;
 }
 [data-inverted][data-position="right center"][data-tooltip]:before {
-  background: @invertedArrowCenterBackground;
+  background: var(--popup-inverted-arrow-center-background, @invertedArrowCenterBackground);
   box-shadow: @rightArrowBoxShadow;
 }
 [data-inverted][data-position~="top"][data-tooltip]:before {
-  background: @invertedArrowBottomBackground;
+  background: var(--popup-inverted-arrow-bottom-background, @invertedArrowBottomBackground);
 }
 
 [data-position~="bottom"][data-tooltip]:before {
@@ -560,28 +552,27 @@
 
 /* Arrow Color By Location */
 .ui.bottom.popup:before {
-  background: @arrowTopBackground;
+  background: var(--popup-arrow-top-background, @arrowTopBackground);
 }
 .ui.right.center.popup:before,
 .ui.left.center.popup:before {
-  background: @arrowCenterBackground;
+  background: var(--popup-arrow-center-background, @arrowCenterBackground);
 }
 .ui.top.popup:before {
-  background: @arrowBottomBackground;
+  background: var(--popup-arrow-bottom-background, @arrowBottomBackground);
 }
 
 /* Inverted Arrow Color */
 .ui.inverted.bottom.popup:before {
-  background: @invertedArrowTopBackground;
+  background: var(--popup-inverted-arrow-top-background, @invertedArrowTopBackground);
 }
 .ui.inverted.right.center.popup:before,
 .ui.inverted.left.center.popup:before {
-  background: @invertedArrowCenterBackground;
+  background: var(--popup-inverted-arrow-center-background, @invertedArrowCenterBackground);
 }
 .ui.inverted.top.popup:before {
-  background: @invertedArrowBottomBackground;
+  background: var(--popup-inverted-arrow-bottom-background, @invertedArrowBottomBackground);
 }
-
 
 /*******************************
             Coupling
@@ -613,7 +604,6 @@
   backface-visibility: hidden;
 }
 
-
 /*******************************
             Variations
 *******************************/
@@ -625,7 +615,6 @@
 .ui.basic.popup:before {
   display: none;
 }
-
 
 /*--------------
      Wide
@@ -645,7 +634,6 @@
   }
 }
 
-
 /*--------------
      Fluid
 ---------------*/
@@ -655,24 +643,23 @@
   max-width: none;
 }
 
-
 /*--------------
      Colors
 ---------------*/
 
 /* Inverted colors  */
 .ui.inverted.popup {
-  background: @invertedBackground;
-  color: @invertedColor;
-  border: @invertedBorder;
-  box-shadow: @invertedBoxShadow;
+  background: var(--popup-inverted-background, @invertedBackground);
+  color: var(--popup-inverted-color, @invertedColor);
+  border: var(--popup-inverted-border, @invertedBorder);
+  box-shadow: var(--popup-inverted-box-shadow, @invertedBoxShadow);
 }
 .ui.inverted.popup .header {
-  background-color: @invertedHeaderBackground;
-  color: @invertedHeaderColor;
+  background-color: var(--popup-inverted-header-background, @invertedHeaderBackground);
+  color: var(--popup-inverted-header-color, @invertedHeaderColor);
 }
 .ui.inverted.popup:before {
-  background-color: @invertedArrowColor;
+  background-color: var(--popup-inverted-arrow-color, @invertedArrowColor);
   box-shadow: none !important;
 }
 
@@ -684,29 +671,27 @@
   max-width: none;
 }
 
-
 /*--------------
      Sizes
 ---------------*/
 
 .ui.mini.popup {
-  font-size: @mini;
+  font-size: var(--mini);
 }
 .ui.tiny.popup {
-  font-size: @tiny;
+  font-size: var(--tiny);
 }
 .ui.small.popup {
-  font-size: @small;
+  font-size: var(--small);
 }
 .ui.popup {
-  font-size: @medium;
+  font-size: var(--medium);
 }
 .ui.large.popup {
-  font-size: @large;
+  font-size: var(--large);
 }
 .ui.huge.popup {
-  font-size: @huge;
+  font-size: var(--huge);
 }
-
 
 .loadUIOverrides();
