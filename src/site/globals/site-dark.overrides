@@ -1007,8 +1007,8 @@
   --note-list-view-item-tag-color: var(--blue-focus);
   --note-list-view-item-selected-background: hsl(var(--hsl-blue-300) / 20%);
   --note-list-view-item-active-background: hsl(var(--hsl-blue-300) / 40%);
+  --note-list-header-separator-border: none;
   --note-search-bar-background: transparent;
-  --note-search-bar-border-bottom: 1px solid var(--border-color);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
 

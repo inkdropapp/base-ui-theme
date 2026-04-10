@@ -1533,8 +1533,8 @@
   --note-list-view-item-date-color: var(--primary-color);
   --note-list-view-item-selected-background: hsl(var(--hsl-sky-800) / 20%);
   --note-list-view-item-active-background: var(--primary-color);
+  --note-list-header-separator-border: none;
   --note-search-bar-background: transparent;
-  --note-search-bar-border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   --note-search-bar-input-border: 1px solid transparent;
   --note-search-bar-input-background: var(--input-background);
 
