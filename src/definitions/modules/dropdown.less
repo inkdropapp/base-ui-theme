@@ -60,6 +60,7 @@
   box-shadow: var(--dropdown-menu-box-shadow, @menuBoxShadow);
   border: var(--dropdown-menu-border, @menuBorder);
   border-radius: var(--dropdown-menu-border-radius, @menuBorderRadius);
+  corner-shape: var(--dropdown-menu-corner-shape, round);
   transition: @menuTransition;
   z-index: @menuZIndex;
   will-change: transform, opacity;
@@ -371,7 +372,7 @@
   color: var(--text-color, @selectionTextColor);
   box-shadow: @selectionBoxShadow;
   border: 1px solid var(--border-color, @selectionBorderColor);
-  border-radius: var(--default-border-radius, @selectionBorderRadius);
+  border-radius: var(--dropdown-menu-border-radius, @selectionBorderRadius);
   transition: @selectionTransition;
 }
 
@@ -776,7 +777,7 @@ select.ui.dropdown {
 .ui.inline.dropdown .menu {
   cursor: auto;
   margin-top: @inlineMenuDistance;
-  border-radius: @inlineMenuBorderRadius;
+  border-radius: var(--dropdown-menu-border-radius, @inlineMenuBorderRadius);
 }
 
 /*******************************

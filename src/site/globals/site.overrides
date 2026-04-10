@@ -1258,7 +1258,8 @@
   --menu-font-family: var(--page-font);
   --menu-border: 1px solid var(--border-color);
   --menu-shadow: var(--subtle-shadow);
-  --menu-border-radius: var(--default-border-radius);
+  --menu-border-radius: var(--default-squircle-radius);
+  --menu-corner-shape: var(--default-corner-shape);
   --menu-item-background: none;
   --menu-item-text-color: var(--text-color);
   --menu-item-font-weight: normal;
@@ -1447,7 +1448,8 @@
   --dropdown-menu-border-width: 1px;
   --dropdown-menu-border-color: var(--border-color);
   --dropdown-menu-border: var(--dropdown-menu-border-width) solid var(--dropdown-menu-border-color);
-  --dropdown-menu-border-radius: var(--default-border-radius);
+  --dropdown-menu-border-radius: var(--default-squircle-radius);
+  --dropdown-menu-corner-shape: var(--default-corner-shape);
   --dropdown-menu-item-border: none;
   --dropdown-menu-item-divider: none;
   --dropdown-menu-item-color: var(--text-color);
