@@ -24,7 +24,6 @@
 /* Site theme site.variables */
 @import (optional) "@{siteFolder}/globals/site.variables";
 
-
 /*-------------------
  Component Variables
 ---------------------*/
@@ -38,7 +37,6 @@
 /* Site Theme */
 @import (optional) "@{siteFolder}/@{type}s/@{element}.variables";
 
-
 /*******************************
              Mix-ins
 *******************************/
@@ -48,7 +46,8 @@
 -------------------*/
 
 .loadFonts() when (@importGoogleFonts) {
-  @import (css) url('@{googleProtocol}fonts.googleapis.com/css?family=@{googleFontRequest}');
+  @import (css)
+    url("@{googleProtocol}fonts.googleapis.com/css?family=@{googleFontRequest}");
 }
 
 /*------------------

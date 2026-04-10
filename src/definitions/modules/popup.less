@@ -36,7 +36,8 @@
   max-width: @maxWidth;
   background: var(--popup-background, @background);
 
-  padding: var(--popup-vertical-padding, @verticalPadding) var(--popup-horizontal-padding, @horizontalPadding);
+  padding: var(--popup-vertical-padding, @verticalPadding)
+    var(--popup-horizontal-padding, @horizontalPadding);
   font-weight: var(--popup-font-weight, @fontWeight);
   font-style: var(--popup-font-style, @fontStyle);
   color: var(--popup-color, @color);
@@ -130,7 +131,10 @@
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: var(--popup-arrow-bottom-background, @tooltipArrowBottomBackground);
+  background: var(
+    --popup-arrow-bottom-background,
+    @tooltipArrowBottomBackground
+  );
   margin-left: @tooltipArrowHorizontalOffset;
   margin-bottom: -@tooltipArrowVerticalOffset;
 }
@@ -210,7 +214,10 @@
 
 /* Arrow Position */
 [data-tooltip][data-inverted]:before {
-  background: var(--popup-inverted-arrow-bottom-background, @invertedArrowBottomBackground);
+  background: var(
+    --popup-inverted-arrow-bottom-background,
+    @invertedArrowBottomBackground
+  );
 }
 
 /* Popup  */
@@ -221,7 +228,10 @@
   box-shadow: var(--tooltip-inverted-box-shadow, @tooltipInvertedBoxShadow);
 }
 [data-tooltip][data-inverted]:after .header {
-  background-color: var(--tooltip-inverted-header-background, @tooltipInvertedHeaderBackground);
+  background-color: var(
+    --tooltip-inverted-header-background,
+    @tooltipInvertedHeaderBackground
+  );
   color: var(--tooltip-inverted-header-color, @tooltipInvertedHeaderColor);
 }
 
@@ -377,19 +387,31 @@
 
 /* Inverted Arrow Color */
 [data-inverted][data-position~="bottom"][data-tooltip]:before {
-  background: var(--popup-inverted-arrow-top-background, @invertedArrowTopBackground);
+  background: var(
+    --popup-inverted-arrow-top-background,
+    @invertedArrowTopBackground
+  );
   box-shadow: @bottomArrowBoxShadow;
 }
 [data-inverted][data-position="left center"][data-tooltip]:before {
-  background: var(--popup-inverted-arrow-center-background, @invertedArrowCenterBackground);
+  background: var(
+    --popup-inverted-arrow-center-background,
+    @invertedArrowCenterBackground
+  );
   box-shadow: @leftArrowBoxShadow;
 }
 [data-inverted][data-position="right center"][data-tooltip]:before {
-  background: var(--popup-inverted-arrow-center-background, @invertedArrowCenterBackground);
+  background: var(
+    --popup-inverted-arrow-center-background,
+    @invertedArrowCenterBackground
+  );
   box-shadow: @rightArrowBoxShadow;
 }
 [data-inverted][data-position~="top"][data-tooltip]:before {
-  background: var(--popup-inverted-arrow-bottom-background, @invertedArrowBottomBackground);
+  background: var(
+    --popup-inverted-arrow-bottom-background,
+    @invertedArrowBottomBackground
+  );
 }
 
 [data-position~="bottom"][data-tooltip]:before {
@@ -564,14 +586,23 @@
 
 /* Inverted Arrow Color */
 .ui.inverted.bottom.popup:before {
-  background: var(--popup-inverted-arrow-top-background, @invertedArrowTopBackground);
+  background: var(
+    --popup-inverted-arrow-top-background,
+    @invertedArrowTopBackground
+  );
 }
 .ui.inverted.right.center.popup:before,
 .ui.inverted.left.center.popup:before {
-  background: var(--popup-inverted-arrow-center-background, @invertedArrowCenterBackground);
+  background: var(
+    --popup-inverted-arrow-center-background,
+    @invertedArrowCenterBackground
+  );
 }
 .ui.inverted.top.popup:before {
-  background: var(--popup-inverted-arrow-bottom-background, @invertedArrowBottomBackground);
+  background: var(
+    --popup-inverted-arrow-bottom-background,
+    @invertedArrowBottomBackground
+  );
 }
 
 /*******************************
@@ -655,7 +686,10 @@
   box-shadow: var(--popup-inverted-box-shadow, @invertedBoxShadow);
 }
 .ui.inverted.popup .header {
-  background-color: var(--popup-inverted-header-background, @invertedHeaderBackground);
+  background-color: var(
+    --popup-inverted-header-background,
+    @invertedHeaderBackground
+  );
   color: var(--popup-inverted-header-color, @invertedHeaderColor);
 }
 .ui.inverted.popup:before {

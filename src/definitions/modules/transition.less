@@ -8,15 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'module';
-@element : 'transition';
+@type: "module";
+@element: "transition";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
           Transitions
@@ -32,7 +31,6 @@
 /*******************************
             States
 *******************************/
-
 
 /* Animating */
 .animating.transition {
@@ -57,7 +55,7 @@
 .visible.transition {
   display: block !important;
   visibility: visible !important;
-/*  backface-visibility: @backfaceVisibility;
+  /*  backface-visibility: @backfaceVisibility;
   transform: @use3DAcceleration;*/
 }
 
@@ -73,6 +71,5 @@
 .looping.transition {
   animation-iteration-count: infinite;
 }
-
 
 .loadUIOverrides();

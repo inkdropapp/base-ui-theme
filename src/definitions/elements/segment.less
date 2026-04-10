@@ -12,10 +12,10 @@
             Theme
 *******************************/
 
-@type : 'element';
-@element : 'segment';
+@type: "element";
+@element: "segment";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
             Segment
@@ -39,7 +39,6 @@
   margin-bottom: 0em;
 }
 
-
 /* Vertical */
 .ui.vertical.segment {
   margin: 0em;
@@ -57,41 +56,40 @@
   border-bottom: none;
 }
 
-
 /*-------------------
     Loose Coupling
 --------------------*/
 
 /* Header */
-.ui.inverted.segment>.ui.header {
+.ui.inverted.segment > .ui.header {
   color: @white;
 }
 
 /* Label */
-.ui[class*="bottom attached"].segment>[class*="top attached"].label {
+.ui[class*="bottom attached"].segment > [class*="top attached"].label {
   border-top-left-radius: 0em;
   border-top-right-radius: 0em;
 }
 
-.ui[class*="top attached"].segment>[class*="bottom attached"].label {
+.ui[class*="top attached"].segment > [class*="bottom attached"].label {
   border-bottom-left-radius: 0em;
   border-bottom-right-radius: 0em;
 }
 
-.ui.attached.segment:not(.top):not(.bottom)>[class*="top attached"].label {
+.ui.attached.segment:not(.top):not(.bottom) > [class*="top attached"].label {
   border-top-left-radius: 0em;
   border-top-right-radius: 0em;
 }
 
-.ui.attached.segment:not(.top):not(.bottom)>[class*="bottom attached"].label {
+.ui.attached.segment:not(.top):not(.bottom) > [class*="bottom attached"].label {
   border-bottom-left-radius: 0em;
   border-bottom-right-radius: 0em;
 }
 
 /* Grid */
 .ui.page.grid.segment,
-.ui.grid>.row>.ui.segment.column,
-.ui.grid>.ui.segment.column {
+.ui.grid > .row > .ui.segment.column,
+.ui.grid > .ui.segment.column {
   padding-top: @pageGridMargin;
   padding-bottom: @pageGridMargin;
 }
@@ -112,11 +110,9 @@
   padding: @padding;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*-------------------
      Placeholder
@@ -144,7 +140,7 @@
 
 .ui.placeholder.segment .field,
 .ui.placeholder.segment textarea,
-.ui.placeholder.segment>.ui.input,
+.ui.placeholder.segment > .ui.input,
 .ui.placeholder.segment .button {
   max-width: @placeholderContentMaxWidth;
   margin-left: auto;
@@ -154,26 +150,25 @@
 .ui.placeholder.segment .column .button,
 .ui.placeholder.segment .column .field,
 .ui.placeholder.segment .column textarea,
-.ui.placeholder.segment .column>.ui.input {
+.ui.placeholder.segment .column > .ui.input {
   max-width: @placeholderContentMaxWidth;
   margin-left: auto;
   margin-right: auto;
 }
 
-.ui.placeholder.segment>.inline {
+.ui.placeholder.segment > .inline {
   align-self: center;
 }
 
-.ui.placeholder.segment>.inline>.button {
+.ui.placeholder.segment > .inline > .button {
   display: inline-block;
   width: auto;
   margin: @placeholderContentInlineButtonMargin;
 }
 
-.ui.placeholder.segment>.inline>.button:last-child {
+.ui.placeholder.segment > .inline > .button:last-child {
   margin-right: 0px;
 }
-
 
 /*-------------------
         Piled
@@ -200,7 +195,7 @@
 .ui.piled.segment:before {
   background-color: var(--piled-segments-background, @white);
   visibility: visible;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   left: 0px;
@@ -255,7 +250,7 @@
 .ui.stacked.segments:after,
 .ui.stacked.segment:before,
 .ui.stacked.segment:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -(@stackedHeight / 2);
   left: 0%;
@@ -348,7 +343,6 @@
   box-shadow: @raisedBoxShadow;
 }
 
-
 /*******************************
             Groups
 *******************************/
@@ -359,8 +353,14 @@
   position: relative;
   margin: @groupedMargin;
   border: var(--grouped-segment-group-border, @groupedBorder);
-  box-shadow: var(--grouped-segment-group-segment-box-shadow, @groupedBoxShadow);
-  border-radius: var(--grouped-segment-group-border-radius, @groupedBorderRadius);
+  box-shadow: var(
+    --grouped-segment-group-segment-box-shadow,
+    @groupedBoxShadow
+  );
+  border-radius: var(
+    --grouped-segment-group-border-radius,
+    @groupedBorderRadius
+  );
 }
 
 .ui.segments:first-child {
@@ -371,9 +371,8 @@
   margin-bottom: 0em;
 }
 
-
 /* Nested Segment */
-.ui.segments>.segment {
+.ui.segments > .segment {
   top: 0px;
   bottom: 0px;
   border-radius: 0px;
@@ -384,7 +383,7 @@
   border-top: var(--grouped-segment-divider, @groupedSegmentDivider);
 }
 
-.ui.segments:not(.horizontal)>.segment:first-child {
+.ui.segments:not(.horizontal) > .segment:first-child {
   top: @attachedTopOffset;
   bottom: 0px;
   border-top: none;
@@ -392,35 +391,37 @@
   bottom: 0px;
   margin-bottom: 0em;
   top: @attachedTopOffset;
-  border-radius: var(--segment-border-radius, @borderRadius) var(--segment-border-radius, @borderRadius) 0em 0em;
+  border-radius: var(--segment-border-radius, @borderRadius)
+    var(--segment-border-radius, @borderRadius) 0em 0em;
 }
 
 /* Bottom */
-.ui.segments:not(.horizontal)>.segment:last-child {
+.ui.segments:not(.horizontal) > .segment:last-child {
   top: @attachedBottomOffset;
   bottom: 0px;
   margin-top: 0em;
   margin-bottom: 0em;
   box-shadow: var(--segment-box-shadow);
-  border-radius: 0em 0em var(--segment-border-radius, @borderRadius) var(--segment-border-radius, @borderRadius);
+  border-radius: 0em 0em var(--segment-border-radius, @borderRadius)
+    var(--segment-border-radius, @borderRadius);
 }
 
 /* Only */
-.ui.segments:not(.horizontal)>.segment:only-child {
+.ui.segments:not(.horizontal) > .segment:only-child {
   border-radius: var(--segment-border-radius, @borderRadius);
 }
 
 /* Nested Group */
-.ui.segments>.ui.segments {
+.ui.segments > .ui.segments {
   border-top: var(--grouped-segment-divider, @groupedSegmentDivider);
   margin: @nestedGroupMargin;
 }
 
-.ui.segments>.segments:first-child {
+.ui.segments > .segments:first-child {
   border-top: none;
 }
 
-.ui.segments>.segment+.segments:not(.horizontal) {
+.ui.segments > .segment + .segments:not(.horizontal) {
   margin-top: 0em;
 }
 
@@ -439,7 +440,7 @@
 }
 
 /* Nested Horizontal Group */
-.ui.segments>.horizontal.segments {
+.ui.segments > .horizontal.segments {
   margin: 0em;
   background-color: transparent;
   border-radius: 0px;
@@ -449,7 +450,7 @@
 }
 
 /* Horizontal Segment */
-.ui.horizontal.segments>.segment {
+.ui.horizontal.segments > .segment {
   flex: 1 1 auto;
   -ms-flex: 1 1 0px;
   /* Solves #2550 MS Flex */
@@ -463,14 +464,13 @@
 }
 
 /* Border Fixes */
-.ui.segments>.horizontal.segments:first-child {
+.ui.segments > .horizontal.segments:first-child {
   border-top: none;
 }
 
-.ui.horizontal.segments>.segment:first-child {
+.ui.horizontal.segments > .segment:first-child {
   border-left: none;
 }
-
 
 /*******************************
             States
@@ -500,7 +500,7 @@
 
 .ui.loading.segment:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0%;
   left: 0%;
   background: @loaderDimmerColor;
@@ -512,7 +512,7 @@
 
 .ui.loading.segment:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
 
@@ -525,7 +525,8 @@
 
   border-radius: @circularRadius;
 
-  border-color: @loaderLineColor @loaderFillColor @loaderFillColor @loaderFillColor;
+  border-color: @loaderLineColor @loaderFillColor @loaderFillColor
+    @loaderFillColor;
   border-style: solid;
   border-width: @loaderLineWidth;
 
@@ -544,11 +545,9 @@
   }
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Basic
@@ -738,7 +737,6 @@
   margin-left: @floatedDistance;
 }
 
-
 /*-------------------
       Inverted
 --------------------*/
@@ -794,7 +792,6 @@
   color: @tertiaryInvertedColor;
 }
 
-
 /*-------------------
       Attached
 --------------------*/
@@ -811,7 +808,7 @@
   border: @attachedBorder;
 }
 
-.ui.attached:not(.message)+.ui.attached.segment:not(.top) {
+.ui.attached:not(.message) + .ui.attached.segment:not(.top) {
   border-top: none;
 }
 

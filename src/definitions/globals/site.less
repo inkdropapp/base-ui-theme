@@ -8,15 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type : 'global';
-@element : 'site';
+@type: "global";
+@element: "site";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
              Page
@@ -99,7 +98,6 @@ h5:last-child {
   margin-bottom: 0em;
 }
 
-
 /*******************************
              Text
 *******************************/
@@ -131,13 +129,11 @@ a:hover {
   text-decoration: var(--link-hover-underline, @linkHoverUnderline);
 }
 
-
 /*******************************
          Scrollbars
 *******************************/
 
 .addScrollbars() when (@useCustomScrollbars) {
-
   /* Force Simple Scrollbars */
   body ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -206,19 +202,28 @@ a:hover {
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
-  background-color: var(--input-highlight-background, @inputHighlightBackground);
+  background-color: var(
+    --input-highlight-background,
+    @inputHighlightBackground
+  );
   color: var(--input-highlight-color, @inputHighlightColor);
 }
 
 textarea::-moz-selection,
 input::-moz-selection {
-  background-color: var(--input-highlight-background, @inputHighlightBackground);
+  background-color: var(
+    --input-highlight-background,
+    @inputHighlightBackground
+  );
   color: var(--input-highlight-color, @inputHighlightColor);
 }
 
 textarea::selection,
 input::selection {
-  background-color: var(--input-highlight-background, @inputHighlightBackground);
+  background-color: var(
+    --input-highlight-background,
+    @inputHighlightBackground
+  );
   color: var(--input-highlight-color, @inputHighlightColor);
 }
 

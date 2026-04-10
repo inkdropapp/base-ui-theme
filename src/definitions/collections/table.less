@@ -8,15 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type : 'collection';
-@element : 'table';
+@type: "collection";
+@element: "table";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
              Table
@@ -73,20 +72,21 @@
   border-left: var(--table-header-divider, @headerDivider);
 }
 
-.ui.table thead tr>th:first-child {
+.ui.table thead tr > th:first-child {
   border-left: none;
 }
 
-.ui.table thead tr:first-child>th:first-child {
+.ui.table thead tr:first-child > th:first-child {
   border-radius: var(--default-border-radius, @borderRadius) 0em 0em 0em;
 }
 
-.ui.table thead tr:first-child>th:last-child {
+.ui.table thead tr:first-child > th:last-child {
   border-radius: 0em var(--default-border-radius, @borderRadius) 0em 0em;
 }
 
-.ui.table thead tr:first-child>th:only-child {
-  border-radius: var(--default-border-radius, @borderRadius) var(--default-border-radius, @borderRadius) 0em 0em;
+.ui.table thead tr:first-child > th:only-child {
+  border-radius: var(--default-border-radius, @borderRadius)
+    var(--default-border-radius, @borderRadius) 0em 0em;
 }
 
 /* Footer */
@@ -107,20 +107,21 @@
   text-transform: @footerTextTransform;
 }
 
-.ui.table tfoot tr>th:first-child {
+.ui.table tfoot tr > th:first-child {
   border-left: none;
 }
 
-.ui.table tfoot tr:first-child>th:first-child {
+.ui.table tfoot tr:first-child > th:first-child {
   border-radius: 0em 0em 0em var(--default-border-radius, @borderRadius);
 }
 
-.ui.table tfoot tr:first-child>th:last-child {
+.ui.table tfoot tr:first-child > th:last-child {
   border-radius: 0em 0em var(--default-border-radius, @borderRadius) 0em;
 }
 
-.ui.table tfoot tr:first-child>th:only-child {
-  border-radius: 0em 0em var(--default-border-radius, @borderRadius) var(--default-border-radius, @borderRadius);
+.ui.table tfoot tr:first-child > th:only-child {
+  border-radius: 0em 0em var(--default-border-radius, @borderRadius)
+    var(--default-border-radius, @borderRadius);
 }
 
 /* Table Row */
@@ -133,7 +134,7 @@
 }
 
 /* Repeated tbody */
-.ui.table tbody+tbody tr:first-child td {
+.ui.table tbody + tbody tr:first-child td {
   border-top: var(--table-row-border, @rowBorder);
 }
 
@@ -144,11 +145,11 @@
 }
 
 /* Icons */
-.ui.table>.icon {
+.ui.table > .icon {
   vertical-align: @iconVerticalAlign;
 }
 
-.ui.table>.icon:only-child {
+.ui.table > .icon:only-child {
   margin: 0em;
 }
 
@@ -165,17 +166,16 @@
   display: block;
 }
 
-
 /* Responsive */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.table:not(.unstackable) {
     width: 100%;
   }
 
   .ui.table:not(.unstackable) tbody,
   .ui.table:not(.unstackable) tr,
-  .ui.table:not(.unstackable) tr>th,
-  .ui.table:not(.unstackable) tr>td {
+  .ui.table:not(.unstackable) tr > th,
+  .ui.table:not(.unstackable) tr > td {
     display: block !important;
     width: auto !important;
     display: block !important;
@@ -199,8 +199,8 @@
     box-shadow: @responsiveRowBoxShadow;
   }
 
-  .ui.table:not(.unstackable) tr>th,
-  .ui.table:not(.unstackable) tr>td {
+  .ui.table:not(.unstackable) tr > th,
+  .ui.table:not(.unstackable) tr > td {
     background: none;
     border: none !important;
     padding: @responsiveCellVerticalPadding @responsiveCellHorizontalPadding !important;
@@ -218,7 +218,6 @@
   }
 }
 
-
 /*******************************
             Coupling
 *******************************/
@@ -230,7 +229,6 @@
 .ui.table td .image img {
   max-width: none;
 }
-
 
 /*******************************
              Types
@@ -274,7 +272,8 @@
   background: @definitionHeaderBackground;
   font-weight: @definitionHeaderFontWeight;
   color: @definitionHeaderColor;
-  box-shadow: -@borderWidth -@borderWidth 0px @borderWidth @definitionPageBackground;
+  box-shadow: -@borderWidth -@borderWidth 0px @borderWidth
+    @definitionPageBackground;
 }
 
 .ui.definition.table tfoot:not(.full-width) th:first-child {
@@ -282,7 +281,8 @@
   background: @definitionFooterBackground;
   font-weight: @definitionFooterColor;
   color: @definitionFooterFontWeight;
-  box-shadow: @borderWidth @borderWidth 0px @borderWidth @definitionPageBackground;
+  box-shadow: @borderWidth @borderWidth 0px @borderWidth
+    @definitionPageBackground;
 }
 
 /* Remove Border */
@@ -308,7 +308,6 @@
   padding-right: @definitionColumnHorizontalPadding;
 }
 
-
 /* Fix 2nd Column */
 .ui.definition.table thead:not(.full-width) th:nth-child(2) {
   border-left: @borderWidth solid @borderColor;
@@ -321,7 +320,6 @@
 .ui.definition.table td:nth-child(2) {
   border-left: @borderWidth solid @borderColor;
 }
-
 
 /*******************************
              States
@@ -402,8 +400,6 @@
   color: @activeColor !important;
 }
 
-
-
 /*--------------
      Disabled
 ---------------*/
@@ -424,13 +420,12 @@
     Stackable
 ---------------*/
 
-@media only screen and (max-width : @largestTabletScreen) {
-
+@media only screen and (max-width: @largestTabletScreen) {
   .ui[class*="tablet stackable"].table,
   .ui[class*="tablet stackable"].table tbody,
   .ui[class*="tablet stackable"].table tr,
-  .ui[class*="tablet stackable"].table tr>th,
-  .ui[class*="tablet stackable"].table tr>td {
+  .ui[class*="tablet stackable"].table tr > th,
+  .ui[class*="tablet stackable"].table tr > td {
     display: block !important;
     width: 100% !important;
     display: block !important;
@@ -454,8 +449,8 @@
     box-shadow: @responsiveRowBoxShadow;
   }
 
-  .ui[class*="tablet stackable"].table tr>th,
-  .ui[class*="tablet stackable"].table tr>td {
+  .ui[class*="tablet stackable"].table tr > th,
+  .ui[class*="tablet stackable"].table tr > td {
     background: none;
     border: none !important;
     padding: @responsiveCellVerticalPadding @responsiveCellHorizontalPadding;
@@ -530,7 +525,6 @@
   text-overflow: ellipsis;
 }
 
-
 /*--------------
    Selectable
 ---------------*/
@@ -552,7 +546,7 @@
   padding: 0em;
 }
 
-.ui.table tbody tr td.selectable>a:not(.ui) {
+.ui.table tbody tr td.selectable > a:not(.ui) {
   display: block;
   color: inherit;
   padding: @cellVerticalPadding @cellHorizontalPadding;
@@ -594,8 +588,6 @@
   color: @negativeColorHover !important;
 }
 
-
-
 /*-------------------
       Attached
 --------------------*/
@@ -612,7 +604,7 @@
   border: @attachedBorder;
 }
 
-.ui.attached+.ui.attached.table:not(.top) {
+.ui.attached + .ui.attached.table:not(.top) {
   border-top: none;
 }
 
@@ -622,7 +614,8 @@
   margin-bottom: 0em;
   top: @attachedTopOffset;
   margin-top: @verticalMargin;
-  border-radius: var(--default-border-radius, @borderRadius) var(--default-border-radius, @borderRadius) 0em 0em;
+  border-radius: var(--default-border-radius, @borderRadius)
+    var(--default-border-radius, @borderRadius) 0em 0em;
 }
 
 .ui.table[class*="top attached"]:first-child {
@@ -636,7 +629,8 @@
   top: @attachedBottomOffset;
   margin-bottom: @verticalMargin;
   box-shadow: @attachedBottomBoxShadow;
-  border-radius: 0em 0em var(--default-border-radius, @borderRadius) var(--default-border-radius, @borderRadius);
+  border-radius: 0em 0em var(--default-border-radius, @borderRadius)
+    var(--default-border-radius, @borderRadius);
 }
 
 .ui[class*="bottom attached"].table:last-child {
@@ -648,13 +642,13 @@
 ---------------*/
 
 /* Table Striping */
-.ui.striped.table>tr:nth-child(2n),
+.ui.striped.table > tr:nth-child(2n),
 .ui.striped.table tbody tr:nth-child(2n) {
   background-color: @stripedBackground;
 }
 
 /* Stripes */
-.ui.inverted.striped.table>tr:nth-child(2n),
+.ui.inverted.striped.table > tr:nth-child(2n),
 .ui.inverted.striped.table tbody tr:nth-child(2n) {
   background-color: @invertedStripedBackground;
 }
@@ -812,7 +806,6 @@
   background-color: @black !important;
   color: @white !important;
 }
-
 
 /*--------------
   Column Count
@@ -989,7 +982,7 @@
   font-style: normal;
   font-weight: @normal;
   text-decoration: inherit;
-  content: '';
+  content: "";
   height: 1em;
   width: @sortableIconWidth;
   opacity: @sortableIconOpacity;
@@ -1047,7 +1040,6 @@
   border-left-color: @sortableInvertedBorderColor;
   border-right-color: @sortableInvertedBorderColor;
 }
-
 
 /*--------------
     Inverted
@@ -1149,7 +1141,10 @@
   padding-right: 0em;
 }
 
-.ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th {
+.ui[class*="very basic"].table:not(.sortable):not(.striped)
+  thead
+  tr:first-child
+  th {
   padding-top: 0em;
 }
 

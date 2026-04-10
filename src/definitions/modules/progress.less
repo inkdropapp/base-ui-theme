@@ -8,15 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'module';
-@element : 'progress';
+@type: "module";
+@element: "progress";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
             Progress
@@ -91,11 +90,9 @@
   transition: @labelTransition;
 }
 
-
 /*******************************
             Types
 *******************************/
-
 
 /* Indicating */
 .ui.indicating.progress[data-percent^="1"] .bar,
@@ -178,7 +175,6 @@
              States
 *******************************/
 
-
 /*--------------
      Success
 ---------------*/
@@ -233,7 +229,7 @@
   min-width: @activeMinWidth;
 }
 .ui.active.progress .bar::after {
-  content: '';
+  content: "";
   opacity: 0;
 
   position: absolute;
@@ -272,11 +268,9 @@
   animation: none !important;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
     Inverted

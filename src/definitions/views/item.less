@@ -12,10 +12,10 @@
             Theme
 *******************************/
 
-@type    : 'view';
-@element : 'item';
+@type: "view";
+@element: "item";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
             Standard
@@ -64,7 +64,7 @@
 
 .ui.items > .item:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
@@ -76,8 +76,6 @@
 .ui.items > .item:last-child {
   margin-bottom: 0em;
 }
-
-
 
 /*--------------
      Images
@@ -105,7 +103,6 @@
   border-radius: @borderRadius;
 }
 
-
 /*--------------
      Content
 ---------------*/
@@ -123,7 +120,7 @@
 }
 .ui.items > .item > .content:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
@@ -162,7 +159,6 @@
   float: right;
 }
 
-
 /*--------------
   Content Image
 ---------------*/
@@ -177,7 +173,6 @@
   height: @avatarSize;
   border-radius: @avatarBorderRadius;
 }
-
 
 /*--------------
    Description
@@ -253,8 +248,6 @@
   color: @metaLinkHoverColor;
 }
 
-
-
 /*--------------
      Labels
 ---------------*/
@@ -310,21 +303,22 @@
   border-top: @extraDivider;
 }
 .ui.items > .item .extra > * {
-  margin: (@extraRowSpacing / 2) @extraHorizontalSpacing (@extraRowSpacing / 2) 0em;
+  margin: (@extraRowSpacing / 2) @extraHorizontalSpacing (@extraRowSpacing / 2)
+    0em;
 }
 .ui.items > .item .extra > [class*="right floated"] {
-  margin: (@extraRowSpacing / 2) 0em (@extraRowSpacing / 2) @extraHorizontalSpacing;
+  margin: (@extraRowSpacing / 2) 0em (@extraRowSpacing / 2)
+    @extraHorizontalSpacing;
 }
 
 .ui.items > .item .extra:after {
   display: block;
-  content: ' ';
+  content: " ";
   height: 0px;
   clear: both;
   overflow: hidden;
   visibility: hidden;
 }
-
 
 /*******************************
           Responsive
@@ -334,7 +328,6 @@
 .ui.items > .item > .image:not(.ui) {
   width: @imageWidth;
 }
-
 
 /* Tablet Only */
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
@@ -348,7 +341,6 @@
     display: block;
     padding: 0em 0em 0em @tabletContentImageDistance;
   }
-
 }
 
 /* Mobile Only */
@@ -374,11 +366,9 @@
   }
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Aligned
@@ -394,7 +384,6 @@
   align-self: flex-end;
 }
 
-
 /*--------------
      Relaxed
 ---------------*/
@@ -405,7 +394,6 @@
 .ui[class*="very relaxed"].items > .item {
   margin: @veryRelaxedItemSpacing 0em;
 }
-
 
 /*-------------------
       Divided
@@ -436,7 +424,6 @@
   padding: @veryRelaxedItemSpacing 0em;
 }
 
-
 /*-------------------
         Link
 --------------------*/
@@ -450,7 +437,6 @@
 .ui.link.items > .item:hover .content .header {
   color: @headerLinkHoverColor;
 }
-
 
 /*--------------
       Size

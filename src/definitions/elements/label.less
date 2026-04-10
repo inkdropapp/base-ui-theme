@@ -8,15 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type : 'element';
-@element : 'label';
+@type: "element";
+@element: "label";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
             Label
@@ -58,32 +57,32 @@ a.ui.label {
 }
 
 /* Inside Link */
-.ui.label>a {
+.ui.label > a {
   cursor: pointer;
   color: inherit;
   opacity: @linkOpacity;
   transition: @linkTransition;
 }
 
-.ui.label>a:hover {
+.ui.label > a:hover {
   opacity: 1;
 }
 
 /* Image */
-.ui.label>img {
+.ui.label > img {
   width: auto !important;
   vertical-align: middle;
   height: @imageHeight !important;
 }
 
 /* Icon */
-.ui.label>.icon {
+.ui.label > .icon {
   width: auto;
   margin: 0em @iconDistance 0em 0em;
 }
 
 /* Detail */
-.ui.label>.detail {
+.ui.label > .detail {
   display: inline-block;
   vertical-align: top;
   font-weight: @detailFontWeight;
@@ -91,14 +90,13 @@ a.ui.label {
   opacity: @detailOpacity;
 }
 
-.ui.label>.detail .icon {
+.ui.label > .detail .icon {
   margin: 0em @detailIconDistance 0em 0em;
 }
 
-
 /* Removable label */
-.ui.label>.close.icon,
-.ui.label>.delete.icon {
+.ui.label > .close.icon,
+.ui.label > .delete.icon {
   cursor: pointer;
   margin-right: 0em;
   margin-left: @deleteMargin;
@@ -107,7 +105,7 @@ a.ui.label {
   transition: @deleteTransition;
 }
 
-.ui.label>.delete.icon:hover {
+.ui.label > .delete.icon:hover {
   opacity: 1;
 }
 
@@ -115,50 +113,47 @@ a.ui.label {
        Group
 --------------------*/
 
-.ui.labels>.label {
+.ui.labels > .label {
   margin: 0em @groupHorizontalMargin @groupVerticalMargin 0em;
 }
-
 
 /*-------------------
        Coupling
 --------------------*/
 
-.ui.header>.ui.label {
+.ui.header > .ui.label {
   margin-top: @lineHeightOffset;
 }
 
-
 /* Remove border radius on attached segment */
-.ui.attached.segment>.ui.top.left.attached.label,
-.ui.bottom.attached.segment>.ui.top.left.attached.label {
+.ui.attached.segment > .ui.top.left.attached.label,
+.ui.bottom.attached.segment > .ui.top.left.attached.label {
   border-top-left-radius: 0;
 }
 
-.ui.attached.segment>.ui.top.right.attached.label,
-.ui.bottom.attached.segment>.ui.top.right.attached.label {
+.ui.attached.segment > .ui.top.right.attached.label,
+.ui.bottom.attached.segment > .ui.top.right.attached.label {
   border-top-right-radius: 0;
 }
 
-.ui.top.attached.segment>.ui.bottom.left.attached.label {
+.ui.top.attached.segment > .ui.bottom.left.attached.label {
   border-bottom-left-radius: 0;
 }
 
-.ui.top.attached.segment>.ui.bottom.right.attached.label {
+.ui.top.attached.segment > .ui.bottom.right.attached.label {
   border-bottom-right-radius: 0;
 }
 
 /* Padding on next content after a label */
-.ui.top.attached.label:first-child+ :not(.attached),
-.ui.top.attached.label+[class*="right floated"]+* {
+.ui.top.attached.label:first-child + :not(.attached),
+.ui.top.attached.label + [class*="right floated"] + * {
   margin-top: @attachedSegmentPadding !important;
 }
 
-.ui.bottom.attached.label:first-child~ :last-child:not(.attached) {
+.ui.bottom.attached.label:first-child ~ :last-child:not(.attached) {
   margin-top: 0em;
   margin-bottom: @attachedSegmentPadding !important;
 }
-
 
 /*******************************
              Types
@@ -216,7 +211,6 @@ a.ui.label {
   border-radius: @attachedBorderRadius 0em @attachedCornerBorderRadius 0em;
 }
 
-
 /*******************************
              States
 *******************************/
@@ -235,10 +229,16 @@ a.ui.label {
 
 a.ui.labels .label:hover,
 a.ui.label:hover {
-  background-color: var(--label-hover-background-color, @labelHoverBackgroundColor);
+  background-color: var(
+    --label-hover-background-color,
+    @labelHoverBackgroundColor
+  );
   border-color: var(--label-hover-background-color, @labelHoverBackgroundColor);
 
-  background-image: var(--label-hover-background-image, @labelHoverBackgroundImage);
+  background-image: var(
+    --label-hover-background-image,
+    @labelHoverBackgroundImage
+  );
   color: var(--label-hover-text-color, @labelHoverTextColor);
 }
 
@@ -252,16 +252,28 @@ a.ui.label:hover:before {
 --------------------*/
 
 .ui.active.label {
-  background-color: var(--tag-default-active-background-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-default-active-background-color,
+    @labelActiveBackgroundColor
+  );
   border-color: var(--tag-default-active-border-color, transparent);
 
-  background-image: var(--label-active-background-image, @labelActiveBackgroundImage);
+  background-image: var(
+    --label-active-background-image,
+    @labelActiveBackgroundImage
+  );
   color: var(--tag-default-active-text-color, @labelActiveTextColor);
 }
 
 .ui.active.label:before {
-  background-color: var(--tag-default-active-background-color, @labelActiveBackgroundColor);
-  background-image: var(--label-active-background-image, @labelActiveBackgroundImage);
+  background-color: var(
+    --tag-default-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  background-image: var(
+    --label-active-background-image,
+    @labelActiveBackgroundImage
+  );
   color: var(--tag-default-active-text-color, @labelActiveTextColor);
 }
 
@@ -271,17 +283,32 @@ a.ui.label:hover:before {
 
 a.ui.labels .active.label:hover,
 a.ui.active.label:hover {
-  background-color: var(--label-active-hover-background-color, @labelActiveHoverBackgroundColor);
-  border-color: var(--label-active-hover-background-color, @labelActiveHoverBackgroundColor);
+  background-color: var(
+    --label-active-hover-background-color,
+    @labelActiveHoverBackgroundColor
+  );
+  border-color: var(
+    --label-active-hover-background-color,
+    @labelActiveHoverBackgroundColor
+  );
 
-  background-image: var(--label-active-hover-background-image, @labelActiveHoverBackgroundImage);
+  background-image: var(
+    --label-active-hover-background-image,
+    @labelActiveHoverBackgroundImage
+  );
   color: var(--label-active-hover-text-color, @labelActiveHoverTextColor);
 }
 
 .ui.labels a.active.label:hover:before,
 a.ui.active.label:hover:before {
-  background-color: var(--label-active-hover-background-color, @labelActiveHoverBackgroundColor);
-  background-image: var(--label-active-hover-background-image, @labelActiveHoverBackgroundImage);
+  background-color: var(
+    --label-active-hover-background-color,
+    @labelActiveHoverBackgroundColor
+  );
+  background-image: var(
+    --label-active-hover-background-image,
+    @labelActiveHoverBackgroundImage
+  );
   color: var(--label-active-hover-text-color, @labelActiveHoverTextColor);
 }
 
@@ -303,11 +330,9 @@ a.ui.active.label:hover:before {
   display: none !important;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Colors
@@ -321,9 +346,13 @@ a.ui.active.label:hover:before {
   border-color: var(--tag-red-border-color, @red) !important;
   color: var(--tag-red-text-color, @redTextColor) !important;
 }
-.ui.red.active,labels .label,
+.ui.red.active,
+labels .label,
 .ui.red.active.label {
-  background-color: var(--tag-red-active-background-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-red-active-background-color,
+    @labelActiveBackgroundColor
+  );
   border-color: var(--tag-red-active-border-color, @labelActiveBackgroundColor);
   color: var(--tag-red-active-text-color, @labelActiveTextColor);
 }
@@ -331,7 +360,10 @@ a.ui.active.label:hover:before {
 /* Link */
 .ui.red.labels .label:hover,
 a.ui.red.label:hover {
-  background-color: var(--label-red-hover-background-color, @redHover) !important;
+  background-color: var(
+    --label-red-hover-background-color,
+    @redHover
+  ) !important;
   border-color: var(--label-red-hover-border-color, @redHover) !important;
   color: var(--label-red-hover-text-color, @redHoverTextColor) !important;
 }
@@ -369,17 +401,27 @@ a.ui.basic.red.label:hover {
   border-color: var(--tag-orange-border-color, @orange) !important;
   color: var(--tag-orange-text-color, @orangeTextColor) !important;
 }
-.ui.orange.active,labels .label,
+.ui.orange.active,
+labels .label,
 .ui.orange.active.label {
-  background-color: var(--tag-orange-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-orange-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-orange-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-orange-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-orange-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.orange.labels .label:hover,
 a.ui.orange.label:hover {
-  background-color: var(--label-orange-hover-background-color, @orangeHover) !important;
+  background-color: var(
+    --label-orange-hover-background-color,
+    @orangeHover
+  ) !important;
   border-color: var(--label-orange-hover-border-color, @orangeHover) !important;
   color: var(--label-orange-hover-text-color, @orangeHoverTextColor) !important;
 }
@@ -392,7 +434,10 @@ a.ui.orange.label:hover {
 
 /* Ribbon */
 .ui.orange.ribbon.label {
-  border-color: var(--label-orange-ribbon-shadow, @orangeRibbonShadow) !important;
+  border-color: var(
+    --label-orange-ribbon-shadow,
+    @orangeRibbonShadow
+  ) !important;
 }
 
 /* Basic */
@@ -417,17 +462,27 @@ a.ui.basic.orange.label:hover {
   border-color: var(--tag-yellow-border-color, @yellow) !important;
   color: var(--tag-yellow-text-color, @yellowTextColor) !important;
 }
-.ui.yellow.active,labels .label,
+.ui.yellow.active,
+labels .label,
 .ui.yellow.active.label {
-  background-color: var(--tag-yellow-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-yellow-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-yellow-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-yellow-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-yellow-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.yellow.labels .label:hover,
 a.ui.yellow.label:hover {
-  background-color: var(--label-yellow-hover-background-color, @yellowHover) !important;
+  background-color: var(
+    --label-yellow-hover-background-color,
+    @yellowHover
+  ) !important;
   border-color: var(--label-yellow-hover-border-color, @yellowHover) !important;
   color: var(--label-yellow-hover-text-color, @yellowHoverTextColor) !important;
 }
@@ -440,7 +495,10 @@ a.ui.yellow.label:hover {
 
 /* Ribbon */
 .ui.yellow.ribbon.label {
-  border-color: var(--label-yellow-ribbon-shadow, @yellowRibbonShadow) !important;
+  border-color: var(
+    --label-yellow-ribbon-shadow,
+    @yellowRibbonShadow
+  ) !important;
 }
 
 /* Basic */
@@ -465,17 +523,27 @@ a.ui.basic.yellow.label:hover {
   border-color: var(--tag-olive-border-color, @olive) !important;
   color: var(--tag-olive-text-color, @oliveTextColor) !important;
 }
-.ui.olive.active,labels .label,
+.ui.olive.active,
+labels .label,
 .ui.olive.active.label {
-  background-color: var(--tag-olive-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-olive-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-olive-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-olive-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-olive-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.olive.labels .label:hover,
 a.ui.olive.label:hover {
-  background-color: var(--label-olive-hover-background-color, @oliveHover) !important;
+  background-color: var(
+    --label-olive-hover-background-color,
+    @oliveHover
+  ) !important;
   border-color: var(--label-olive-hover-border-color, @oliveHover) !important;
   color: var(--label-olive-hover-text-color, @oliveHoverTextColor) !important;
 }
@@ -513,17 +581,27 @@ a.ui.basic.olive.label:hover {
   border-color: var(--tag-green-border-color, @green) !important;
   color: var(--tag-green-text-color, @greenTextColor) !important;
 }
-.ui.green.active,labels .label,
+.ui.green.active,
+labels .label,
 .ui.green.active.label {
-  background-color: var(--tag-green-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-green-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-green-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-green-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-green-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.green.labels .label:hover,
 a.ui.green.label:hover {
-  background-color: var(--label-green-hover-background-color, @greenHover) !important;
+  background-color: var(
+    --label-green-hover-background-color,
+    @greenHover
+  ) !important;
   border-color: var(--label-green-hover-border-color, @greenHover) !important;
   color: var(--label-green-hover-text-color, @greenHoverTextColor) !important;
 }
@@ -561,17 +639,27 @@ a.ui.basic.green.label:hover {
   border-color: var(--tag-teal-border-color, @teal) !important;
   color: var(--tag-teal-text-color, @tealTextColor) !important;
 }
-.ui.teal.active,labels .label,
+.ui.teal.active,
+labels .label,
 .ui.teal.active.label {
-  background-color: var(--tag-teal-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-teal-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-teal-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-teal-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-teal-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.teal.labels .label:hover,
 a.ui.teal.label:hover {
-  background-color: var(--label-teal-hover-background-color, @tealHover) !important;
+  background-color: var(
+    --label-teal-hover-background-color,
+    @tealHover
+  ) !important;
   border-color: var(--label-teal-hover-border-color, @tealHover) !important;
   color: var(--label-teal-hover-text-color, @tealHoverTextColor) !important;
 }
@@ -609,17 +697,27 @@ a.ui.basic.teal.label:hover {
   border-color: var(--tag-blue-border-color, @blue) !important;
   color: var(--tag-blue-text-color, @blueTextColor) !important;
 }
-.ui.blue.active,labels .label,
+.ui.blue.active,
+labels .label,
 .ui.blue.active.label {
-  background-color: var(--tag-blue-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-blue-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-blue-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-blue-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-blue-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.blue.labels .label:hover,
 a.ui.blue.label:hover {
-  background-color: var(--label-blue-hover-background-color, @blueHover) !important;
+  background-color: var(
+    --label-blue-hover-background-color,
+    @blueHover
+  ) !important;
   border-color: var(--label-blue-hover-border-color, @blueHover) !important;
   color: var(--label-blue-hover-text-color, @blueHoverTextColor) !important;
 }
@@ -657,17 +755,27 @@ a.ui.basic.blue.label:hover {
   border-color: var(--tag-violet-border-color, @violet) !important;
   color: var(--tag-violet-text-color, @violetTextColor) !important;
 }
-.ui.violet.active,labels .label,
+.ui.violet.active,
+labels .label,
 .ui.violet.active.label {
-  background-color: var(--tag-violet-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-violet-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-violet-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-violet-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-violet-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.violet.labels .label:hover,
 a.ui.violet.label:hover {
-  background-color: var(--label-violet-hover-background-color, @violetHover) !important;
+  background-color: var(
+    --label-violet-hover-background-color,
+    @violetHover
+  ) !important;
   border-color: var(--label-violet-hover-border-color, @violetHover) !important;
   color: var(--label-violet-hover-text-color, @violetHoverTextColor) !important;
 }
@@ -680,7 +788,10 @@ a.ui.violet.label:hover {
 
 /* Ribbon */
 .ui.violet.ribbon.label {
-  border-color: var(--label-violet-ribbon-shadow, @violetRibbonShadow) !important;
+  border-color: var(
+    --label-violet-ribbon-shadow,
+    @violetRibbonShadow
+  ) !important;
 }
 
 /* Basic */
@@ -705,17 +816,27 @@ a.ui.basic.violet.label:hover {
   border-color: var(--tag-purple-border-color, @purple) !important;
   color: var(--tag-purple-text-color, @purpleTextColor) !important;
 }
-.ui.purple.active,labels .label,
+.ui.purple.active,
+labels .label,
 .ui.purple.active.label {
-  background-color: var(--tag-purple-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-purple-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-purple-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-purple-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-purple-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.purple.labels .label:hover,
 a.ui.purple.label:hover {
-  background-color: var(--label-purple-hover-background-color, @purpleHover) !important;
+  background-color: var(
+    --label-purple-hover-background-color,
+    @purpleHover
+  ) !important;
   border-color: var(--label-purple-hover-border-color, @purpleHover) !important;
   color: var(--label-purple-hover-text-color, @purpleHoverTextColor) !important;
 }
@@ -728,7 +849,10 @@ a.ui.purple.label:hover {
 
 /* Ribbon */
 .ui.purple.ribbon.label {
-  border-color: var(--label-purple-ribbon-shadow, @purpleRibbonShadow) !important;
+  border-color: var(
+    --label-purple-ribbon-shadow,
+    @purpleRibbonShadow
+  ) !important;
 }
 
 /* Basic */
@@ -753,17 +877,27 @@ a.ui.basic.purple.label:hover {
   border-color: var(--tag-pink-border-color, @pink) !important;
   color: var(--tag-pink-text-color, @pinkTextColor) !important;
 }
-.ui.pink.active,labels .label,
+.ui.pink.active,
+labels .label,
 .ui.pink.active.label {
-  background-color: var(--tag-pink-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-pink-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-pink-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-pink-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-pink-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.pink.labels .label:hover,
 a.ui.pink.label:hover {
-  background-color: var(--label-pink-hover-background-color, @pinkHover) !important;
+  background-color: var(
+    --label-pink-hover-background-color,
+    @pinkHover
+  ) !important;
   border-color: var(--label-pink-hover-border-color, @pinkHover) !important;
   color: var(--label-pink-hover-text-color, @pinkHoverTextColor) !important;
 }
@@ -801,17 +935,27 @@ a.ui.basic.pink.label:hover {
   border-color: var(--tag-brown-border-color, @brown) !important;
   color: var(--tag-brown-text-color, @brownTextColor) !important;
 }
-.ui.brown.active,labels .label,
+.ui.brown.active,
+labels .label,
 .ui.brown.active.label {
-  background-color: var(--tag-brown-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-brown-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-brown-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-brown-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-brown-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.brown.labels .label:hover,
 a.ui.brown.label:hover {
-  background-color: var(--label-brown-hover-background-color, @brownHover) !important;
+  background-color: var(
+    --label-brown-hover-background-color,
+    @brownHover
+  ) !important;
   border-color: var(--label-brown-hover-border-color, @brownHover) !important;
   color: var(--label-brown-hover-text-color, @brownHoverTextColor) !important;
 }
@@ -849,17 +993,27 @@ a.ui.basic.brown.label:hover {
   border-color: var(--tag-grey-border-color, @grey) !important;
   color: var(--tag-grey-text-color, @greyTextColor) !important;
 }
-.ui.grey.active,labels .label,
+.ui.grey.active,
+labels .label,
 .ui.grey.active.label {
-  background-color: var(--tag-grey-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-grey-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-grey-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-grey-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-grey-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.grey.labels .label:hover,
 a.ui.grey.label:hover {
-  background-color: var(--label-grey-hover-background-color, @greyHover) !important;
+  background-color: var(
+    --label-grey-hover-background-color,
+    @greyHover
+  ) !important;
   border-color: var(--label-grey-hover-border-color, @greyHover) !important;
   color: var(--label-grey-hover-text-color, @greyHoverTextColor) !important;
 }
@@ -897,17 +1051,27 @@ a.ui.basic.grey.label:hover {
   border-color: var(--tag-black-border-color, @black) !important;
   color: var(--tag-black-text-color, @blackTextColor) !important;
 }
-.ui.orange.active,labels .label,
+.ui.orange.active,
+labels .label,
 .ui.orange.active.label {
-  background-color: var(--tag-orange-active-background-color, @labelActiveBackgroundColor);
-  border-color: var(--tag-orange-active-border-color, @labelActiveBackgroundColor);
+  background-color: var(
+    --tag-orange-active-background-color,
+    @labelActiveBackgroundColor
+  );
+  border-color: var(
+    --tag-orange-active-border-color,
+    @labelActiveBackgroundColor
+  );
   color: var(--tag-orange-active-text-color, @labelActiveTextColor);
 }
 
 /* Link */
 .ui.black.labels .label:hover,
 a.ui.black.label:hover {
-  background-color: var(--label-black-hover-background-color, @blackHover) !important;
+  background-color: var(
+    --label-black-hover-background-color,
+    @blackHover
+  ) !important;
   border-color: var(--label-black-hover-border-color, @blackHover) !important;
   color: var(--label-black-hover-text-color, @blackHoverTextColor) !important;
 }
@@ -962,13 +1126,12 @@ a.ui.basic.label:hover {
   border-color: inherit;
 }
 
-
 /*-------------------
        Fluid
 --------------------*/
 
 .ui.label.fluid,
-.ui.fluid.labels>.label {
+.ui.fluid.labels > .label {
   width: 100%;
   box-sizing: border-box;
 }
@@ -995,7 +1158,6 @@ a.ui.basic.label:hover {
   text-align: center;
 }
 
-
 /*-------------------
        Circular
 --------------------*/
@@ -1021,61 +1183,145 @@ a.ui.basic.label:hover {
   height: @emptyCircleSize;
   vertical-align: baseline;
   border-width: @borderWidth;
-  background-color: var(--tag-default-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-default-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-default-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-default-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 
 .ui.empty.circular.red.label {
-  background-color: var(--tag-red-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-red-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-red-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-red-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.orange.label {
-  background-color: var(--tag-orange-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-orange-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-orange-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-orange-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.yellow.label {
-  background-color: var(--tag-yellow-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-yellow-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-yellow-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-yellow-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.olive.label {
-  background-color: var(--tag-olive-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-olive-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-olive-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-olive-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.green.label {
-  background-color: var(--tag-green-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-green-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-green-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-green-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.teal.label {
-  background-color: var(--tag-teal-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-teal-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-teal-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-teal-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.blue.label {
-  background-color: var(--tag-blue-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-blue-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-blue-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-blue-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.violet.label {
-  background-color: var(--tag-violet-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-violet-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-violet-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-violet-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.purple.label {
-  background-color: var(--tag-purple-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-purple-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-purple-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-purple-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.pink.label {
-  background-color: var(--tag-pink-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-pink-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-pink-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-pink-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.brown.label {
-  background-color: var(--tag-brown-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-brown-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-brown-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-brown-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.grey.label {
-  background-color: var(--tag-grey-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-grey-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-grey-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-grey-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 .ui.empty.circular.black.label {
-  background-color: var(--tag-black-circular-background-color, var(--label-text-color)) !important;
-  border-color: var(--tag-black-circular-border-color, var(--label-border-color)) !important;
+  background-color: var(
+    --tag-black-circular-background-color,
+    var(--label-text-color)
+  ) !important;
+  border-color: var(
+    --tag-black-circular-border-color,
+    var(--label-border-color)
+  ) !important;
 }
 
 /*-------------------
@@ -1101,7 +1347,7 @@ a.ui.basic.label:hover {
 /* Arrow */
 .ui.pointing.label:before {
   position: absolute;
-  content: '';
+  content: "";
   transform: rotate(45deg);
   background-image: none;
 
@@ -1199,7 +1445,6 @@ a.ui.basic.label:hover {
   top: 50%;
   right: @basicPointingTriangleOffset;
 }
-
 
 /*------------------
    Floating Label

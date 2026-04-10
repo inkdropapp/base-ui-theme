@@ -12,11 +12,10 @@
             Theme
 *******************************/
 
-@type    : 'element';
-@element : 'divider';
+@type: "element";
+@element: "divider";
 
-@import (multiple) '../../theme.config';
-
+@import (multiple) "../../theme.config";
 
 /*******************************
             Divider
@@ -42,8 +41,10 @@
 ---------------*/
 
 .ui.divider:not(.vertical):not(.horizontal) {
-  border-top: var(--divider-border-shadow-width, @shadowWidth) solid var(--divider-border-shadow-color, @shadowColor);
-  border-bottom: var(--divider-border-highlight-width, @highlightWidth) solid var(--divider-border-highlight-color, @highlightColor);
+  border-top: var(--divider-border-shadow-width, @shadowWidth) solid
+    var(--divider-border-shadow-color, @shadowColor);
+  border-bottom: var(--divider-border-highlight-width, @highlightWidth) solid
+    var(--divider-border-highlight-color, @highlightColor);
 }
 
 /*--------------
@@ -72,7 +73,7 @@
 
 .ui.horizontal.divider:before,
 .ui.horizontal.divider:after {
-  content: '';
+  content: "";
   display: table-cell;
   position: relative;
   top: 50%;
@@ -111,11 +112,13 @@
 .ui.vertical.divider:after {
   position: absolute;
   left: 50%;
-  content: '';
+  content: "";
   z-index: 3;
 
-  border-left: var(--divider-border-shadow-width, @shadowWidth) solid var(--divider-border-shadow-color, @shadowColor);
-  border-right: var(--divider-border-highlight-width, @highlightWidth) solid var(--divider-border-highlight-color, @highlightColor);
+  border-left: var(--divider-border-shadow-width, @shadowWidth) solid
+    var(--divider-border-shadow-color, @shadowColor);
+  border-right: var(--divider-border-highlight-width, @highlightWidth) solid
+    var(--divider-border-highlight-color, @highlightColor);
 
   width: 0%;
   height: @verticalDividerHeight;
@@ -130,8 +133,7 @@
 }
 
 /* Inside grid */
-@media only screen and (max-width : @largestMobileScreen) {
-
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.stackable.grid .ui.vertical.divider,
   .ui.grid .stackable.row .ui.vertical.divider {
     display: table;
@@ -155,7 +157,7 @@
     left: 0;
     border-left: none;
     border-right: none;
-    content: '';
+    content: "";
     display: table-cell;
     position: relative;
     top: 50%;
@@ -232,6 +234,5 @@
 .ui.divider {
   font-size: @medium;
 }
-
 
 .loadUIOverrides();

@@ -12,15 +12,14 @@
             Theme
 *******************************/
 
-@type    : 'module';
-@element : 'checkbox';
+@type: "module";
+@element: "checkbox";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
            Checkbox
 *******************************/
-
 
 /*--------------
     Content
@@ -54,11 +53,9 @@
   height: @checkboxSize;
 }
 
-
 /*--------------
       Box
 ---------------*/
-
 
 .ui.checkbox .box,
 .ui.checkbox label {
@@ -78,7 +75,7 @@
 
   width: @checkboxSize;
   height: @checkboxSize;
-  content: '';
+  content: "";
 
   background: var(--checkbox-background, @checkboxBackground);
   border-radius: var(--checkbox-border-radius, @checkboxBorderRadius);
@@ -122,11 +119,9 @@
   vertical-align: middle;
 }
 
-
 /*******************************
            States
 *******************************/
-
 
 /*--------------
       Hover
@@ -149,7 +144,10 @@
 .ui.checkbox .box:active::before,
 .ui.checkbox label:active::before {
   background: var(--checkbox-pressed-background, @checkboxPressedBackground);
-  border-color: var(--checkbox-pressed-border-color, @checkboxPressedBorderColor);
+  border-color: var(
+    --checkbox-pressed-border-color,
+    @checkboxPressedBorderColor
+  );
 }
 .ui.checkbox .box:active::after,
 .ui.checkbox label:active::after {
@@ -195,35 +193,55 @@
   Indeterminate
 ---------------*/
 
-.ui.checkbox input:not([type=radio]):indeterminate ~ .box:before,
-.ui.checkbox input:not([type=radio]):indeterminate ~ label:before {
-  background: var(--checkbox-intermediate-background, @checkboxIndeterminateBackground);
-  border-color: var(--checkbox-intermediate-border-color, @checkboxIndeterminateBorderColor);
+.ui.checkbox input:not([type="radio"]):indeterminate ~ .box:before,
+.ui.checkbox input:not([type="radio"]):indeterminate ~ label:before {
+  background: var(
+    --checkbox-intermediate-background,
+    @checkboxIndeterminateBackground
+  );
+  border-color: var(
+    --checkbox-intermediate-border-color,
+    @checkboxIndeterminateBorderColor
+  );
 }
-.ui.checkbox input:not([type=radio]):indeterminate ~ .box:after,
-.ui.checkbox input:not([type=radio]):indeterminate ~ label:after {
-  opacity: var(--checkbox-intermediate-check-opacity, @checkboxIndeterminateCheckOpacity);
-  color: var(--checkbox-intermediate-check-color, @checkboxIndeterminateCheckColor);
+.ui.checkbox input:not([type="radio"]):indeterminate ~ .box:after,
+.ui.checkbox input:not([type="radio"]):indeterminate ~ label:after {
+  opacity: var(
+    --checkbox-intermediate-check-opacity,
+    @checkboxIndeterminateCheckOpacity
+  );
+  color: var(
+    --checkbox-intermediate-check-color,
+    @checkboxIndeterminateCheckColor
+  );
 }
 
 /*--------------
   Active Focus
 ---------------*/
 
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before,
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before,
+.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ .box:before,
+.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label:before,
 .ui.checkbox input:checked:focus ~ .box:before,
-.ui.checkbox input:checked:focus ~ label:before  {
-  background: var(--checkbox-active-focus-background, @checkboxActiveFocusBackground);
-  border-color: var(--checkbox-active-focus-border-color, @checkboxActiveFocusBorderColor);
+.ui.checkbox input:checked:focus ~ label:before {
+  background: var(
+    --checkbox-active-focus-background,
+    @checkboxActiveFocusBackground
+  );
+  border-color: var(
+    --checkbox-active-focus-border-color,
+    @checkboxActiveFocusBorderColor
+  );
 }
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:after,
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:after,
+.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ .box:after,
+.ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label:after,
 .ui.checkbox input:checked:focus ~ .box:after,
 .ui.checkbox input:checked:focus ~ label:after {
-  color: var(--checkbox-active-focus-check-color, @checkboxActiveFocusCheckColor);
+  color: var(
+    --checkbox-active-focus-check-color,
+    @checkboxActiveFocusCheckColor
+  );
 }
-
 
 /*--------------
     Read-Only
@@ -233,7 +251,6 @@
 .ui.read-only.checkbox label {
   cursor: default;
 }
-
 
 /*--------------
      Disabled
@@ -264,11 +281,9 @@
   user-select: none;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*--------------
      Radio
@@ -286,7 +301,7 @@
 /* Box */
 .ui.radio.checkbox .box:before,
 .ui.radio.checkbox label:before {
-  content: '';
+  content: "";
   transform: none;
 
   width: @radioSize;
@@ -300,7 +315,7 @@
 .ui.radio.checkbox .box:after,
 .ui.radio.checkbox label:after {
   border: none;
-  content: '' !important;
+  content: "" !important;
   width: @radioSize;
   height: @radioSize;
   line-height: @radioSize;
@@ -347,11 +362,17 @@
 /* Active Focus */
 .ui.radio.checkbox input:focus:checked ~ .box:before,
 .ui.radio.checkbox input:focus:checked ~ label:before {
-  background-color: var(--radio-active-focus-background, @radioActiveFocusBackground);
+  background-color: var(
+    --radio-active-focus-background,
+    @radioActiveFocusBackground
+  );
 }
 .ui.radio.checkbox input:focus:checked ~ .box:after,
 .ui.radio.checkbox input:focus:checked ~ label:after {
-  background-color: var(--radio-active-focus-bullet-color, @radioActiveFocusBulletColor);
+  background-color: var(
+    --radio-active-focus-bullet-color,
+    @radioActiveFocusBulletColor
+  );
 }
 
 /*--------------
@@ -381,7 +402,7 @@
 .ui.slider.checkbox label:before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   transform: none;
   border: none !important;
   left: 0em;
@@ -396,7 +417,6 @@
   transform: none;
   border-radius: @sliderLineRadius;
   transition: @sliderLineTransition;
-
 }
 
 /* Handle */
@@ -404,7 +424,7 @@
 .ui.slider.checkbox label:after {
   background: @handleBackground;
   position: absolute;
-  content: '' !important;
+  content: "" !important;
   opacity: 1;
   z-index: 2;
 
@@ -461,7 +481,6 @@
   background-color: @sliderOnFocusLineColor !important;
 }
 
-
 /*--------------
      Toggle
 ---------------*/
@@ -492,7 +511,7 @@
 .ui.toggle.checkbox label:before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   z-index: 1;
   transform: none;
   border: none;
@@ -511,7 +530,7 @@
 .ui.toggle.checkbox label:after {
   background: var(--toggle-handle-background, @handleBackground);
   position: absolute;
-  content: '' !important;
+  content: "" !important;
   opacity: 1;
   z-index: 2;
 
@@ -561,15 +580,20 @@
   box-shadow: var(--toggle-on-handle-box-shadow, @toggleOnHandleBoxShadow);
 }
 
-
 /* Active Focus */
 .ui.toggle.checkbox input:focus:checked ~ .box,
 .ui.toggle.checkbox input:focus:checked ~ label {
-  color: var(--toggle-on-focus-label-color, @toggleOnFocusLabelColor) !important;
+  color: var(
+    --toggle-on-focus-label-color,
+    @toggleOnFocusLabelColor
+  ) !important;
 }
 .ui.toggle.checkbox input:focus:checked ~ .box:before,
 .ui.toggle.checkbox input:focus:checked ~ label:before {
-  background-color: var(--toggle-on-focus-lane-color, @toggleOnFocusLaneColor) !important;
+  background-color: var(
+    --toggle-on-focus-lane-color,
+    @toggleOnFocusLaneColor
+  ) !important;
 }
 
 /*******************************

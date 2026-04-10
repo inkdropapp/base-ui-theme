@@ -8,16 +8,14 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type : 'element';
-@element : 'header';
+@type: "element";
+@element: "header";
 
-@import (multiple) '../../theme.config';
-
+@import (multiple) "../../theme.config";
 
 /*******************************
             Header
@@ -27,7 +25,8 @@
 .ui.header {
   border: none;
   margin: var(--header-margin, @margin);
-  padding: var(--header-vertical-padding, @verticalPadding) var(--header-horizontal-padding, @horizontalPadding);
+  padding: var(--header-vertical-padding, @verticalPadding)
+    var(--header-horizontal-padding, @horizontalPadding);
   font-family: var(--header-font, @fontFamily);
   font-weight: var(--header-font-weight, @fontWeight);
   line-height: var(--header-line-height, @lineHeight);
@@ -61,7 +60,7 @@
       Icon
 ---------------*/
 
-.ui.header>.icon {
+.ui.header > .icon {
   display: table-cell;
   opacity: @iconOpacity;
   font-size: @iconSize;
@@ -80,8 +79,8 @@
         Image
 --------------------*/
 
-.ui.header>.image:not(.icon),
-.ui.header>img {
+.ui.header > .image:not(.icon),
+.ui.header > img {
   display: inline-block;
   margin-top: @imageOffset;
   width: @imageWidth;
@@ -89,8 +88,8 @@
   vertical-align: @imageAlignment;
 }
 
-.ui.header>.image:not(.icon):only-child,
-.ui.header>img:only-child {
+.ui.header > .image:not(.icon):only-child,
+.ui.header > img:only-child {
   margin-right: @imageMargin;
 }
 
@@ -104,19 +103,18 @@
 }
 
 /* After Image */
-.ui.header>img+.content,
-.ui.header>.image+.content {
+.ui.header > img + .content,
+.ui.header > .image + .content {
   padding-left: @imageMargin;
   vertical-align: @contentImageAlignment;
 }
 
 /* After Icon */
-.ui.header>.icon+.content {
+.ui.header > .icon + .content {
   padding-left: @iconMargin;
   display: table-cell;
   vertical-align: @contentIconAlignment;
 }
-
 
 /*--------------
  Loose Coupling
@@ -129,11 +127,9 @@
 }
 
 /* Positioning */
-.ui.header+p {
+.ui.header + p {
   margin-top: @nextParagraphDistance;
 }
-
-
 
 /*******************************
             Types
@@ -163,7 +159,6 @@ h5.ui.header {
   font-size: var(--h5, @h5);
 }
 
-
 /* Sub Header */
 h1.ui.header .sub.header {
   font-size: var(--h1-sub-header-font-size, @h1SubHeaderFontSize);
@@ -184,7 +179,6 @@ h4.ui.header .sub.header {
 h5.ui.header .sub.header {
   font-size: var(--h5-sub-header-font-size, @h5SubHeaderFontSize);
 }
-
 
 /*--------------
  Content Heading
@@ -261,8 +255,6 @@ h5.ui.header .sub.header {
   font-size: @hugeSubHeadingSize;
 }
 
-
-
 /*-------------------
         Icon
 --------------------*/
@@ -274,7 +266,7 @@ h5.ui.header .sub.header {
 }
 
 .ui.icon.header:after {
-  content: '';
+  content: "";
   display: block;
   height: 0px;
   clear: both;
@@ -328,7 +320,6 @@ h5.ui.header .sub.header {
   opacity: var(--disabled-opacity, @disabledOpacity);
 }
 
-
 /*******************************
            Variations
 *******************************/
@@ -359,7 +350,6 @@ h5.ui.header .sub.header {
 .ui.inverted.block.header {
   border-bottom: none;
 }
-
 
 /*-------------------
        Colors
@@ -629,7 +619,6 @@ a.ui.inverted.grey.header:hover {
   color: @lightGreyHover !important;
 }
 
-
 /*-------------------
        Aligned
 --------------------*/
@@ -653,7 +642,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.justified.header:after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 100%;
 }
 
@@ -682,7 +671,6 @@ a.ui.inverted.grey.header:hover {
   padding: 0em;
 }
 
-
 /*-------------------
       Dividing
 --------------------*/
@@ -703,7 +691,6 @@ a.ui.inverted.grey.header:hover {
 .ui.inverted.dividing.header {
   border-bottom-color: @invertedDividedBorderColor;
 }
-
 
 /*-------------------
         Block
