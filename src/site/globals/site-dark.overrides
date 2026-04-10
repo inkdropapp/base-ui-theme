@@ -427,35 +427,27 @@
   --------------------*/
   --button-background: hsl(var(--hsl-neutral-800) / 70%) none;
   --button-text-color: hsl(var(--hsl-neutral-50) / 60%);
-  --button-margin: 0em 0.25em 0em 0em;
   --button-border: 1px solid var(--strong-transparent-white);
-  --button-padding: var(--input-vertical-padding) var(--input-horizontal-padding);
   --button-text-shadow: none;
-  /* --button-box-shadow: 0px 1px 2px 0 hsl(var(--hsl-gray-950) / 45%); */
   --button-box-shadow:
     /* inner dark glow */
     0 0 0.5px 1px hsl(var(--hsl-black) / 0.075) inset,
     /* shadow ring */
     0 0 0 1px hsl(var(--hsl-black) / 0.05),
-    /* /* multiple soft shadows */
+    /* multiple soft shadows */
     0 0.3px 0.4px hsl(0deg 0% 0% / 0.02),
     0 0.9px 1.5px hsl(0deg 0% 0% / 0.045),
     0 3.5px 6px hsl(0deg 0% 0% / 0.09);
-
-  --button-font-weight: 600;
-  --button-line-height: 1em;
   /* Hovered */
   --button-hover-background-color: hsl(var(--hsl-neutral-700) / 70%);
   --button-hover-background-image: none;
   --button-hover-box-shadow: var(--button-box-shadow);
   --button-hover-color: var(--hovered-text-color);
-  --button-hover-icon-opacity: 0.85;
   /* Focused */
   --button-focus-background-color: var(--button-hover-background-color);
   --button-focus-background-image: '';
   --button-focus-boxshadow: '';
   --button-focus-color: var(--hovered-text-color);
-  --button-icon-focus-opacity: 0.85;
   /* Disabled */
   --button-disabled-background-image: none;
   --button-disabled-box-shadow: none;
@@ -475,17 +467,9 @@
   --button-active-hover-background-image: none;
   --button-active-hover-color: var(--button-active-color);
   --button-active-hover-box-shadow: var(--button-active-box-shadow);
-  /* Loading */
-  --button-loading-opacity: 1;
-  --button-loading-pointer-events: auto;
-  --button-loading-transition: all 0s linear, opacity var(--default-duration) var(--default-easing);
-  /* Icon Only */
-  --button-icon-only-opacity: 0.9;
   /* Basic style */
   --basic-button-background: transparent none;
   --basic-button-text-color: var(--text-color);
-  --basic-button-font-weight: normal;
-  --basic-button-border-radius: var(--default-border-radius);
   --basic-button-box-shadow: 0px 0px 0px 1px var(--color-neutral-900) inset;
   --basic-button-hover-background: hsl(var(--hsl-neutral-800) / 50%);
   --basic-button-hover-text-color: var(--hovered-text-color);
@@ -572,54 +556,26 @@
         Divider
   --------------------*/
   --divider-text-color: var(--dark-text-color);
-  --divider-border-shadow-width: 1px;
   --divider-border-shadow-color: var(--border-color);
-  --divider-border-highlight-width: 1px;
   --divider-border-highlight-color: var(--white-border-color);
 
   /*-------------------
         Elements
   --------------------*/
-  --mark-border-width: 1px;
   --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
   --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
   --mark-color: light-dark(var(--color-gray-950), var(--color-gray-50));
-  --mark-font-weight: var(--font-weights-bold);
 
   /*-------------------
         Header
   --------------------*/
   --header-text-color: var(--text-color);
-  --header-vertical-padding: 0em;
-  --header-horizontal-padding: 0em;
-  --header-text-transform: none;
-  --sub-header-margin: 0em;
-  --sub-header-font-size: var(--medium-size);
-  --sub-header-line-height: 1.2em;
   --sub-header-text-color: var(--muted-text-color);
-  --h1-sub-header-font-size: var(--large-size);
-  --h2-sub-header-font-size: var(--large-size);
-  --h3-sub-header-font-size: var(--medium-size);
-  --h4-sub-header-font-size: var(--medium-size);
-  --h5-sub-header-font-size: var(--small-size);
-  --huge-header-font-size: var(--h1);
-  --large-header-font-size: var(--h2);
-  --medium-header-font-size: var(--h3);
-  --small-header-font-size: var(--h4);
-  --tiny-header-font-size: var(--h5);
-  --huge-sub-header-font-size: var(--h1-sub-header-font-size);
-  --large-sub-header-font-size: var(--h2-sub-header-font-size);
-  --sub-header-font-size: var(--h3-sub-header-font-size);
-  --small-sub-header-font-size: var(--h4-sub-header-font-size);
-  --tiny-sub-header-font-size: var(--h5-sub-header-font-size);
 
   /*-------------------
         Input
   --------------------*/
-  --input-font-family: var(--page-font);
-  --input-border-width: 1px;
   --input-border: var(--input-border-width) solid var(--border-color);
-  --input-border-radius: var(--default-border-radius);
   --input-box-shadow: none;
   --input-down-border-color: rgba(0, 0, 0, 0.3);
   --input-down-background: var(--color-gray-50);
@@ -639,9 +595,7 @@
         Label
   --------------------*/
   --label-background-image: none;
-  --label-font-weight: var(--font-weights-medium);
   --label-border: 0px solid transparent;
-  --label-border-radius: var(--absolute-border-radius);
   --label-hover-background-color: #E0E0E0;
   --label-hover-background-image: none;
   --label-hover-text-color: var(--hovered-text-color);
@@ -649,7 +603,6 @@
   --label-active-hover-background-image: none;
   --label-active-hover-text-color: var(--selected-text-color);
   --label-basic-background: none hsl(var(--hsl-neutral-50) / 5%);
-  --label-basic-border-width: 1px;
   --label-basic-border-color: var(--border-color);
   --label-basic-border: var(--label-basic-border-width) solid var(--label-basic-border-color);
   --label-basic-text-color: var(--text-color);
@@ -661,7 +614,6 @@
   /*-------------------
         List
   --------------------*/
-  --selection-list-item-border-radius: 0.5em;
   --selection-list-hover-background: var(--subtle-transparent-white);
   --selection-list-hover-color: var(--hovered-text-color);
   --selection-list-down-background: var(--transparent-white);
@@ -681,20 +633,17 @@
   --segment-background: hsl(var(--hsl-neutral-800) / 50%);
   --segment-border: 1px solid var(--border-color);
   --segment-box-shadow: var(--subtle-shadow);
-  --segment-border-radius: var(--default-border-radius);
   --secondary-segment-background: hsl(var(--hsl-neutral-700) / 50%);
   --secondary-segment-color: var(--muted-text-color);
   --grouped-segment-box-shadow: none;
   --grouped-segment-border: none;
   --grouped-segment-divider: 1px solid var(--border-color);
-  /* --grouped-segment-group-border: 1px solid var(--border-color); */
   --grouped-segment-group-border: none;
   --grouped-segment-group-segment-box-shadow: 0 0 0 1px hsl(var(--hsl-neutral-100) / 10%),
     0 1px 1px hsl(var(--hsl-neutral-900) / .1),
     0 1.5px 3px -2px hsl(var(--hsl-neutral-900) / .3),
     0 4px 6px hsl(var(--hsl-neutral-900) / .04),
     0 8px 12px -1px hsl(var(--hsl-neutral-900) / .03);
-  --grouped-segment-group-border-radius: var(--default-border-radius);
   --grouped-segment-hover-background: hsl(var(--hsl-neutral-800) / 80%);
   --stacked-segment-page-background: var(var(--subtle-transparent-black));
   --piled-segments-background: var(--strong-transparent-white);
@@ -702,17 +651,10 @@
   /*-------------------
         Form
   --------------------*/
-  --form-input-font: var(--page-font);
-  --form-input-font-size: 1em;
   --form-label-color: var(--text-color);
-  --form-label-font-size: var(--relative-small);
-  --form-label-font-weight: var(--font-weights-bold);
-  --input-border-radius: var(--absolute-border-radius);
   --input-box-shadow: 0em 0em 0em 0em transparent inset;
-  --form-textarea-line-height: 1.2857;
   --form-select-background: var(--color-neutral-900);
   --form-select-border: var(--input-border);
-  --form-select-border-radius: var(--input-border-radius);
   --form-select-box-shadow: var(--input-box-shadow);
   --form-select-color: var(--input-color);
   --form-prompt-background: var(--color-neutral-800);
@@ -721,17 +663,14 @@
   --form-prompt-text-color: var(--negative-text-color);
   --form-input-focus-color: var(--selected-text-color);
   --form-input-focus-border-color: var(--focused-form-border-color);
-  --form-input-focus-border-radius: var(--input-border-radius);
   --form-input-focus-background: var(--input-background);
   --form-input-focus-box-shadow: 0px 0em 0em 0em var(--selected-border-color) inset;
   --form-textarea-focus-color: var(--selected-text-color);
   --form-textarea-focus-border-color: var(--focused-form-border-color);
-  --form-textarea-focus-border-radius: var(--input-border-radius);
   --form-textarea-focus-background: var(--input-background);
   --form-textarea-focus-box-shadow: 0px 0em 0em 0em var(--selected-border-color) inset;
   --form-error-color: var(--negative-text-color);
   --form-error-border-color: var(--negative-border-color);
-  --form-error-border-radius: var(--input-border-radius);
   --form-error-background: var(--negative-background-color);
   --form-error-box-shadow: none;
   --form-error-focus-color: var(--negative-text-color);
@@ -739,23 +678,15 @@
   --form-error-focus-background: var(--negative-background-color);
   --form-error-focus-box-shadow: none;
   --form-loader-dimmer-color: rgba(255, 255, 255, 0.8);
-  --form-loader-dimmer-z-index: 100;
   --form-inline-label-color: var(--text-color);
-  --form-inline-label-font-size: var(--relative-small);
-  --form-inline-label-font-weight: var(--font-weights-bold);
-  --form-inline-input-size: var(--relative-medium);
   /*-------------------
         Menu
   --------------------*/
   --menu-background: var(--color-neutral-900);
-  --menu-font-weight: normal;
-  --menu-font-family: var(--page-font);
   --menu-border: 1px solid var(--border-color);
   --menu-shadow: var(--subtle-shadow);
-  --menu-border-radius: var(--default-border-radius);
   --menu-item-background: none;
   --menu-item-text-color: var(--text-color);
-  --menu-item-font-weight: normal;
   --menu-divider-background: var(--internal-border-color);
   --menu-hover-item-background: var(--subtle-transparent-white);
   --menu-hover-item-text-color: var(--selected-text-color);
@@ -763,7 +694,6 @@
   --menu-pressed-item-text-color: var(--selected-text-color);
   --menu-active-item-background: var(--transparent-black);
   --menu-active-item-text-color: var(--selected-text-color);
-  --menu-active-item-font-weight: normal;
   --menu-active-item-box-shadow: none;
   --menu-active-hover-item-background: var(--transparent-white);
   --menu-active-hover-item-color: var(--selected-text-color);
@@ -773,17 +703,14 @@
   --vertical-menu-item-active-background: var(--transparent-white);
   --vertical-divider-background: var(--internal-border-color);
   --tabular-menu-background: none transparent;
-  --tabular-menu-border-width: 1px;
   --tabular-menu-border-color: var(--solid-border-color);
   --tabular-menu-text-color: var(--menu-item-text-color);
   --tabular-menu-hovered-text-color: var(--hovered-text-color);
   --tabular-menu-active-background: none hsl(var(--hsl-neutral-800));
   --tabular-menu-active-color: var(--selected-text-color);
   --tabular-menu-active-box-shadow: none;
-  --tabular-menu-border-radius: var(--default-border-radius);
   --secondary-menu-background: none;
   --secondary-menu-item-background: none;
-  --secondary-menu-item-border-radius: var(--default-border-radius);
   --secondary-menu-header-border: none;
   --secondary-menu-header-background: none transparent;
   --secondary-menu-hover-item-background: var(--transparent-black);
@@ -792,7 +719,6 @@
   --secondary-menu-active-item-color: var(--selected-text-color);
   --secondary-menu-active-hover-item-background: var(--transparent-black);
   --secondary-menu-active-hover-item-color: var(--selected-text-color);
-  --secondary-vertical-menu-item-border-radius: var(--default-border-radius);
   --secondary-vertical-pointing-menu-border-right-color: var(--border-color);
   --secondary-pointing-menu-hover-text-color: var(--highlight-color);
   --secondary-pointing-menu-active-item-color: var(--selected-text-color);
@@ -805,10 +731,6 @@
   --message-shadow-shadow: 0px 0px 0px 0px hsl(var(--hsl-white) / 20%);
   --message-box-shadow: 0px 0px 0px 1px var(--strong-border-color) inset,
     var(--message-shadow-shadow);
-  --message-header-font-weight: var(--font-weights-bold);
-  --message-header-font-size: var(--relative-large);
-  --message-text-opacity: 0.85;
-  --message-list-opacity: 0.85;
   --positive-box-shadow: 0px 0px 0px 1px var(--positive-border-color) inset,
     var(--message-shadow-shadow);
   --negative-box-shadow: 0px 0px 0px 1px var(--negative-border-color) inset,
@@ -829,7 +751,6 @@
   --popup-background: var(--color-neutral-900);
   --popup-color: var(--text-color);
   --popup-box-shadow: var(--floating-shadow);
-  --popup-border-radius: var(--default-border-radius);
 
   --popup-arrow-background: var(--popup-background);
   --popup-arrow-top-background: var(--popup-arrow-background);
@@ -845,13 +766,10 @@
         Table
   --------------------*/
   --table-background: hsl(var(--hsl-neutral-800) / 20%);
-  --table-border-width: 1px;
   --table-border: var(--table-border-width) solid var(--border-color);
   --table-box-shadow: noone;
   --table-header-background: hsl(var(--hsl-neutral-700) / 30%);
   --table-header-color: var(--text-color);
-  --table-header-font-style: none;
-  --table-header-font-weight: var(--font-weights-bold);
   --table-header-border: 1px solid var(--internal-border-color);
   --table-header-divider: none;
   --table-row-border: 1px solid var(--internal-border-color);
@@ -861,7 +779,6 @@
   --------------------*/
   --checkbox-color: var(--text-color);
   --checkbox-background: var(--color-neutral-800);
-  --checkbox-border-radius: var(--3px);
   --checkbox-border: 1px solid var(--solid-border-color);
   --checkbox-label-color: var(--text-color);
   --checkbox-hover-background: var(--checkbox-background);
@@ -877,16 +794,13 @@
   --checkbox-focus-label-color: var(--selected-text-color);
   --checkbox-active-background: var(--color-neutral-800);
   --checkbox-active-border-color: var(--selected-border-color);
-  --checkbox-active-check-opacity: 1;
   --checkbox-active-check-color: var(--selected-text-color);
   --checkbox-intermediate-background: var(--checkbox-active-background);
   --checkbox-intermediate-border-color: var(--checkbox-active-border-color);
-  --checkbox-intermediate-check-opacity: 1;
   --checkbox-intermediate-check-color: var(--checkbox-active-check-color);
   --checkbox-active-focus-background: var(--color-neutral-800);
   --checkbox-active-focus-border-color: var(--checkbox-focus-border-color);
   --checkbox-active-focus-check-color: var(--selected-text-color);
-  --checkbox-disabled-opacity: 0.5;
   --checkbox-disabled-label-color: #000000;
   --radio-bullet-color: var(--text-color);
   --radio-focus-background: var(--checkbox-focus-background);
@@ -898,7 +812,6 @@
   --toggle-off-label-color: var(--checkbox-color);
   --toggle-lane-background: var(--transparent-black);
   --toggle-lane-box-shadow: none;
-  --toggle-handle-radius: var(--circular-radius);
   --toggle-handle-background: var(--color-neutral-100) var(--subtle-gradient);
   --toggle-handle-box-shadow: var(--subtle-shadow),
     0px 0px 0px 1px var(--border-color) inset;
@@ -914,22 +827,17 @@
   --------------------*/
   --dropdown-menu-background: var(--color-neutral-900);
   --dropdown-menu-box-shadow: var(--raised-shadow);
-  --dropdown-menu-border-width: 1px;
   --dropdown-menu-border-color: var(--border-color);
   --dropdown-menu-border: var(--dropdown-menu-border-width) solid var(--dropdown-menu-border-color);
-  --dropdown-menu-border-radius: var(--default-border-radius);
   --dropdown-menu-item-border: none;
   --dropdown-menu-item-divider: none;
   --dropdown-menu-item-color: var(--text-color);
-  --dropdown-menu-item-font-weight: var(--font-weights-normal);
   --dropdown-menu-header-color: var(--dark-text-color);
   --dropdown-menu-divider-border: 1px solid var(--internal-border-color);
   --dropdown-menu-item-description-color: var(--light-text-color);
   --dropdown-menu-message-color: var(--unselected-text-color);
-  --inline-dropdown-text-font-weight: var(--font-weights-bold);
   --inline-dropdown-menu-background: hsl(var(--hsl-neutral-900) / 70%);
   --dropdown-active-item-background: transparent;
-  --dropdown-active-item-font-weight: var(--font-weights-bold);
   --dropdown-active-item-color: var(--selected-text-color);
   --dropdown-hovered-item-background: var(--transparent-white);
   --dropdown-hovered-item-color: var(--selected-text-color);
@@ -943,22 +851,16 @@
         Modal
   --------------------*/
   --modal-border: none;
-  --modal-border-radius: var(--default-border-radius);
   --modal-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.067),
     0 6.7px 5.3px rgba(0, 0, 0, 0.097),
     0 12.5px 10px rgba(0, 0, 0, 0.12),
     0 22.3px 17.9px rgba(0, 0, 0, 0.143),
     0 41.8px 33.4px rgba(0, 0, 0, 0.173),
     0 100px 80px rgba(0, 0, 0, 0.24);
-  --modal-box-close-opacity: 0.8;
-  --modal-box-close-size: 1.25em;
   --modal-box-close-color: var(--text-color);
   --modal-box-header-background: var(--color-neutral-900);
   --modal-box-header-color: var(--light-text-color);
   --modal-box-header-border: 1px solid var(--border-color);
-  --modal-box-header-font-size: 1rem;
-  --modal-box-header-font-weight: var(--font-weights-bold);
-  --modal-box-content-font-size: 1em;
   --modal-box-content-background: var(--color-neutral-900);
   --modal-box-actions-background: var(--color-neutral-800);
   --modal-box-actions-border: 1px solid var(--border-color);
@@ -980,7 +882,6 @@
   --sidebar-sync-status-view-border-top: 1px solid var(--border-color);
   --sidebar-sync-status-view-text-color: var(--muted-text-color);
   --sidebar-sync-status-view-detail-color: var(--unselected-text-color);
-  --sidebar-scrollbar-width: 6px;
   --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
   --sidebar-notification-view-background: var(--warning-color);
@@ -989,7 +890,6 @@
   /*-------------------
         Scroll Bar
   --------------------*/
-  --scrollbar-width: 6px;
   --scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
 
