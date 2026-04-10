@@ -12,10 +12,10 @@
             Theme
 *******************************/
 
-@type    : 'collection';
-@element : 'form';
+@type: "collection";
+@element: "form";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
             Elements
@@ -57,7 +57,6 @@
   margin: 0em;
 }
 
-
 /*--------------------
         Labels
 ---------------------*/
@@ -74,7 +73,6 @@
 /*--------------------
     Standard Inputs
 ---------------------*/
-
 
 .ui.form textarea,
 .ui.form input:not([type]),
@@ -118,7 +116,7 @@
   outline-color: var(--unfocused-outline-color);
   outline-style: var(--focused-outline-style);
   -webkit-appearance: none;
-  tap-highlight-color:  rgba(255, 255, 255, 0);
+  tap-highlight-color: rgba(255, 255, 255, 0);
 
   line-height: var(--input-line-height, @inputLineHeight);
   padding: @inputPadding;
@@ -127,7 +125,7 @@
   background: var(--input-background, @inputBackground);
   border: var(--input-border, @inputBorder);
   color: var(--input-color, @inputColor);
-  border-radius: var(--input-border-radius, @inputBorderRadius);
+  border-radius: var(--form-input-border-radius, @inputBorderRadius);
   box-shadow: var(--input-box-shadow, @inputBoxShadow);
   transition: @inputTransition;
 
@@ -141,7 +139,7 @@
 .ui.form textarea {
   margin: 0em;
   -webkit-appearance: none;
-  tap-highlight-color:  rgba(255, 255, 255, 0);
+  tap-highlight-color: rgba(255, 255, 255, 0);
 
   padding: @textAreaPadding;
   font-size: var(--form-input-font-size, @textAreaFontSize);
@@ -152,7 +150,7 @@
   outline-color: var(--unfocused-outline-color);
   outline-style: var(--focused-outline-style);
   color: var(--input-color, @inputColor);
-  border-radius: var(--input-border-radius, @inputBorderRadius);
+  border-radius: var(--form-input-border-radius, @inputBorderRadius);
   box-shadow: var(--input-box-shadow, @inputBoxShadow);
   transition: @textAreaTransition;
   font-size: var(--form-input-font-size, @textAreaFontSize);
@@ -182,7 +180,6 @@
 .ui.form input.attached {
   width: auto;
 }
-
 
 /*--------------------
      Basic Select
@@ -262,7 +259,6 @@
   width: 0px;
 }
 
-
 /*--------------------
    Types of Messages
 ---------------------*/
@@ -302,7 +298,6 @@
   left: 0em;
 }
 
-
 /*******************************
             States
 *******************************/
@@ -328,8 +323,6 @@
   border-color: @inputAutoFillErrorBorder !important;
 }
 
-
-
 /*--------------------
       Placeholder
 ---------------------*/
@@ -349,7 +342,10 @@
   color: var(--input-placeholder-focus-color, @inputPlaceholderFocusColor);
 }
 .ui.form :focus:-ms-input-placeholder {
-  color: var(--input-placeholder-focus-color, @inputPlaceholderFocusColor) !important;
+  color: var(
+    --input-placeholder-focus-color,
+    @inputPlaceholderFocusColor
+  ) !important;
 }
 .ui.form :focus::-moz-placeholder {
   color: var(--input-placeholder-focus-color, @inputPlaceholderFocusColor);
@@ -360,22 +356,33 @@
   color: var(--input-error-placeholder-color, @inputErrorPlaceholderColor);
 }
 .ui.form .error :-ms-input-placeholder {
-  color: var(--input-error-placeholder-color, @inputErrorPlaceholderColor) !important;
+  color: var(
+    --input-error-placeholder-color,
+    @inputErrorPlaceholderColor
+  ) !important;
 }
 .ui.form .error ::-moz-placeholder {
   color: var(--input-error-placeholder-color, @inputErrorPlaceholderColor);
 }
 
 .ui.form .error :focus::-webkit-input-placeholder {
-  color: var(--input-error-placeholder-focus-color, @inputErrorPlaceholderFocusColor);
+  color: var(
+    --input-error-placeholder-focus-color,
+    @inputErrorPlaceholderFocusColor
+  );
 }
 .ui.form .error :focus:-ms-input-placeholder {
-  color: var(--input-error-placeholder-focus-color, @inputErrorPlaceholderFocusColor) !important;
+  color: var(
+    --input-error-placeholder-focus-color,
+    @inputErrorPlaceholderFocusColor
+  ) !important;
 }
 .ui.form .error :focus::-moz-placeholder {
-  color: var(--input-error-placeholder-focus-color, @inputErrorPlaceholderFocusColor);
+  color: var(
+    --input-error-placeholder-focus-color,
+    @inputErrorPlaceholderFocusColor
+  );
 }
-
 
 /*--------------------
         Focus
@@ -401,13 +408,18 @@
 }
 .ui.form textarea:focus {
   color: var(--form-textarea-focus-color, @textAreaFocusColor);
-  border-color: var(--form-textarea-focus-border-color, @textAreaFocusBorderColor);
-  border-radius: var(--form-textarea-focus-border-radius, @textAreaFocusBorderRadius);
+  border-color: var(
+    --form-textarea-focus-border-color,
+    @textAreaFocusBorderColor
+  );
+  border-radius: var(
+    --form-textarea-focus-border-radius,
+    @textAreaFocusBorderRadius
+  );
   background: var(--form-textarea-focus-background, @textAreaFocusBackground);
   box-shadow: var(--form-textarea-focus-box-shadow, @textAreaFocusBoxShadow);
   -webkit-appearance: none;
 }
-
 
 /*--------------------
         Success
@@ -571,7 +583,6 @@
   background-color: @dropdownErrorSelectedBackground;
 }
 
-
 /* Active */
 .ui.form .fields.error .field .ui.dropdown .menu .active.item,
 .ui.form .field.error .ui.dropdown .menu .active.item {
@@ -620,7 +631,6 @@
   opacity: 1;
 }
 
-
 /*--------------
     Loading
 ---------------*/
@@ -632,7 +642,7 @@
 }
 .ui.loading.form:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0%;
   left: 0%;
   background: var(--form-loader-dimmer-color, @loaderDimmerColor);
@@ -642,7 +652,7 @@
 }
 .ui.loading.form:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
 
@@ -655,7 +665,8 @@
 
   border-radius: var(--circular-radius, @circularRadius);
 
-  border-color: @loaderLineColor @loaderFillColor @loaderFillColor @loaderFillColor;
+  border-color: @loaderLineColor @loaderFillColor @loaderFillColor
+    @loaderFillColor;
   border-style: solid;
   border-width: @loaderLineWidth;
 
@@ -672,7 +683,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 /*******************************
          Element Types
@@ -706,11 +716,9 @@
   left: 100%;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------------
     Inverted Colors
@@ -748,7 +756,6 @@
   color: @invertedInputColor;
   box-shadow: @invertedInputBoxShadow;
 }
-
 
 /*--------------------
      Field Groups
@@ -837,13 +844,15 @@
 }
 
 /* Swap to full width on mobile */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.form .fields {
     flex-wrap: wrap;
   }
 
   .ui[class*="equal width"].form:not(.unstackable) .fields > .field,
-  .ui.form:not(.unstackable) [class*="equal width"].fields:not(.unstackable) > .field,
+  .ui.form:not(.unstackable)
+    [class*="equal width"].fields:not(.unstackable)
+    > .field,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
@@ -866,7 +875,6 @@
     margin: 0em 0em @rowDistance;
   }
 }
-
 
 /* Sizing Combinations */
 .ui.form .fields .wide.field {
@@ -925,7 +933,7 @@
 }
 
 /* Swap to full width on mobile */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
   .ui.form:not(.unstackable) .two.fields:not(.unstackable) > .field,
   .ui.form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
@@ -1035,7 +1043,6 @@
 .ui.form .inline.fields .wide.field > select {
   width: 100%;
 }
-
 
 /*--------------------
         Sizes

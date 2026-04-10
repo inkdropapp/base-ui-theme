@@ -40,6 +40,10 @@
 
   --default-border-radius: @defaultBorderRadius;
 
+  --default-corner-shape: squircle;
+  --default-squircle-radius: @15px;
+  --large-squircle-radius: @24px;
+
   /*-------------------
       Brand Colors
    --------------------*/
@@ -887,6 +891,8 @@
   --button-box-shadow: 0px 0px 0px 1px transparent inset;
   --button-font-weight: 600;
   --button-line-height: 1em;
+  --button-border-radius: var(--default-squircle-radius);
+  --button-corner-shape: var(--default-corner-shape);
 
   /* Hovered */
   --button-hover-background-color: var(--color-gray-300);
@@ -937,7 +943,7 @@
   --basic-button-background: transparent none;
   --basic-button-text-color: var(--text-color);
   --basic-button-font-weight: normal;
-  --basic-button-border-radius: var(--default-border-radius);
+  --basic-button-border-radius: var(--default-squircle-radius);
   --basic-button-box-shadow: 0px 0px 0px 1px var(--border-color) inset;
 
   --basic-button-hover-background: var(--color-white);
@@ -1104,7 +1110,8 @@
   --input-font-family: var(--page-font);
   --input-border-width: 1px;
   --input-border: var(--input-border-width) solid var(--border-color);
-  --input-border-radius: var(--default-border-radius);
+  --input-border-radius: var(--default-squircle-radius);
+  --input-corner-shape: var(--default-corner-shape);
   --input-box-shadow: none;
 
   --input-down-border-color: rgba(0, 0, 0, 0.3);
@@ -1203,32 +1210,32 @@
   --form-label-color: var(--text-color);
   --form-label-font-size: var(--relative-small);
   --form-label-font-weight: var(--font-weights-bold);
-  --input-border-radius: var(--absolute-border-radius);
   --input-box-shadow: 0em 0em 0em 0em transparent inset;
   --form-textarea-line-height: 1.2857;
   --form-select-background: var(--white);
   --form-select-border: var(--input-border);
-  --form-select-border-radius: var(--input-border-radius);
+  --form-select-border-radius: var(--default-border-radius);
   --form-select-box-shadow: var(--input-box-shadow);
   --form-select-color: var(--input-color);
   --form-prompt-background: var(--white);
   --form-prompt-border-color: var(--negative-border-color);
   --form-prompt-border: 1px solid var(--form-prompt-border-color);
   --form-prompt-text-color: var(--negative-text-color);
+  --form-input-border-radius: var(--default-border-radius);
   --form-input-focus-color: var(--selected-text-color);
   --form-input-focus-border-color: var(--focused-form-border-color);
-  --form-input-focus-border-radius: var(--input-border-radius);
+  --form-input-focus-border-radius: var(--default-border-radius);
   --form-input-focus-background: var(--input-background);
   --form-input-focus-box-shadow: 0px 0em 0em 0em var(--selected-border-color) inset;
   --form-textarea-focus-color: var(--selected-text-color);
   --form-textarea-focus-border-color: var(--focused-form-border-color);
-  --form-textarea-focus-border-radius: var(--input-border-radius);
+  --form-textarea-focus-border-radius: var(--default-border-radius);
   --form-textarea-focus-background: var(--input-background);
   --form-textarea-focus-box-shadow: 0px 0em 0em 0em var(--selected-border-color) inset;
 
   --form-error-color: var(--negative-text-color);
   --form-error-border-color: var(--negative-border-color);
-  --form-error-border-radius: var(--input-border-radius);
+  --form-error-border-radius: var(--default-border-radius);
   --form-error-background: var(--negative-background-color);
   --form-error-box-shadow: none;
   --form-error-focus-color: var(--negative-text-color);
@@ -1467,7 +1474,8 @@
         Modal
   --------------------*/
   --modal-border: none;
-  --modal-border-radius: var(--default-border-radius);
+  --modal-border-radius: var(--large-squircle-radius);
+  --modal-corner-shape: var(--default-corner-shape);  
   --modal-box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.067),
     0 6.7px 5.3px rgba(0, 0, 0, 0.097),

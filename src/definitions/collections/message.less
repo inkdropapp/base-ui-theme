@@ -12,10 +12,10 @@
             Theme
 *******************************/
 
-@type    : 'collection';
-@element : 'message';
+@type: "collection";
+@element: "message";
 
-@import (multiple) '../../theme.config';
+@import (multiple) "../../theme.config";
 
 /*******************************
             Message
@@ -30,7 +30,8 @@
   line-height: @lineHeight;
   color: var(--text-color, @textColor);
   transition: @transition;
-  border-radius: var(--default-border-radius, @borderRadius);
+  border-radius: var(--default-squircle-radius, @borderRadius);
+  corner-shape: var(--default-corner-shape, round);
   box-shadow: var(--message-box-shadow, @boxShadow);
 }
 
@@ -40,7 +41,6 @@
 .ui.message:last-child {
   margin-bottom: 0em;
 }
-
 
 /*--------------
      Content
@@ -96,7 +96,7 @@
 }
 .ui.message .list:not(.ui) li:before {
   position: absolute;
-  content: '•';
+  content: "•";
   left: -1em;
   height: 100%;
   vertical-align: baseline;
@@ -104,7 +104,6 @@
 .ui.message .list:not(.ui) li:last-child {
   margin-bottom: 0em;
 }
-
 
 /* Icon */
 .ui.message > .icon {
@@ -165,7 +164,6 @@
   display: none;
 }
 
-
 /*******************************
             Variations
 *******************************/
@@ -180,7 +178,6 @@
 .ui.compact.icon.message {
   display: inline-flex;
 }
-
 
 /*--------------
     Attached
@@ -209,7 +206,6 @@
   width: auto;
 }
 
-
 /*--------------
       Icon
 ---------------*/
@@ -234,7 +230,6 @@
   vertical-align: @iconVerticalAlign;
 }
 
-
 .ui.icon.message .icon:not(.close) + .content {
   padding-left: @iconContentDistance;
 }
@@ -249,7 +244,6 @@
 .ui.floating.message {
   box-shadow: @floatingBoxShadow;
 }
-
 
 /*--------------
      Colors
@@ -341,7 +335,6 @@
 .ui.success.message .header {
   color: var(--success-header-color, @successHeaderColor);
 }
-
 
 /* Colors */
 .ui.inverted.message,
