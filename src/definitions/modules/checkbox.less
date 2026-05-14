@@ -523,6 +523,7 @@
   width: @toggleLaneWidth;
   height: @toggleLaneHeight;
   border-radius: var(--toggle-handle-radius, @toggleHandleRadius);
+  transition: @toggleLaneTransition;
 }
 
 /* Handle */
@@ -556,6 +557,8 @@
 .ui.toggle.checkbox input:focus ~ label:before {
   background-color: var(--toggle-focus-color, @toggleFocusColor);
   border: none;
+  outline: 2px solid var(--focused-outline-color);
+  outline-offset: var(--focused-outline-offset);
 }
 
 /* Hover */

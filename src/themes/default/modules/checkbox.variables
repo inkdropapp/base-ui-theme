@@ -164,6 +164,10 @@
 @toggleLaneHeight: @toggleHandleSize;
 @toggleLaneBoxShadow: none;
 @toggleLaneVerticalOffset: 0rem;
+@toggleLaneTransition:
+  background @toggleTransitionDuration @defaultEasing,
+  box-shadow @toggleTransitionDuration @defaultEasing
+;
 @toggleOffOffset: -0.05rem;
 @toggleOnOffset: (@toggleLaneWidth - @toggleHandleSize) + 0.15rem;
 

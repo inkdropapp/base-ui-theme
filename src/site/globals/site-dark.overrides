@@ -810,12 +810,12 @@
   --radio-active-focus-background: var(--checkbox-active-focus-background);
   --radio-active-focus-bullet-color: var(--checkbox-active-focus-check-color);
   --toggle-off-label-color: var(--checkbox-color);
-  --toggle-lane-background: var(--transparent-black);
+  --toggle-lane-background: var(--transparent-white);
   --toggle-lane-box-shadow: none;
   --toggle-handle-background: var(--color-neutral-100) var(--subtle-gradient);
   --toggle-handle-box-shadow: var(--subtle-shadow),
     0px 0px 0px 1px var(--border-color) inset;
-  --toggle-focus-color: var(--very-strong-transparent-black);
+  --toggle-focus-color: var(--transparent-white);
   --toggle-hover-color: var(--toggle-focus-color);
   --toggle-on-label-color: var(--selected-text-color);
   --toggle-on-lane-color: var(--primary-color);
