@@ -2,7 +2,7 @@ import postcss, { Rule } from 'postcss'
 import fs from 'fs'
 import path from 'path'
 
-const pathToThemeCSS = path.resolve(__dirname, '..', 'styles', 'theme.css')
+const pathToThemeCSS = path.resolve(import.meta.dirname, '..', 'styles', 'theme.css')
 const themeCSS = fs.readFileSync(pathToThemeCSS)
 
 const variables = new Set()
@@ -16,5 +16,5 @@ root.walkDecls(/^--/, node => {
   }
 })
 
-const pathToOutput = path.join(__dirname, '..', 'lib', 'variable-names.json')
+const pathToOutput = path.join(import.meta.dirname, '..', 'lib', 'variable-names.json')
 fs.writeFileSync(pathToOutput, JSON.stringify(Array.from(variables), null, 2))

@@ -34,7 +34,7 @@
     "unwatch": "./scripts/unwatch.sh",
     "build": "mkdir -p ./styles && lessc src/semantic.less > styles/theme.css",
     "format": "prettier --write src",
-    "generate-variable-names": "mkdir -p ./lib && bun ./scripts/generate-variable-names.ts",
-    "prepublishOnly": "bun run build && bun run generate-variable-names"
+    "generate-variable-names": "mkdir -p ./lib && node --experimental-strip-types ./scripts/generate-variable-names.ts",
+    "prepublishOnly": "npm run build && npm run generate-variable-names"
   }
 }
