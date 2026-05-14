@@ -10,21 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Use Bun 🥟
-        uses: oven-sh/setup-bun@v2
+        uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
         with:
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@inkdropapp'
+          node-version: 24
+          cache: pnpm
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install 🔧
         env:
-          BUN_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: bun install
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - run: pnpm install --frozen-lockfile
 
       - name: Build 🏗️
-        run: bun run build
+        run: pnpm run build
 
       - name: Generate variable name list 🏗️
-        run: bun run generate-variable-names
+        run: pnpm run generate-variable-names
