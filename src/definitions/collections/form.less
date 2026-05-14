@@ -639,7 +639,7 @@
   position: relative;
   cursor: default;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: var(--disabled-opacity, @disabledOpacity);
 }
 .ui.loading.form:before {
   position: absolute;
