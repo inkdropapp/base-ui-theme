@@ -677,7 +677,7 @@
   --form-error-focus-border-color: var(--negative-border-color);
   --form-error-focus-background: var(--negative-background-color);
   --form-error-focus-box-shadow: none;
-  --form-loader-dimmer-color: rgba(255, 255, 255, 0.8);
+  --form-loader-dimmer-color: transparent;
   --form-inline-label-color: var(--text-color);
   /*-------------------
         Menu

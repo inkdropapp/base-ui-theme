@@ -1243,7 +1243,7 @@
   --form-error-focus-background: var(--negative-background-color);
   --form-error-focus-box-shadow: none;
 
-  --form-loader-dimmer-color: rgba(255, 255, 255, 0.8);
+  --form-loader-dimmer-color: transparent;
   --form-loader-dimmer-z-index: 100;
   --form-inline-label-color: var(--text-color);
   --form-inline-label-font-size: var(--relative-small);
