@@ -1339,7 +1339,9 @@
   /*-------------------
         Popup
   --------------------*/
-  --popup-border: 1px solid var(--solid-border-color);
+  --popup-border-width: 1px;
+  --popup-border-color: var(--solid-border-color);
+  --popup-border: var(--popup-border-width) solid var(--solid-border-color);
   --popup-background: var(--white);
   --popup-color: var(--text-color);
   --popup-box-shadow: var(--floating-shadow);
@@ -1355,6 +1357,7 @@
   --popup-header-distance: var(--relative7px);
 
   --popup-arrow-background: var(--popup-background);
+  --popup-arrow-box-shadow: var(--popup-border-width) var(--popup-border-width) 0px 0px var(--popup-border-color);
   --popup-arrow-top-background: var(--popup-arrow-background);
   --popup-arrow-center-background: var(--popup-arrow-background);
   --popup-arrow-bottom-background: var(--popup-arrow-background);

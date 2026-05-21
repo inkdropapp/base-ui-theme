@@ -67,7 +67,7 @@
   transform: rotate(45deg);
 
   z-index: @arrowZIndex;
-  box-shadow: @arrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @arrowBoxShadow);
 }
 
 /*******************************
@@ -371,15 +371,15 @@
 /* Arrow */
 [data-position~="bottom"][data-tooltip]:before {
   background: var(--popup-arrow-top-background, @arrowTopBackground);
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 [data-position="left center"][data-tooltip]:before {
   background: var(--popup-arrow-center-background, @arrowCenterBackground);
-  box-shadow: @leftArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @leftArrowBoxShadow);
 }
 [data-position="right center"][data-tooltip]:before {
   background: var(--popup-arrow-center-background, @arrowCenterBackground);
-  box-shadow: @rightArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @rightArrowBoxShadow);
 }
 [data-position~="top"][data-tooltip]:before {
   background: var(--popup-arrow-bottom-background, @arrowBottomBackground);
@@ -391,21 +391,21 @@
     --popup-inverted-arrow-top-background,
     @invertedArrowTopBackground
   );
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 [data-inverted][data-position="left center"][data-tooltip]:before {
   background: var(
     --popup-inverted-arrow-center-background,
     @invertedArrowCenterBackground
   );
-  box-shadow: @leftArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @leftArrowBoxShadow);
 }
 [data-inverted][data-position="right center"][data-tooltip]:before {
   background: var(
     --popup-inverted-arrow-center-background,
     @invertedArrowCenterBackground
   );
-  box-shadow: @rightArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @rightArrowBoxShadow);
 }
 [data-inverted][data-position~="top"][data-tooltip]:before {
   background: var(
@@ -490,7 +490,7 @@
   left: 50%;
   right: auto;
   bottom: auto;
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 
 .ui.bottom.left.popup {
@@ -503,7 +503,7 @@
   right: auto;
   bottom: auto;
   margin-left: 0em;
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 
 .ui.bottom.right.popup {
@@ -516,7 +516,7 @@
   bottom: auto;
   left: auto;
   margin-left: 0em;
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 
 /*--- Above ---*/
@@ -558,7 +558,7 @@
   bottom: auto;
   left: auto;
   margin-top: @arrowOffset;
-  box-shadow: @leftArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @leftArrowBoxShadow);
 }
 
 /*--- Right Center  ---*/
@@ -569,7 +569,7 @@
   bottom: auto;
   right: auto;
   margin-top: @arrowOffset;
-  box-shadow: @rightArrowBoxShadow;
+  box-shadow: var(--popup-arrow-box-shadow, @rightArrowBoxShadow);
 }
 
 /* Arrow Color By Location */
