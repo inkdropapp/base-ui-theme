@@ -1349,7 +1349,7 @@
   --popup-horizontal-padding: 1em;
   --popup-font-weight: normal;
   --popup-font-style: normal;
-  --popup-border-radius: var(--default-border-radius);
+  --popup-border-radius: var(--default-squircle-radius);
 
   --popup-header-font-size: var(--relative-large);
   --popup-header-font-weight: bold;
@@ -1357,10 +1357,13 @@
   --popup-header-distance: var(--relative7px);
 
   --popup-arrow-background: var(--popup-background);
-  --popup-arrow-box-shadow: var(--popup-border-width) var(--popup-border-width) 0px 0px var(--popup-border-color);
   --popup-arrow-top-background: var(--popup-arrow-background);
   --popup-arrow-center-background: var(--popup-arrow-background);
   --popup-arrow-bottom-background: var(--popup-arrow-background);
+  --popup-arrow-box-shadow: var(--popup-border-width) var(--popup-border-width) 0px 0px var(--popup-border-color);
+  --popup-left-arrow-box-shadow: var(--popup-border-width) calc(var(--popup-border-width) * -1) 0px 0px var(--popup-border-color);
+  --popup-right-arrow-box-shadow: calc(var(--popup-border-width) * -1) var(--popup-border-width) 0px 0px var(--popup-border-color);
+  --popup-bottom-arrow-box-shadow: calc(var(--popup-border-width) * -1) calc(var(--popup-border-width) * -1) 0px 0px var(--popup-border-color);
 
   --tooltip-background: var(--popup-background);
   --tooltip-color: var(--popup-color);
