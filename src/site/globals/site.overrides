@@ -1339,6 +1339,7 @@
   /*-------------------
         Popup
   --------------------*/
+  --popup-z-index: 10;
   --popup-border-width: 1px;
   --popup-border-color: var(--solid-border-color);
   --popup-border: var(--popup-border-width) solid var(--solid-border-color);
@@ -1365,16 +1366,26 @@
   --popup-right-arrow-box-shadow: calc(var(--popup-border-width) * -1) var(--popup-border-width) 0px 0px var(--popup-border-color);
   --popup-bottom-arrow-box-shadow: calc(var(--popup-border-width) * -1) calc(var(--popup-border-width) * -1) 0px 0px var(--popup-border-color);
 
+  --tooltip-z-index: 20;
   --tooltip-background: var(--popup-background);
-  --tooltip-color: var(--popup-color);
+  --tooltip-color: var(--muted-text-color);
+  --tooltip-border-width: 1px;
   --tooltip-border: var(--popup-border);
   --tooltip-box-shadow: var(--popup-box-shadow);
   --tooltip-border-radius: var(--popup-border-radius);
+  --tooltip-border-color: var(--solid-border-color);
+  --tooltip-vertical-padding: 0.6em;
+  --tooltip-horizontal-padding: 0.8em;
   --tooltip-padding: var(--popup-vertical-padding) var(--popup-horizontal-padding);
-  --tooltip-font-size: var(--medium);
+  --tooltip-font-size: var(--mini);
   --tooltip-font-weight: var(--popup-font-weight);
   --tooltip-font-style: var(--popup-font-style);
   --tooltip-line-height: var(--line-height);
+  --tooltip-arrow-background: var(--tooltip-background);
+  --tooltip-arrow-box-shadow: var(--tooltip-border-width) var(--tooltip-border-width) 0px 0px var(--tooltip-border-color);
+  --tooltip-arrow-top-background: var(--tooltip-arrow-background);
+  --tooltip-arrow-bottom-background: var(--tooltip-arrow-background);
+  --tooltip-bottom-arrow-box-shadow: calc(var(--tooltip-border-width) * -1) calc(var(--tooltip-border-width) * -1) 0px 0px var(--tooltip-border-color);
 
   /*-------------------
         Table

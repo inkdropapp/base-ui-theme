@@ -22,14 +22,15 @@
 *******************************/
 
 .ui.popup {
-  display: none;
-  position: absolute;
+  display: block;
+  position: fixed;
   top: 0px;
-  right: 0px;
+  right: auto;
+  margin: 0;
 
   /* Fixes content being squished when inline (moz only) */
   min-width: min-content;
-  z-index: @zIndex;
+  z-index: var(--popup-z-index, @zIndex);
 
   border: var(--popup-border, 1px solid var(--solid-border-color));
   line-height: @lineHeight;
@@ -79,37 +80,15 @@
     Tooltip
 ---------------*/
 
-/* Content */
-[data-tooltip] {
-  position: relative;
-}
+/* Box */
+.ui.tooltip {
+  position: fixed;
+  display: block;
+  right: auto;
+  margin: 0;
+  z-index: var(--tooltip-z-index, @tooltipZIndex);
 
-/* Arrow */
-[data-tooltip]:before {
-  pointer-events: none;
-  position: absolute;
-  content: "";
-  font-size: var(--medium);
-  width: @arrowSize;
-  height: @arrowSize;
-
-  background: var(--popup-arrow-background, @tooltipArrowBackground);
-  transform: rotate(45deg);
-
-  z-index: @arrowZIndex;
-  box-shadow: @tooltipArrowBoxShadow;
-}
-
-/* Popup */
-[data-tooltip]:after {
-  pointer-events: none;
-  content: attr(data-tooltip);
-  position: absolute;
-  text-transform: none;
-  text-align: left;
   white-space: nowrap;
-
-  font-size: var(--tooltip-font-size, @tooltipFontSize);
 
   border: var(--tooltip-border, @tooltipBorder);
   line-height: var(--tooltip-line-height, @tooltipLineHeight);
@@ -117,321 +96,61 @@
   background: var(--tooltip-background, @tooltipBackground);
 
   padding: var(--tooltip-padding, @tooltipPadding);
+  font-size: var(--tooltip-font-size, @tooltipFontSize);
   font-weight: var(--tooltip-font-weight, @tooltipFontWeight);
   font-style: var(--tooltip-font-style, @tooltipFontStyle);
   color: var(--tooltip-color, @tooltipColor);
 
   border-radius: var(--tooltip-border-radius, @tooltipBorderRadius);
+  corner-shape: var(--default-corner-shape, round);
   box-shadow: var(--tooltip-box-shadow, @tooltipBoxShadow);
-  z-index: @tooltipZIndex;
 }
 
-/* Default Position (Top Center) */
-[data-tooltip]:not([data-position]):before {
+/* Arrow */
+.ui.tooltip:before {
+  position: absolute;
+  content: "";
+  width: @arrowSize;
+  height: @arrowSize;
+
+  background: var(--tooltip-arrow-background, @tooltipArrowBackground);
+  transform: rotate(45deg);
+
+  z-index: @arrowZIndex;
+  box-shadow: var(--tooltip-arrow-box-shadow, @tooltipArrowBoxShadow);
+}
+
+.ui.top.tooltip:before {
   top: auto;
+  bottom: -4px;
+  left: var(--popup-arrow-pos, 50%);
   right: auto;
-  bottom: 100%;
-  left: 50%;
+  margin-left: -5px;
+}
+
+.ui.bottom.tooltip:before {
+  top: -4px;
+  bottom: auto;
+  left: var(--popup-arrow-pos, 50%);
+  right: auto;
+  margin-left: -5px;
+}
+
+/* Arrow Color By Side (placement comes from the app supplement) */
+.ui.bottom.tooltip:before {
+  background: var(--tooltip-arrow-top-background, @tooltipArrowTopBackground);
+  box-shadow: var(--tooltip-bottom-arrow-box-shadow, @bottomArrowBoxShadow);
+}
+.ui.top.tooltip:before {
   background: var(
-    --popup-arrow-bottom-background,
+    --tooltip-arrow-bottom-background,
     @tooltipArrowBottomBackground
   );
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
-}
-[data-tooltip]:not([data-position]):after {
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 100%;
-  margin-bottom: @tooltipDistanceAway;
 }
 
-/* Animation */
-[data-tooltip]:before,
-[data-tooltip]:after {
-  pointer-events: none;
-  visibility: hidden;
-}
-[data-tooltip]:before {
-  opacity: 0;
-  transform: rotate(45deg) scale(0) !important;
-  transform-origin: center top;
-  transition: all @tooltipDuration @tooltipEasing;
-}
-[data-tooltip]:after {
-  opacity: 1;
-  transform-origin: center bottom;
-  transition: all @tooltipDuration @tooltipEasing;
-}
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-  visibility: visible;
-  pointer-events: auto;
-}
-[data-tooltip]:hover:before {
-  transform: rotate(45deg) scale(1) !important;
-  opacity: 1;
-}
-
-/* Animation Position */
-[data-tooltip]:after,
-[data-tooltip][data-position="top center"]:after,
-[data-tooltip][data-position="bottom center"]:after {
-  transform: translateX(-50%) scale(0) !important;
-}
-[data-tooltip]:hover:after,
-[data-tooltip][data-position="bottom center"]:hover:after {
-  transform: translateX(-50%) scale(1) !important;
-}
-[data-tooltip][data-position="left center"]:after,
-[data-tooltip][data-position="right center"]:after {
-  transform: translateY(-50%) scale(0) !important;
-}
-[data-tooltip][data-position="left center"]:hover:after,
-[data-tooltip][data-position="right center"]:hover:after {
-  transform: translateY(-50%) scale(1) !important;
-}
-[data-tooltip][data-position="top left"]:after,
-[data-tooltip][data-position="top right"]:after,
-[data-tooltip][data-position="bottom left"]:after,
-[data-tooltip][data-position="bottom right"]:after {
-  transform: scale(0) !important;
-}
-[data-tooltip][data-position="top left"]:hover:after,
-[data-tooltip][data-position="top right"]:hover:after,
-[data-tooltip][data-position="bottom left"]:hover:after,
-[data-tooltip][data-position="bottom right"]:hover:after {
-  transform: scale(1) !important;
-}
-
-/*--------------
-    Inverted
----------------*/
-
-/* Arrow */
-[data-tooltip][data-inverted]:before {
-  box-shadow: none !important;
-}
-
-/* Arrow Position */
-[data-tooltip][data-inverted]:before {
-  background: var(
-    --popup-inverted-arrow-bottom-background,
-    @invertedArrowBottomBackground
-  );
-}
-
-/* Popup  */
-[data-tooltip][data-inverted]:after {
-  background: var(--tooltip-inverted-background, @tooltipInvertedBackground);
-  color: var(--tooltip-inverted-color, @tooltipInvertedColor);
-  border: var(--tooltip-inverted-border, @tooltipInvertedBorder);
-  box-shadow: var(--tooltip-inverted-box-shadow, @tooltipInvertedBoxShadow);
-}
-[data-tooltip][data-inverted]:after .header {
-  background-color: var(
-    --tooltip-inverted-header-background,
-    @tooltipInvertedHeaderBackground
-  );
-  color: var(--tooltip-inverted-header-color, @tooltipInvertedHeaderColor);
-}
-
-/*--------------
-    Position
----------------*/
-
-/* Top Center */
-[data-position="top center"][data-tooltip]:after {
-  top: auto;
-  right: auto;
-  left: 50%;
-  bottom: 100%;
-  transform: translateX(-50%);
-  margin-bottom: @tooltipDistanceAway;
-}
-[data-position="top center"][data-tooltip]:before {
-  top: auto;
-  right: auto;
-  bottom: 100%;
-  left: 50%;
-  background: var(--popup-arrow-top-background, @tooltipArrowTopBackground);
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
-}
-
-/* Top Left */
-[data-position="top left"][data-tooltip]:after {
-  top: auto;
-  right: auto;
-  left: 0;
-  bottom: 100%;
-  margin-bottom: @tooltipDistanceAway;
-}
-[data-position="top left"][data-tooltip]:before {
-  top: auto;
-  right: auto;
-  bottom: 100%;
-  left: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
-}
-
-/* Top Right */
-[data-position="top right"][data-tooltip]:after {
-  top: auto;
-  left: auto;
-  right: 0;
-  bottom: 100%;
-  margin-bottom: @tooltipDistanceAway;
-}
-[data-position="top right"][data-tooltip]:before {
-  top: auto;
-  left: auto;
-  bottom: 100%;
-  right: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
-}
-
-/* Bottom Center */
-[data-position="bottom center"][data-tooltip]:after {
-  bottom: auto;
-  right: auto;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  margin-top: @tooltipDistanceAway;
-}
-[data-position="bottom center"][data-tooltip]:before {
-  bottom: auto;
-  right: auto;
-  top: 100%;
-  left: 50%;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-top: -@tooltipArrowVerticalOffset;
-}
-
-/* Bottom Left */
-[data-position="bottom left"][data-tooltip]:after {
-  left: 0;
-  top: 100%;
-  margin-top: @tooltipDistanceAway;
-}
-[data-position="bottom left"][data-tooltip]:before {
-  bottom: auto;
-  right: auto;
-  top: 100%;
-  left: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-top: -@tooltipArrowVerticalOffset;
-}
-
-/* Bottom Right */
-[data-position="bottom right"][data-tooltip]:after {
-  right: 0;
-  top: 100%;
-  margin-top: @tooltipDistanceAway;
-}
-[data-position="bottom right"][data-tooltip]:before {
-  bottom: auto;
-  left: auto;
-  top: 100%;
-  right: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowVerticalOffset;
-  margin-top: -@tooltipArrowHorizontalOffset;
-}
-
-/* Left Center */
-[data-position="left center"][data-tooltip]:after {
-  right: 100%;
-  top: 50%;
-  margin-right: @tooltipDistanceAway;
-  transform: translateY(-50%);
-}
-[data-position="left center"][data-tooltip]:before {
-  right: 100%;
-  top: 50%;
-  margin-top: @tooltipArrowVerticalOffset;
-  margin-right: @tooltipArrowHorizontalOffset;
-}
-
-/* Right Center */
-[data-position="right center"][data-tooltip]:after {
-  left: 100%;
-  top: 50%;
-  margin-left: @tooltipDistanceAway;
-  transform: translateY(-50%);
-}
-[data-position="right center"][data-tooltip]:before {
-  left: 100%;
-  top: 50%;
-  margin-top: @tooltipArrowHorizontalOffset;
-  margin-left: -@tooltipArrowVerticalOffset;
-}
-
-/* Arrow */
-[data-position~="bottom"][data-tooltip]:before {
-  background: var(--popup-arrow-top-background, @arrowTopBackground);
-  box-shadow: var(--popup-bottom-arrow-box-shadow, @bottomArrowBoxShadow);
-}
-[data-position="left center"][data-tooltip]:before {
-  background: var(--popup-arrow-center-background, @arrowCenterBackground);
-  box-shadow: var(--popup-left-arrow-box-shadow, @leftArrowBoxShadow);
-}
-[data-position="right center"][data-tooltip]:before {
-  background: var(--popup-arrow-center-background, @arrowCenterBackground);
-  box-shadow: var(--popup-right-arrow-box-shadow, @rightArrowBoxShadow);
-}
-[data-position~="top"][data-tooltip]:before {
-  background: var(--popup-arrow-bottom-background, @arrowBottomBackground);
-}
-
-/* Inverted Arrow Color */
-[data-inverted][data-position~="bottom"][data-tooltip]:before {
-  background: var(
-    --popup-inverted-arrow-top-background,
-    @invertedArrowTopBackground
-  );
-  box-shadow: var(--popup-bottom-arrow-box-shadow, @bottomArrowBoxShadow);
-}
-[data-inverted][data-position="left center"][data-tooltip]:before {
-  background: var(
-    --popup-inverted-arrow-center-background,
-    @invertedArrowCenterBackground
-  );
-  box-shadow: var(--popup-left-arrow-box-shadow, @leftArrowBoxShadow);
-}
-[data-inverted][data-position="right center"][data-tooltip]:before {
-  background: var(
-    --popup-inverted-arrow-center-background,
-    @invertedArrowCenterBackground
-  );
-  box-shadow: var(--popup-right-arrow-box-shadow, @rightArrowBoxShadow);
-}
-[data-inverted][data-position~="top"][data-tooltip]:before {
-  background: var(
-    --popup-inverted-arrow-bottom-background,
-    @invertedArrowBottomBackground
-  );
-}
-
-[data-position~="bottom"][data-tooltip]:before {
-  transform-origin: center bottom;
-}
-[data-position~="bottom"][data-tooltip]:after {
-  transform-origin: center top;
-}
-[data-position="left center"][data-tooltip]:before {
-  transform-origin: top center;
-}
-[data-position="left center"][data-tooltip]:after {
-  transform-origin: right center;
-}
-[data-position="right center"][data-tooltip]:before {
-  transform-origin: right center;
-}
-[data-position="right center"][data-tooltip]:after {
-  transform-origin: left center;
+/* Basic (no arrow) */
+.ui.basic.tooltip:before {
+  display: none;
 }
 
 /*--------------
@@ -484,8 +203,21 @@
      Pointer
 ---------------*/
 
+.ui.top.popup:before {
+  top: auto;
+  bottom: -5px;
+  left: var(--popup-arrow-pos, 50%);
+  right: auto;
+  margin-left: -5px;
+}
+
 /*--- Below ---*/
 .ui.bottom.popup:before {
+  top: -5px;
+  bottom: auto;
+  left: var(--popup-arrow-pos, 50%);
+  right: auto;
+  margin-left: -5px;
   box-shadow: var(--popup-bottom-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 

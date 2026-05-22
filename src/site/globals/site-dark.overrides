@@ -757,11 +757,6 @@
   --popup-arrow-center-background: var(--popup-arrow-background);
   --popup-arrow-bottom-background: var(--popup-arrow-background);
 
-  --tooltip-background: var(--popup-background);
-  --tooltip-color: var(--popup-color);
-  --tooltip-border: var(--popup-border);
-  --tooltip-box-shadow: var(--popup-box-shadow);
-
   /*-------------------
         Table
   --------------------*/
