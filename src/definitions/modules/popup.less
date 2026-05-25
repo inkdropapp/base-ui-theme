@@ -136,6 +136,24 @@
   margin-left: -5px;
 }
 
+/* Tooltip to the left of the anchor: arrow on the right edge. */
+.ui.left.tooltip:before {
+  top: var(--popup-arrow-pos, 50%);
+  bottom: auto;
+  left: auto;
+  right: -4px;
+  margin-top: -5px;
+}
+
+/* Tooltip to the right of the anchor: arrow on the left edge. */
+.ui.right.tooltip:before {
+  top: var(--popup-arrow-pos, 50%);
+  bottom: auto;
+  right: auto;
+  left: -4px;
+  margin-top: -5px;
+}
+
 /* Arrow Color By Side (placement comes from the app supplement) */
 .ui.bottom.tooltip:before {
   background: var(--tooltip-arrow-top-background, @tooltipArrowTopBackground);
@@ -146,6 +164,12 @@
     --tooltip-arrow-bottom-background,
     @tooltipArrowBottomBackground
   );
+}
+.ui.left.tooltip:before {
+  box-shadow: var(--tooltip-left-arrow-box-shadow, @leftArrowBoxShadow);
+}
+.ui.right.tooltip:before {
+  box-shadow: var(--tooltip-right-arrow-box-shadow, @rightArrowBoxShadow);
 }
 
 /* Basic (no arrow) */

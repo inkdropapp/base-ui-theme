@@ -1386,6 +1386,8 @@
   --tooltip-arrow-top-background: var(--tooltip-arrow-background);
   --tooltip-arrow-bottom-background: var(--tooltip-arrow-background);
   --tooltip-bottom-arrow-box-shadow: calc(var(--tooltip-border-width) * -1) calc(var(--tooltip-border-width) * -1) 0px 0px var(--tooltip-border-color);
+  --tooltip-left-arrow-box-shadow: var(--tooltip-border-width) calc(var(--tooltip-border-width) * -1) 0px 0px var(--tooltip-border-color);
+  --tooltip-right-arrow-box-shadow: calc(var(--tooltip-border-width) * -1) var(--tooltip-border-width) 0px 0px var(--tooltip-border-color);
 
   /*-------------------
         Table
