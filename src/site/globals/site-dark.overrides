@@ -95,17 +95,17 @@
   --brown-header-color: var(--color-yellow-500);
 
   /*--- Colored Text ---*/
-  --red-text-color: var(--color-red-500);
-  --orange-text-color: var(--color-orange-500);
+  --red-text-color: var(--color-red-400);
+  --orange-text-color: var(--color-orange-400);
   --yellow-text-color: var(--color-yellow-400);
-  --olive-text-color: var(--color-lime-500);
-  --green-text-color: var(--color-green-500);
-  --teal-text-color: var(--color-teal-500);
-  --blue-text-color: var(--color-blue-500);
-  --violet-text-color: var(--color-violet-500);
-  --purple-text-color: var(--color-purple-500);
-  --pink-text-color: var(--color-pink-500);
-  --brown-text-color: var(--color-yellow-600);
+  --olive-text-color: var(--color-lime-400);
+  --green-text-color: var(--color-green-400);
+  --teal-text-color: var(--color-teal-400);
+  --blue-text-color: var(--color-blue-400);
+  --violet-text-color: var(--color-violet-400);
+  --purple-text-color: var(--color-purple-400);
+  --pink-text-color: var(--color-pink-400);
+  --brown-text-color: var(--color-yellow-500);
 
   /*--- Colored Border ---*/
   --red-border-color: var(--red-text-color);
@@ -697,7 +697,7 @@
   /*-------------------
         Message
   --------------------*/
-  --message-background: hsl(var(--hsl-zinc-50) / 20%);
+  --message-background: hsl(var(--hsl-zinc-50) / 15%);
   --message-shadow-shadow: 0px 0px 0px 0px hsl(var(--hsl-white) / 20%);
   --message-box-shadow: 0px 0px 0px 1px var(--strong-border-color) inset,
     var(--message-shadow-shadow);
