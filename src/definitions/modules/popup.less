@@ -47,7 +47,7 @@
   corner-shape: var(--default-corner-shape, round);
   box-shadow: var(--popup-box-shadow, @boxShadow);
 }
-.ui.popup > .header {
+.ui.popup .popup-header {
   padding: 0em;
 
   font-family: @headerFont;
@@ -55,7 +55,7 @@
   line-height: var(--popup-header-line-height, @headerLineHeight);
   font-weight: var(--popup-header-font-weight, @headerFontWeight);
 }
-.ui.popup > .header + .content {
+.ui.popup .popup-header + .popup-content {
   padding-top: var(--popup-header-distance, @headerDistance);
 }
 
@@ -445,7 +445,7 @@
   border: var(--popup-inverted-border, @invertedBorder);
   box-shadow: var(--popup-inverted-box-shadow, @invertedBoxShadow);
 }
-.ui.inverted.popup .header {
+.ui.inverted.popup .popup-header {
   background-color: var(
     --popup-inverted-header-background,
     @invertedHeaderBackground

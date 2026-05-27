@@ -67,76 +67,46 @@
   /*-------------------
       Site Colors
   --------------------*/
-  /*---  Colors  ---*/
-  --red: var(--color-red-500);
-  --orange: var(--color-orange-500);
-  --yellow: var(--color-yellow-500);
-  --olive: var(--color-lime-500);
-  --green: var(--color-green-500);
-  --teal: var(--color-teal-500);
-  --blue: var(--color-blue-500);
-  --violet: var(--color-violet-500);
-  --purple: var(--color-purple-500);
-  --pink: var(--color-pink-500);
-  --brown: var(--color-yellow-800);
-  --grey: var(--color-neutral-500);
-  --black: var(--color-neutral-900);
-  /*---  Light Colors  ---*/
-  --light-red: var(--color-red-400);
-  --light-orange: var(--color-orange-400);
-  --light-yellow: var(--color-yellow-400);
-  --light-olive: var(--color-lime-400);
-  --light-green: var(--color-green-400);
-  --light-teal: var(--color-teal-400);
-  --light-blue: var(--color-blue-400);
-  --light-violet: var(--color-violet-400);
-  --light-purple: var(--color-purple-400);
-  --light-pink: var(--color-pink-400);
-  --light-brown: var(--color-yellow-700);
-  --light-grey: var(--color-neutral-300);
-  --light-black: var(--color-neutral-700);
-  /*---   Neutrals  ---*/
-  --full-black: var(--color-black);
-  --off-white: var(--color-gray-50);
-  --dark-white: var(--color-gray-100);
-  --mid-white: var(--color-gray-200);
-  --white: var(--color-white);
+
   /*--- Colored Backgrounds ---*/
-  --red-background: var(--color-red-100);
-  --orange-background: var(--color-orange-100);
-  --yellow-background: var(--color-yellow-100);
-  --olive-background: var(--color-lime-100);
-  --green-background: var(--color-green-100);
-  --teal-background: var(--color-teal-100);
-  --blue-background: var(--color-blue-100);
-  --violet-background: var(--color-violet-100);
-  --purple-background: var(--color-purple-100);
-  --pink-background: var(--color-pink-100);
-  --brown-background: var(--color-orange-100);
+  --red-background: var(--color-red-900);
+  --orange-background: var(--color-orange-900);
+  --yellow-background: var(--color-yellow-900);
+  --olive-background: var(--color-lime-900);
+  --green-background: var(--color-green-900);
+  --teal-background: var(--color-teal-900);
+  --blue-background: var(--color-blue-900);
+  --violet-background: var(--color-violet-900);
+  --purple-background: var(--color-purple-900);
+  --pink-background: var(--color-pink-900);
+  --brown-background: var(--color-orange-900);
+
   /*--- Colored Headers ---*/
-  --red-header-color: var(--color-red-600);
-  --orange-header-color: var(--color-orange-600);
-  --yellow-header-color: var(--color-yellow-800);
-  --olive-header-color: var(--color-lime-700);
-  --green-header-color: var(--color-green-700);
-  --teal-header-color: var(--color-teal-700);
-  --blue-header-color: var(--color-blue-600);
-  --violet-header-color: var(--color-violet-600);
-  --purple-header-color: var(--color-purple-600);
-  --pink-header-color: var(--color-pink-600);
-  --brown-header-color: var(--color-yellow-900);
+  --red-header-color: var(--color-red-400);
+  --orange-header-color: var(--color-orange-400);
+  --yellow-header-color: var(--color-yellow-300);
+  --olive-header-color: var(--color-lime-400);
+  --green-header-color: var(--color-green-400);
+  --teal-header-color: var(--color-teal-400);
+  --blue-header-color: var(--color-blue-400);
+  --violet-header-color: var(--color-violet-400);
+  --purple-header-color: var(--color-purple-400);
+  --pink-header-color: var(--color-pink-400);
+  --brown-header-color: var(--color-yellow-500);
+
   /*--- Colored Text ---*/
   --red-text-color: var(--color-red-500);
   --orange-text-color: var(--color-orange-500);
-  --yellow-text-color: var(--color-yellow-700);
-  --olive-text-color: var(--color-lime-600);
-  --green-text-color: var(--color-green-600);
-  --teal-text-color: var(--color-teal-600);
+  --yellow-text-color: var(--color-yellow-400);
+  --olive-text-color: var(--color-lime-500);
+  --green-text-color: var(--color-green-500);
+  --teal-text-color: var(--color-teal-500);
   --blue-text-color: var(--color-blue-500);
   --violet-text-color: var(--color-violet-500);
   --purple-text-color: var(--color-purple-500);
   --pink-text-color: var(--color-pink-500);
-  --brown-text-color: var(--color-yellow-800);
+  --brown-text-color: var(--color-yellow-600);
+
   /*--- Colored Border ---*/
   --red-border-color: var(--red-text-color);
   --orange-border-color: var(--orange-text-color);
