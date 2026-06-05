@@ -372,8 +372,12 @@
   color: var(--text-color, @selectionTextColor);
   box-shadow: @selectionBoxShadow;
   border: 1px solid var(--border-color, @selectionBorderColor);
-  border-radius: var(--dropdown-menu-border-radius, @selectionBorderRadius);
+  border-radius: var(
+    --dropdown-selection-border-radius,
+    @selectionBorderRadius
+  );
   transition: @selectionTransition;
+  corner-shape: var(--dropdown-selection-corner-shape, round);
 }
 
 .ui.selection.dropdown.visible,
@@ -423,7 +427,11 @@ select.ui.dropdown {
   min-width: @menuMinWidth;
   width: @menuMinWidth;
 
-  border-radius: @selectionMenuBorderRadius;
+  corner-shape: var(--dropdown-selection-corner-shape, round);
+  border-radius: var(
+    --dropdown-selection-menu-border-radius,
+    @selectionMenuBorderRadius
+  );
   box-shadow: var(--raised-shadow, @selectionMenuBoxShadow);
   transition: @selectionMenuTransition;
 }

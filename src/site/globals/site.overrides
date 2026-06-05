@@ -1477,6 +1477,9 @@
   --dropdown-menu-border: var(--dropdown-menu-border-width) solid var(--dropdown-menu-border-color);
   --dropdown-menu-border-radius: var(--default-squircle-radius);
   --dropdown-menu-corner-shape: var(--default-corner-shape);
+  --dropdown-selection-corner-shape: var(--default-corner-shape);
+  --dropdown-selection-border-radius: var(--default-squircle-radius);
+  --dropdown-selection-menu-border-radius: 0em 0em var(--default-squircle-radius) var(--default-squircle-radius);
   --dropdown-menu-item-border: none;
   --dropdown-menu-item-divider: none;
   --dropdown-menu-item-color: var(--text-color);
