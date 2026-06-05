@@ -287,10 +287,10 @@
   margin: 0em;
   height: 100%;
 
-  width: @iconWidth;
-  opacity: @iconOpacity;
+  width: var(--input-icon-width, @iconWidth);
+  opacity: var(--input-icon-opacity, @iconOpacity);
   border-radius: 0em @borderRadius @borderRadius 0em;
-  transition: @iconTransition;
+  transition: var(--input-icon-transition, @iconTransition);
 }
 
 .ui.icon.input > i.icon:not(.link) {
@@ -298,7 +298,7 @@
 }
 
 .ui.icon.input > input {
-  padding-right: @iconMargin !important;
+  padding-right: var(--input-icon-margin, @iconMargin) !important;
 }
 
 .ui.icon.input > i.icon:before,
@@ -308,7 +308,7 @@
   text-align: center;
   top: 50%;
   width: 100%;
-  margin-top: @iconOffset;
+  margin-top: var(--input-icon-offset, @iconOffset);
 }
 
 .ui.icon.input > i.link.icon {
@@ -333,13 +333,13 @@
 }
 
 .ui[class*="left icon"].input > input {
-  padding-left: @iconMargin !important;
+  padding-left: var(--input-icon-margin, @iconMargin) !important;
   padding-right: @horizontalPadding !important;
 }
 
 /* Focus */
 .ui.icon.input > input:focus ~ i.icon {
-  opacity: 1;
+  opacity: var(--input-icon-focus-opacity, @iconFocusOpacity);
 }
 
 /*--------------------

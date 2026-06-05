@@ -1131,6 +1131,14 @@
   --input-placeholder-error-color: var(--color-red-300);
   --input-placeholder-error-focus-color: var(--color-red-400);
 
+  --input-icon-width: calc(var(--input-vertical-padding) * 2 + var(--glyph-width));
+  --input-icon-opacity: 0.5;
+  --input-icon-focus-opacity: 1;
+  --input-icon-offset: -0.5em;
+  --input-icon-distance: 0em;
+  --input-icon-margin: calc(var(--input-icon-width) + var(--input-icon-distance));
+  --input-icon-transition: opacity 0.3s var(--default-easing);
+
   /*-------------------
         Label
   --------------------*/
