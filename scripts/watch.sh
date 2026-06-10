@@ -14,6 +14,6 @@ echo '[
               ]
           ],
           "chdir": "..",
-          "command": ["bun", "run", "build"]
+          "command": ["npm", "run", "build"]
       }
   ]' | watchman -j
