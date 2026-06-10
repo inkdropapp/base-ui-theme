@@ -1531,21 +1531,21 @@
   /*-------------------
         Side Bar
   --------------------*/
-  --sidebar-color-scheme: dark;
-  --sidebar-background: var(--color-gray-900);
+  --sidebar-color-scheme: light;
+  --sidebar-background: var(--color-gray-100);
   --sidebar-border-right: none;
-  --sidebar-menu-item-inactive-background: hsl(var(--hsl-slate-600) / 70%);
-  --sidebar-menu-item-active-background: hsl(var(--hsl-blue-300) / 50%);
-  --sidebar-menu-section-color: var(--inverted-unselected-text-color);
-  --sidebar-menu-section-separator-color: rgba(255, 255, 255, 0.1);
-  --sidebar-menu-item-color: var(--inverted-light-text-color);
-  --sidebar-menu-active-item-color: var(--inverted-light-text-color);
-  --sidebar-menu-action-color: var(--inverted-disabled-text-color);
-  --sidebar-menu-action-hover-color: var(--inverted-light-text-color);
-  --sidebar-sync-status-view-background: var(--color-gray-950);
-  --sidebar-sync-status-view-text-color: var(--inverted-muted-text-color);
-  --sidebar-sync-status-view-detail-color: var(--inverted-unselected-text-color);
-  --sidebar-sync-status-view-border-top: none;
+  --sidebar-menu-item-inactive-background: hsl(var(--hsl-sky-800) / 20%);
+  --sidebar-menu-item-active-background: var(--primary-color);
+  --sidebar-menu-section-color: var(--unselected-text-color);
+  --sidebar-menu-section-separator-color: var(--internal-border-color);
+  --sidebar-menu-item-color: var(--dark-text-color);
+  --sidebar-menu-active-item-color: var(--dark-text-color);
+  --sidebar-menu-action-color: var(--light-text-color);
+  --sidebar-menu-action-hover-color: var(--light-text-color);
+  --sidebar-sync-status-view-background: var(--subtle-transparent-white);
+  --sidebar-sync-status-view-text-color: var(--muted-text-color);
+  --sidebar-sync-status-view-detail-color: var(--unselected-text-color);
+  --sidebar-sync-status-view-border-top: 1px solid var(--border-color);
   --sidebar-scrollbar-width: 6px;
   --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
   --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
@@ -1562,7 +1562,7 @@
   /*-------------------
         Note List Bar
   --------------------*/
-  --note-list-bar-background: var(--color-stone-100);
+  --note-list-bar-background: var(--color-stone-50);
   --note-list-bar-border-right: none;
   --note-list-bar-pinned-section-header-background: var(--color-neutral-200);
   --note-list-bar-pinned-section-header-border-bottom: none;
@@ -1627,6 +1627,7 @@
 
 :root:has(body.acrylic-window) {
   --page-background: transparent;
+  --sidebar-background: var(--subtle-transparent-white);
   --note-list-bar-background: hsl(var(--hsl-stone-100) / 80%);
   --editor-background: hsl(var(--hsl-white) / 70%);
   --editor-drawer-background: hsl(var(--hsl-white));
