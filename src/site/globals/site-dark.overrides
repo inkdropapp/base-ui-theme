@@ -938,3 +938,4 @@
   --page-background: hsl(var(--hsl-black) / 40%);
 }
 
+/* vim: set filetype=css: */
