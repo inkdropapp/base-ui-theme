@@ -12,12 +12,11 @@ Read [the documentation](https://developers.inkdrop.app/guides/create-a-theme) f
 
 ## How to build
 
-To build the module and generate CSS variable name list, run the following commands:
+To build the module, run the following commands:
 
 ```
 pnpm install
 pnpm run build
-pnpm run generate-variable-names
 ```
 
 ## File structure
@@ -37,10 +36,7 @@ src/
     modules/                 Accordion, checkbox, dropdown, modal, popup, sticky, transition
   definitions/               Semantic UI source LESS that consumes the variables above
   themes/default/            Default variant assets referenced by theme.config
-scripts/
-  generate-variable-names.ts Extracts every :root --variable name into lib/variable-names.json
 styles/theme.css             Build output
-lib/variable-names.json      Build output — published for downstream theme authors
 ```
 
 ## How CSS variables are used
@@ -50,7 +46,6 @@ The theme is driven entirely by CSS custom properties declared on `:root`.
 1. **LESS variables** in `site.variables` (and per-component `.variables` files) define the static palette and sizing tokens — these are resolved at compile time by `lessc`.
 2. **CSS custom properties** in `site.overrides` are declared on `:root` and reference those LESS values (e.g. `--primary-color: var(--color-blue-500);`). These are what the rest of the theme consumes via `var(...)`.
 3. **Component LESS files** under `src/definitions/` reference the custom properties, not the LESS variables — so consumers can override any token at runtime without rebuilding.
-4. `pnpm run generate-variable-names` walks the compiled `styles/theme.css` and writes every `:root` custom-property name to `lib/variable-names.json`, which is published alongside the CSS so downstream themes can introspect the available knobs.
 
 To customize a token, override the custom property in your own stylesheet:
 
