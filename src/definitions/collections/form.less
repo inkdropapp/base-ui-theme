@@ -125,6 +125,7 @@
   background: var(--input-background, @inputBackground);
   border: var(--input-border, @inputBorder);
   color: var(--input-color, @inputColor);
+  corner-shape: var(--form-input-corner-shape);
   border-radius: var(--form-input-border-radius, @inputBorderRadius);
   box-shadow: var(--input-box-shadow, @inputBoxShadow);
   transition: @inputTransition;
@@ -150,6 +151,7 @@
   outline-color: var(--unfocused-outline-color);
   outline-style: var(--focused-outline-style);
   color: var(--input-color, @inputColor);
+  corner-shape: var(--form-input-corner-shape);
   border-radius: var(--form-input-border-radius, @inputBorderRadius);
   box-shadow: var(--input-box-shadow, @inputBoxShadow);
   transition: @textAreaTransition;
@@ -191,6 +193,7 @@
   width: 100%;
   background: var(--form-select-background, @selectBackground);
   border: var(--form-select-border, @selectBorder);
+  corner-shape: var(--form-select-corner-shape, round);
   border-radius: var(--form-select-border-radius, @selectBorderRadius);
   box-shadow: var(--form-select-box-shadow, @selectBoxShadow);
   padding: @selectPadding;
