@@ -27,6 +27,3 @@ jobs:
 
       - name: Build 🏗️
         run: pnpm run build
-
-      - name: Generate variable name list 🏗️
-        run: pnpm run generate-variable-names
