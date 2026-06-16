@@ -27,6 +27,7 @@
   box-shadow: var(--segment-box-shadow, @boxShadow);
   margin: @margin;
   padding: @padding;
+  corner-shape: var(--segment-corner-shape, round);
   border-radius: var(--segment-border-radius, @borderRadius);
   border: var(--segment-border, @border);
 }
@@ -361,6 +362,7 @@
     --grouped-segment-group-border-radius,
     @groupedBorderRadius
   );
+  corner-shape: var(--segment-corner-shape, round);
 }
 
 .ui.segments:first-child {
@@ -391,6 +393,7 @@
   bottom: 0px;
   margin-bottom: 0em;
   top: @attachedTopOffset;
+  corner-shape: var(--segment-corner-shape, round);
   border-radius: var(--segment-border-radius, @borderRadius)
     var(--segment-border-radius, @borderRadius) 0em 0em;
 }
@@ -402,12 +405,14 @@
   margin-top: 0em;
   margin-bottom: 0em;
   box-shadow: var(--segment-box-shadow);
+  corner-shape: var(--segment-corner-shape, round);
   border-radius: 0em 0em var(--segment-border-radius, @borderRadius)
     var(--segment-border-radius, @borderRadius);
 }
 
 /* Only */
 .ui.segments:not(.horizontal) > .segment:only-child {
+  corner-shape: var(--segment-corner-shape, round);
   border-radius: var(--segment-border-radius, @borderRadius);
 }
 
@@ -435,6 +440,7 @@
   background-color: var(--segment-background, @background);
   box-shadow: var(--segment-box-shadow, @boxShadow);
   margin: @margin;
+  corner-shape: var(--segment-corner-shape, round);
   border-radius: var(--segment-border-radius, @borderRadius);
   border: var(--segment-border, @border);
 }
