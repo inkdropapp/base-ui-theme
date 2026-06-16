@@ -245,6 +245,28 @@
   box-shadow: var(--popup-bottom-arrow-box-shadow, @bottomArrowBoxShadow);
 }
 
+/* Popup to the left of the anchor: arrow on the right edge. */
+/*rtl:rename*/
+.ui.left.popup:before {
+  top: var(--popup-arrow-pos, 50%);
+  bottom: auto;
+  left: auto;
+  right: -5px;
+  margin-top: -5px;
+  box-shadow: var(--popup-left-arrow-box-shadow, @leftArrowBoxShadow);
+}
+
+/* Popup to the right of the anchor: arrow on the left edge. */
+/*rtl:rename*/
+.ui.right.popup:before {
+  top: var(--popup-arrow-pos, 50%);
+  bottom: auto;
+  right: auto;
+  left: -5px;
+  margin-top: -5px;
+  box-shadow: var(--popup-right-arrow-box-shadow, @rightArrowBoxShadow);
+}
+
 .ui.bottom.center.popup:before {
   margin-left: @arrowOffset;
   top: @arrowOffset;
