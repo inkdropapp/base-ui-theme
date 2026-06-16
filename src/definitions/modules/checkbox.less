@@ -78,6 +78,7 @@
   content: "";
 
   background: var(--checkbox-background, @checkboxBackground);
+  corner-shape: var(--checkbox-corner-shape, round);
   border-radius: var(--checkbox-border-radius, @checkboxBorderRadius);
 
   transition: @checkboxTransition;
@@ -304,6 +305,7 @@
   content: "";
   transform: none;
 
+  corner-shape: round;
   width: @radioSize;
   height: @radioSize;
   border-radius: var(--circular-radius, @circularRadius);
@@ -405,6 +407,7 @@
   content: "";
   transform: none;
   border: none !important;
+  corner-shape: round;
   left: 0em;
   z-index: 1;
 
@@ -515,6 +518,7 @@
   z-index: 1;
   transform: none;
   border: none;
+  corner-shape: round;
 
   top: @toggleLaneVerticalOffset;
 
