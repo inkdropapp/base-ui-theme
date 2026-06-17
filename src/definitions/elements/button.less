@@ -319,9 +319,9 @@
     @iconVerticalPadding @iconHorizontalPadding
   );
   margin: 0;
-  font-size: var(--icon-button-font-size, @iconFontSize);
 
   > svg {
+    font-size: var(--icon-button-font-size, @iconFontSize);
     margin: 0;
   }
 }
@@ -333,7 +333,8 @@
   vertical-align: top;
 }
 
-.ui.button:not(.icon) > svg {
+.ui.button:not(.icon) > svg,
+.ui.labeled.icon.button > svg {
   margin: 0 var(--button-icon-distance, @iconDistance) 0 0;
   opacity: 0.8;
   vertical-align: bottom;
