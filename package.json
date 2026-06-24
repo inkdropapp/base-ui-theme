@@ -31,7 +31,7 @@
     "clean": "rm -rf ./styles",
     "watch": "./scripts/watch.sh",
     "unwatch": "./scripts/unwatch.sh",
-    "build": "mkdir -p ./styles && lessc src/semantic.less > styles/theme.css",
+    "build": "mkdirp ./styles && lessc src/semantic.less > styles/theme.css",
     "format": "prettier --write src",
     "prepublishOnly": "npm run build"
   }
