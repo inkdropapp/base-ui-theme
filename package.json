@@ -7,12 +7,13 @@
     "url": "git+https://github.com/inkdropapp/base-ui-theme.git"
   },
   "devDependencies": {
-    "@inkdropapp/css": "^0.9.11",
+    "@inkdropapp/css": "^0.9.12",
     "@types/node": "^26.5.1",
+    "cssnano": "^9.0.4",
     "del": "^8.0.1",
     "less": "^4.9.1",
-    "mkdirp": "^3.0.1",
     "postcss": "^8.5.28",
+    "postcss-nested": "^8.0.1",
     "prettier": "^3.9.6"
   },
   "browserslist": [
@@ -31,7 +32,7 @@
     "clean": "rm -rf ./styles",
     "watch": "./scripts/watch.sh",
     "unwatch": "./scripts/unwatch.sh",
-    "build": "mkdirp ./styles && lessc src/semantic.less > styles/theme.css",
+    "build": "node scripts/build.mjs",
     "format": "prettier --write src",
     "prepublishOnly": "npm run build"
   }
