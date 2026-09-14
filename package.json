@@ -17,7 +17,9 @@
     "prettier": "^3.9.6"
   },
   "browserslist": [
-    "Electron 39.4.0"
+    "Electron 43.0.0",
+    "last 1 ChromeAndroid version",
+    "iOS >= 26.0"
   ],
   "description": "Base UI Theme for Inkdrop",
   "files": [
