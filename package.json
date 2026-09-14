@@ -7,13 +7,13 @@
     "url": "git+https://github.com/inkdropapp/base-ui-theme.git"
   },
   "devDependencies": {
-    "@inkdropapp/css": "^0.6.3",
-    "@types/node": "^25.5.0",
+    "@inkdropapp/css": "^0.9.11",
+    "@types/node": "^26.5.1",
     "del": "^8.0.1",
-    "less": "^4.6.4",
+    "less": "^4.9.1",
     "mkdirp": "^3.0.1",
-    "postcss": "^8.5.8",
-    "prettier": "^3.8.2"
+    "postcss": "^8.5.28",
+    "prettier": "^3.9.6"
   },
   "browserslist": [
     "Electron 39.4.0"
