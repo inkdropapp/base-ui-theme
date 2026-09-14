@@ -51,7 +51,7 @@ If it is already defined, skip to **How to wire the rule file** — this is the 
 4. Place it in the matching `ui.css` section, grouped with related tokens. If it derives from another new token, chain via `var()`:
    `--input-icon-margin: calc(var(--input-icon-width) + var(--input-icon-distance))`
 5. Run `npm run generate-variable-names` in the `css` repo so `variables.json` picks it up.
-6. The token only reaches this repo once `@inkdropapp/css` is published and the dependency bumped here. **Say so explicitly** when handing back work that spans both repos — a green `npm run build` here does *not* prove a new token exists.
+6. The token only reaches this repo once `@inkdropapp/css` is published and the dependency bumped here. **Say so explicitly** when handing back work that spans both repos — a green `npm run build` here does _not_ prove a new token exists.
 
 ## How to wire the rule file (in this repo)
 
@@ -79,9 +79,6 @@ margin: var(--input-icon-margin, @iconMargin) !important;
   ```
 
   If the rule you are editing references one of these, defining it in `ui.css` is part of the job.
+
 - Check whether the rule already consumes the token before editing (the dropdown selection box already had `corner-shape: var(--dropdown-selection-corner-shape, round)`).
 - Migration is partial — roughly 27% of `@lessVar` usages in rule files are wrapped so far. `container.less`, `sticky.less` and `transition.less` are at 0%; `list.less` and `accordion.less` are near it.
-
-## Known-stale references elsewhere
-
-- `README.md` documents `src/site/globals/site-dark.overrides`, which does not exist.
